@@ -1,0 +1,14 @@
+Zadania
+ls
+pwd
+cd ./Desktopc
+pwd
+ls
+ls ../../ubuntu
+cd ../Pictures
+pwd
+cd ././././././ (cały czas wskazujemy nasz katalog, więc nigdzie sie nie przeniesiemy)
+cd /home/ubuntu
+cd /root (potrzebujemy uprawnień, katalog ustawienia użytkownika root - głównego administratora każdego systemu uniksowego, który ma maksymalne uprawnienia)
+Ctrl+Alt+F1 (zmienia na środowisko tekstowe/terminal)
+Alt+F7(zmienia na panel graficzny)
