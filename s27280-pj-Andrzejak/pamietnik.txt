@@ -2,4 +2,7 @@
 Moj drogi pamietniczku, podczas dzisiejszego zjazdu nauczylem sie:
 -dodawac klucz ssh do gita
 -klonowac repozytorium z github przy pomocy ssh
-
+------------UPDATE DOMOWY------------
+-nauczylem sie ze mozna wywolywac dwie komendy na raz przy uzyciu && (np. cd && ls czyli zmien katalog i wyswietl jego zawartosc)
+-po chwili glowienia sie i surfowania po sieci odkrylem ze dodanie atrybutu -p do komendy mkdir stworzy brakujace katalogi "po drodze" 
+-gdy mamy zamiar usunac katalog trzeba dodac atrybut -r do komendy rm 
