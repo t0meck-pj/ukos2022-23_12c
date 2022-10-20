@@ -1,0 +1,4 @@
+20.10.2022
+nauczylem sie:
+-dodawac ssh-klicz do github
+-
