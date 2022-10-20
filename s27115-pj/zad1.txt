@@ -1,0 +1,30 @@
+xeon@e11:~$ ls
+ Dokumenty   Games   Muzyka   Obrazy   Pobrane   Publiczny   Pulpit   snap   Szablony  'VirtualBox VMs'   Wideo
+xeon@e11:~$ pwd
+/home/xeon
+xeon@e11:~$ cd Pulpit
+xeon@e11:~/Pulpit$ pwd
+/home/xeon/Pulpit
+xeon@e11:~/Pulpit$ ls
+C++  ISO  PDF  ukos  zadania
+xeon@e11:~/Pulpit$ ls ..
+ Dokumenty   Games   Muzyka   Obrazy   Pobrane   Publiczny   Pulpit   snap   Szablony  'VirtualBox VMs'   Wideo
+xeon@e11:~/Pulpit$ cd Obrazy
+bash: cd: Obrazy: Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit$ cd ../Obrazy
+xeon@e11:~/Obrazy$ ls
+51109.jpg
+xeon@e11:~/Obrazy$ pwd
+/home/xeon/Obrazy
+xeon@e11:~/Obrazy$ cd  ././././././
+xeon@e11:~/Obrazy$ pwd
+/home/xeon/Obrazy
+xeon@e11:~/Obrazy$ cd
+xeon@e11:~$ cd /root
+bash: cd: /root: Brak dostępu <<<<< spowodowane brakiem uprawnien do odczytu katalogu root przez obecnego uzytkownika
+
+Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1
+przełaczy do terminala w trybie tekstowym 
+
+A teraz co się stanie po: Alt+F7
+powrót do sesji graficznej 
