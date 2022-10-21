@@ -1,0 +1,27 @@
+zad 2
+ls
+zad 3
+pwd
+zad 4
+cd /windows/desktop/
+zad 5
+pwd
+zad 6
+ls
+zad 7
+ls -l /home
+zad 8
+cd /Pictures/
+zad 9
+pwd
+zad 10
+ten samy katalog. nie zmieniamy go
+zad 11
+cd /home/
+zad 12
+odmowa dostepu. to jest katalog glownego administratora systemu
+zad 13
+srodowisko tekstowe / terminal
+zad 14
+panel graficzny
+

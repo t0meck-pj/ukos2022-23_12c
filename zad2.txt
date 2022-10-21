@@ -1,0 +1,23 @@
+mkdir ukos
+cd ukos
+mkdir katalog
+mkdir klamka
+cd katalog
+mkdir katalog2
+mkdir katalog3
+cd ../klamka
+touch zajecia2.txt
+touch zajecia2.log
+touch inny.txt
+touch nowy.txt
+mkdir -p ../../ukos/to/jest/dluga/nazwa
+cd ../../ukos/to/jest/dluga/nazwa
+touch dane.txt
+rm ../../../../klamka/*.txt
+rmdir ../../../../katalog/katalog2
+rm -r ../../../../ klamka
+.
+.
+
+
+
