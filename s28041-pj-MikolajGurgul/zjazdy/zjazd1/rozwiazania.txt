@@ -34,7 +34,7 @@ mkdir 'ukos to jest dluga nazwa' -> utworzenie katalogu ukos/to/jest/dluga/nazwa
 
 Polecenia:
 
-cd ukos\ to\ jest\ dluga\ nazwa -> wejœcie do folderu ukos\ to\ jest\ dluga\ nazwa
+cd ukos\ to\ jest\ dluga\ nazwa -> wejscie do folderu ukos\ to\ jest\ dluga\ nazwa
 touch dane.txt -> stworzenie pliku dane.txt
 
 5. Usun z katalogu ukos/klamka wszystkie pliki z roszerzeniem txt
