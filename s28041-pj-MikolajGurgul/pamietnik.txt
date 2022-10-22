@@ -1,0 +1,17 @@
+09.10.2022
+
+Mój pamiêtniczek z zajêæ ukos. Na pierwszych zajêciach pozna³em oraz nauczy³em sie:
+
+- przegl¹dania u¿ytych juz wczeœniej komend poprzez strza³ki na klawiaturze
+- automatycznego dokañczania s³owa/komendy/nazwy folderu poprzez klawisz tabulacji
+- automatycznego kopiowania tekstu poprzez zaznaczenie fragmentu kodu i wklejenie go œrodkowym przyciskiem myszy/scroll
+- wykorzystywania pomocy poprzez komendê man np. man ls
+- w manualu (man) opisywanie komendy z argumentami kwadratowymi s¹ opcjonalne i nie trzeba ich ¿ywac. 
+Natomiast argumenty w nawiasach okr¹g³ych lub bez, s¹ obowi¹zkowe i trzeba je podawac.
+- scie¿ki wzglêdne oraz bezwzglêdne. Ró¿nica polega na tym, ¿e scie¿ka wzglêdna rozpoczyna siê od katalogu w którym znajduje siê plik. 
+W terminalu wyglada to: ./test/tescik/100
+Natomiast scie¿ka bezwzglêdna to scie¿ka od drzewa katalogów. W terminalu: /Desktop/Ukos/Katalog/ja
+- poruszanie siê po katalogach, oraz podstawowe komendy: cd -> zmiana katalogu, pwd -> wyœwietlenie aktualnego katalogu, ls -> wyœwietlenie zawartoœci,
+mkdir -> stworzenie katalogu, rmdir -> usuniêcie katalogu, touch -> stworzenie pliku, nano -> edycja oraz je¿eli nie ma takiego pliku to równiez stworzenie
+pliku, oraz wiele wiêcej
+- klonowanie repozytoriów z gita, forkowanie istniej¹cego repozytorium, tworzenie pull requestow, commitowanie i pushowanie na githuba
