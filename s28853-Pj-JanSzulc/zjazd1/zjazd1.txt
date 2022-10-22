@@ -1,0 +1,79 @@
+Zad 1 
+włczenie virtualBox pozniej linux ubuntu  
+a w linuxie terminalu
+zad2 
+ls
+zad 3
+pwd
+zad 4
+cd ./Desktop
+zad 5
+pwd
+lzad 6
+ls
+zad 7
+ls -l /home
+zad 8
+cd ../Pictures
+zad 9
+pwd
+zad 10
+ten sam katalog
+zad 11
+cd /home
+zad 12
+odmowa dostępu
+brak uprawnień jako superużytkownik
+zad 13
+wyświetla się ekran z informacjami na 
+temat komputera takim na przykład jak
+umowa licencyjna
+zad 14
+wychodzimy z ekranu z zadania 13 do
+ekranu i terminala z powrotem
+
+
+katalogi
+zad1
+buntu@bss-ubu1804:~$ mkdir ukos
+
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ ls
+Desktop Documents Downloads Music Pictures Public Templates ukos Videos
+ubuntu@bss-ubu1804:~$ cd ukos
+ubuntu@bss-ubu1804:~/ukos$ mkdir klamka
+ubuntu@bss-ubu1804:~/ukos$ mkdir katalog
+ubuntu@bss-ubu1804:~/ukos$ pwd
+/home/ubuntu/ukos
+ubuntu@bss-ubu1804:~/ukos$ ls
+katalog klamka
+ubuntu@bss-ubu1804:~/ukos$ cd katalog
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog2 katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog$ ls
+katalog2 katalog3
+zad 2
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ cd klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ pwd
+/home/ubuntu/ukos/klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+inny.txt nowy.txt zajęcia2.log zajęcia2.txt
+zad 3
+ubuntu@bss-ubu1804:~/ukos$ mkdir -p ukos/to/jest/dluga/nazwa
+zad 4
+ubuntu@bss-ubu1804:~/ukos$ touch ukos/to/jest/dluga/nazwa/dane.txt
+zad 5
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+zajęcia2.log
+
+zad 6
+ubuntu@bss-ubu1804:~/ukos$ rm -dir ./katalog/katalog2
+rm: remove directory './katalog/katalog2'? Y
+zad 7
+ubuntu@bss-ubu1804:~/ukos$ rm -dir klamka
+rm: descend into directory 'klamka'? y
+rm: remove regular empty file 'klamka/zajęcia2.log'? y
+rm: remove directory 'klamka'? y
