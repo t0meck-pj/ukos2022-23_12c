@@ -1,0 +1,9 @@
+09.10.2022r
+Mój drogi pamiętniku, na zajęciach nauczyłem się:
+-obsługi github
+-podstawowych komend 
+-tworzenia katalogów i plików tekstowych
+-stworzenie klucza ssh do githuba
+-commit, pull i push
+-miałem problem z cd/root, myślę, że jak zainstaluje obraz linuxa to będę mógł to sprawdzić
+-nie działała mi komenda alt+f7 i ctrl+alt+f1 ale to problem taki jak wyżej
