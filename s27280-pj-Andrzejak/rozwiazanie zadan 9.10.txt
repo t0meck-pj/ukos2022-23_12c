@@ -1,0 +1,31 @@
+Rozwiązanie zadań:
+
+1:
+   mkdir ukos
+   mkdir ukos/katalog
+   mkdir ukos/katalog/katalog2
+   mkdir ukos/katalog/katalog3
+   mkdir ukos/klamka
+
+2:
+   touch zajecia2.txt
+   touch zajecia2.log
+   touch inny.txt
+   touch nowy.txt
+
+3:
+   mkdir -p ukos/to/jest/dluga/nazwa
+
+4:
+   touch nazwa/dane.txt (uzylem takiej sciezki ponieważ byłem juz w folderze dluga, sprawdzajac poprawnosc wykonania sie plikow dla poprzedniego zadania)
+
+5:
+   cd ukos/klamka
+   rm *.txt
+
+6:
+   cd /home/ubuntu/ukos/katalog
+   rm -r katalog2
+
+7:
+   rm -d ukos/klamka
