@@ -1,0 +1,13 @@
+Kochany pamietniczku pisze to poraz n-ty bo baly czas mi nie wychodzi
+ale walcze na dzisiejszych zajeciach u naszego spoko wykladowcy
+nauczylem sie:
+1. Uzywania prostych i nieszkodliwych komend w terminalu linux takich jak >
+oczywiscie zartuje takich jak ls mkdir cd rm itd.
+2. Ze nie korzystamy z vima bo ciezko sie wychodzi.
+3 . dalej walcze z gitem jest to dla mnie program malo intuicyjny ale
+moze sie uda go ogarnac.
+Zjazd 2 Pamietniczku ty moj kochany na dzisiejszych zajeciach nauczylem sie:
+1. Jakie beledy popelnilem w poprzednich zadaniach 
+2.Jak je naprawic
+3.Jak nie wstawiac plikow na git
+4.Oraz wlasnie zaczynam czytac o uprawnieniach i dostepach w linux.
