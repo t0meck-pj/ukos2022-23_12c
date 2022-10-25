@@ -1,97 +1,50 @@
-C:\
-λ ls
-'$Recycle.Bin'/  'Documents and Settings'@   Intel/           'Program Files (x86)'/         Users/
-'$WinREAgent'/    Drivers/                   OneDriveTemp/     ProgramData/                  Windows/
- Apps/            DumpStack.log.tmp          pagefile.sys      Recovery/
- Dell/            e-logo/                    PerfLogs/         swapfile.sys
- dell.sdr         hiberfil.sys              'Program Files'/  'System Volume Information'/
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ cd desktop
+bash: cd: desktop: No such file or directory
+ubuntu@bss-ubu1804:~$ cd desktop/
+bash: cd: desktop/: No such file or directory
+ubuntu@bss-ubu1804:~$ cd
+ubuntu@bss-ubu1804:~$ cd
+ubuntu@bss-ubu1804:~$ cd Desktop/
+ubuntu@bss-ubu1804:~/Desktop$ pwd
+/home/ubuntu/Desktop
+ubuntu@bss-ubu1804:~/Desktop$ ls
+adding-packages-permanently-info.txt  passwords-info.txt
+ubuntu@bss-ubu1804:~/Desktop$ ls ../
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+ubuntu@bss-ubu1804:~/Desktop$ ls ../../
+ubuntu  vagrant
+ubuntu@bss-ubu1804:~/Desktop$ cd ../../../
+ubuntu@bss-ubu1804:/$ ls
+bin   home            lib64       opt   sbin      tmp      vmlinuz
+boot  initrd.img      lost+found  proc  srv       usr      vmlinuz.old
+dev   initrd.img.old  media       root  swapfile  vagrant
+etc   lib             mnt         run   sys       var
+ubuntu@bss-ubu1804:/$ cd ~
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+ubuntu@bss-ubu1804:~$ cd Desktop/
+ubuntu@bss-ubu1804:~/Desktop$ ls ../../../
+bin   home            lib64       opt   sbin      tmp      vmlinuz
+boot  initrd.img      lost+found  proc  srv       usr      vmlinuz.old
+dev   initrd.img.old  media       root  swapfile  vagrant
+etc   lib             mnt         run   sys       var
+ubuntu@bss-ubu1804:~/Desktop$ cd ../Pictures/
+ubuntu@bss-ubu1804:~/Pictures$ cd ..
+ubuntu@bss-ubu1804:~$ cd Desktop
+ubuntu@bss-ubu1804:~/Desktop$ cd ~/Pictures/
+ubuntu@bss-ubu1804:~/Pictures$ pwd
+/home/ubuntu/Pictures
+ubuntu@bss-ubu1804:~/Pictures$ cd ././././././
+ubuntu@bss-ubu1804:~/Pictures$ cd ~
+ubuntu@bss-ubu1804:~$ cd/root
+bash: cd/root: No such file or directory
+ubuntu@bss-ubu1804:~$ cd /root
+bash: cd: /root: Permission denied
 
-C:\
-λ pwd
-C:\
+13. Przełączyło mnie do terminala w trybie tekstowym
+14. Powrót do wersji graficznej
 
-C:\
-λ cd users/dominik/desktop
-
-C:\Users\Dominik\Desktop
-λ pwd
-C:\Users\Dominik\Desktop
-
-C:\Users\Dominik\Desktop
-λ ls
- CodeBlocks.lnk*  'GitHub Desktop.lnk'*   Zadania_S26964/
- desktop.ini       Zadania_GIT/          'Zrzut ekranu 2022-10-07 193853.png'
-
-C:\Users\Dominik\Desktop
-λ ls ../
- AppData/
- Contacts/
- Cookies@
-'Dane aplikacji'@
- Desktop/
- Documents/
- Downloads/
- Favorites/
- IntelGraphicsProfiles/
- Links/
-'Menu Start'@
-'Moje dokumenty'@
- Music/
- NetHood@
- NTUSER.DAT
- ntuser.dat.LOG1
- ntuser.dat.LOG2
- NTUSER.DAT{f7ac2ed8-0799-11ed-ad83-6c9466e18614}.TM.blf
- NTUSER.DAT{f7ac2ed8-0799-11ed-ad83-6c9466e18614}.TMContainer00000000000000000001.regtrans-ms
- NTUSER.DAT{f7ac2ed8-0799-11ed-ad83-6c9466e18614}.TMContainer00000000000000000002.regtrans-ms
- ntuser.ini
- OneDrive/
- Pictures/
- PrintHood@
- Recent@
-'Saved Games'/
- Searches/
- SendTo@
- Szablony@
-'Ustawienia lokalne'@
- Videos/
-
-C:\Users\Dominik\Desktop
-λ ls ../../
-'All Users'@   Default/  'Default User'@   desktop.ini   Dominik/   Public/
-
-C:\Users\Dominik\Desktop
-λ cd ../../../
-
-C:\
-λ cd users/dominik/pictures
-
-C:\Users\Dominik\Pictures
-λ pwd
-C:\Users\Dominik\Pictures
-
-C:\Users\Dominik\Pictures
-λ cd ././././././
-
-C:\Users\Dominik\Pictures
-λ cd c:
-C:\Users\Dominik\Pictures
-
-C:\Users\Dominik\Pictures
-λ cd c
-System nie może odnaleźć określonej ścieżki.
-
-C:\Users\Dominik\Pictures
-λ cd c:/
-
-c:\
-λ cd/root
-System nie może odnaleźć określonej ścieżki.
-
-c:\
-λ ls
-'$Recycle.Bin'/  'Documents and Settings'@   Intel/           'Program Files (x86)'/         Users/
-'$WinREAgent'/    Drivers/                   OneDriveTemp/     ProgramData/                  Windows/
- Apps/            DumpStack.log.tmp          pagefile.sys      Recovery/
- Dell/            e-logo/                    PerfLogs/         swapfile.sys
- dell.sdr         hiberfil.sys              'Program Files'/  'System Volume Information'/
