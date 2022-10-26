@@ -1,0 +1,51 @@
+		Zadania Z Midnight Commanderem nie dało się zrobić, brak na szuflandi
+*Zad1*
+
+				{	mkdir katalogN
+				{	cd KatalogN
+				{	mkdir katalogP
+				{	cd KatalogP/
+				{	mkdir kataloga
+				{	mkdir katalogb
+				{	mkdir katalogc
+Utworzenie		{	cd kataloga
+struktury		{	touch plika.txt
+				{	cd ..
+				{	cd katalogb/
+				{	touch plikb.txt
+				{	cd ..
+				{	cd katalogc/
+				{	touch plikc.txt
+				
+
+Nie można utworzyć pliku w folderze innego użytkownika,za to ja mogę usunąć plik w moim folderze
+*Zad2*
+
+Zmiana uprawnień do katalogu bieżącego:
+chmod 000 ./
+
+Zmiana uprawnień do katalogu nadrzędnego:
+chmod 000 ../
+(polecenie cd możemy wykonać do wyjścia z folderu bieżącego do nadrzędnego)
+(polecenie chmod niemożemy wykonać w katalogu w którym nie mamy uprawnień)
+(Gdy jesteśmy nadal w katalogu choć niemamy uprawnień do katalogu nadrzędnego mamy dalej stare uprawnienia, choć jeśli wyjdziemy tych, uprawnień już nie będziemy mieli)
+(żeby wyjść z katalogu bieżącego,ale do katalogu nadrzędnego nie mamy uprawnień musimy wyjść za pomocą ścieżki bezwzględnej)
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+Nie możemy
+Czy możemy użyć cd -
+-bash: cd: /home/PJWSTK/s27424/KatalogN/KatalogP/katalogc: Brak dostępu
+Nie mamy dostępu
+
+*Zad3*
+ZADANIE GRUPOWE ROBIONE Z JAN SZULC: s28853 BłAŻEJ KANCZKOWSKI : s26836
+katalog domowy musi mieć uprawnienia read oraz execute
+chmod o+r ./
+Plik musi mieć uprawnienia read oraz write oraz execute
+chmod 
+echo treść_komunikatu > plik (usuwa poprzedni komunikat napisany w tym pliku, i nadpisuję nowy)
+echo treść_komunikatu >> plik (dopisuje kolejny komunikat, nie nadpisując starego)
+tail -f plik na bieżąco sprawdza co jest wpisywane do pliku
+*Zad4*
+Żeby móc wyświetlić stornę musimy nadać plikowi uprawnienia minimum read dla "inni" czyli o
+A folderowy public_html musimy nadac minimalnie x czyli uprawnienie do "wejścia" do danego katalogu
