@@ -11,3 +11,6 @@ Zjazd 2 Pamietniczku ty moj kochany na dzisiejszych zajeciach nauczylem sie:
 2.Jak je naprawic
 3.Jak nie wstawiac plikow na git
 4.Oraz wlasnie zaczynam czytac o uprawnieniach i dostepach w linux.
+
+
+zmiana
