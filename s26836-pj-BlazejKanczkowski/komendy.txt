@@ -1,0 +1,37 @@
+	1.Uruchom terminal
+	2.Wyświetl zawartość aktualnego katalogu
+-ls
+	3.Sprawdź gdzie aktualnie się znajdujesz
+-pwd
+/home/PJWSTK/s26836
+	4.Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+-cd windows/desktop
+	5.Sprawdź gdzie jesteś
+-pwd
+/home/PJWSTK/s26836/windows/desktop
+	6.Wyświetl zawartość bieżącego katalogu.
+-ls
+	7.Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego
+-ls /home
+ladaml  lost+found  PJWSTK
+	8.Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej
+-(wlaczenie wirtualnej maszyny zeby miec katalog 'Obrazy')
+-cd desktop, pwd /home/blazej/desktop
+-cd ../pictures
+	9.Sprawdź gdzie jesteś
+-pwd
+/home/blazej/pictures
+	10.Zobacz do jakiego katalogu przejdziesz za pomocą ścieżk ././././././ 
+-cd ././././././
+-pwd
+/home/blazej/obrazy
+	11.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej
+-cd
+	12.Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz
+	zastanów się co się stało. Poszukaj w Internecie
+-cd /root
+bash: cd: /root: Permission denied (brak wystarczajacych uprawnien uzytkownika aby wykonac operacje /root)
+	13.Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1
+-wylacza tryb graficzny, pozostaje sam terminal
+	14.A teraz co się stanie po: Alt+F7
+-powrot do trybu z grafika
