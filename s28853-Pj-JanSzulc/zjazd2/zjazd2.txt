@@ -1,0 +1,167 @@
+zad 1
+s28853@szuflandia22:~$ mkdir katalog1
+s28853@szuflandia22:~$ chmod 700 katalog1
+s28853@szuflandia22:~$ chmod g+r katalog1
+s28853@szuflandia22:~$ ls -l
+razem 168
+drwxr----- 2 s28853 domain users   4096 10-24 12:20  katalog1
+-rwxr--r-- 1 s28853 domain users   1975 10-23 16:06 'petla 2.rtf'
+-rwxr--r-- 1 s28853 domain users   1041 10-23 16:05 'petle 2.cpp'
+drwxr-xr-x 2 s28853 domain users   4096 10-22 12:26 'pętle ppgr'
+drwxr-xr-x 3 s28853 domain users   4096 10-08 12:43 'pprg 1'
+drwxr-xr-x 3 s28853 domain users   4096 10-08 10:34  windows
+-rwxr--r-- 1 s28853 domain users      3 10-22 12:24 'zad 1 pętle.cpp'
+-rwxr--r-- 1 s28853 domain users      0 10-23 14:58 'zad 2'
+-rwxr--r-- 1 s28853 domain users   1041 10-23 16:04 'zadanie 2 petle.cpp'
+-rwxr--r-- 1 s28853 domain users 138869 10-23 16:02 'zadanie 2 petle.exe'
+s28853@szuflandia22:~/katalog1$ mkdir katalog2
+s28853@szuflandia22:~/katalog1$ chmod 505 katalog2
+s28853@szuflandia22:~/katalog1$ ls
+katalog2
+
+s28853@szuflandia22:~/katalog1$ ls
+katalog2  plik1.txt
+s28853@szuflandia22:~/katalog1$ chmod u+x plik1.txt
+s28853@szuflandia22:~/katalog1$ ls -l
+razem 4
+dr-x---r-x 2 s28853 domain users 4096 10-24 12:27 katalog2
+-rwxr--r-- 1 s28853 domain users    0 10-24 12:30 plik1.txt
+
+s28853@szuflandia22:~/katalog1$ mkdir katalog3
+s28853@szuflandia22:~/katalog1$ chmod 770 katalog3
+s28853@szuflandia22:~/katalog1$ ls -l
+razem 8
+dr-x---r-x 2 s28853 domain users 4096 10-24 12:27 katalog2
+drwxrwx--- 2 s28853 domain users 4096 10-24 17:20 katalog3
+-rwxr--r-- 1 s28853 domain users    0 10-24 12:30 plik1.txt
+s28853@szuflandia22:~/katalog1$ cd katalog3
+s28853@szuflandia22:~/katalog1/katalog3$ touch plik2
+s28853@szuflandia22:~/katalog1/katalog3$ chmod 303 plik2
+s28853@szuflandia22:~/katalog1/katalog3$ ls -l
+razem 0
+--wx----wx 1 s28853 domain users 0 10-24 17:22 plik2
+s28853@szuflandia22:~/katalog1/katalog3$
+
+-rw-r--r-- 1 s28853 domain users 0 10-24 17:25 plik3
+s28853@szuflandia22:~/katalog1/katalog3$ chmod 505 plik3
+s28853@szuflandia22:~/katalog1/katalog3$ ls -l
+razem 0
+--wx----wx 1 s28853 domain users 0 10-24 17:22 plik2
+-r-x---r-x 1 s28853 domain users 0 10-24 17:25 plik3
+s28853@szuflandia22:~/katalog1/katalog3$
+
+s28853@szuflandia22:~$ mc
+w MC trzeba wejść w plik/zmień uprawnienia i zaznaczyć x jakie się chcę uzyskać
+
+ZAD 2
+
+
+cd możemy wykonać w przypadkach kiedy mamy dostę uprawnienia dostępu do katalogu
+
+chmod możemy wykorzystać w przypadkach gdy potrzeba zmienić uprawnienia żeby dostać 
+się do pliku i mieć możliwość odczytywania, edytowania, zapisywania.
+
+Nie ponieważ mamy brak dostępu do katalogu nadrzędnego.
+
+cd - możemy wrócić korzystając z tego polecenia wracamy z drzewa katalogów
+
+
+s28853@szuflandia22:~/katalog1$ cd katalog3
+s28853@szuflandia22:~/katalog1/katalog3$ cd ..
+s28853@szuflandia22:~/katalog1$ chmod 000 katalog3
+s28853@szuflandia22:~/katalog1$ cd ..
+
+s28853@szuflandia22:~$ katalog1
+
+s28853@szuflandia22:~/katalog1$ cd ..
+s28853@szuflandia22:~$ chmod 000 katalog1
+s28853@szuflandia22:~$ cd katalog1
+-bash: cd: katalog1: Brak dostępu
+s28853@szuflandia22:~$ chmod 700 katalog1
+s28853@szuflandia22:~$ cd
+s28853@szuflandia22:~$
+s28853@szuflandia22:~$ cd katalog1
+
+s28853@szuflandia22:~/katalog1$ cd katalog3
+-bash: cd: katalog3: Brak dostępu
+s28853@szuflandia22:~/katalog1$ chmod 700 katalog3
+s28853@szuflandia22:~/katalog1$ pwd
+/home/PJWSTK/s28853/katalog1
+
+s28853@szuflandia22:~/katalog1$ cd katalog3
+s28853@szuflandia22:~/katalog1/katalog3$ pwd
+/home/PJWSTK/s28853/katalog1/katalog3
+s28853@szuflandia22:~/katalog1/katalog3$ cd ..
+s28853@szuflandia22:~/katalog1$ cd ..
+s28853@szuflandia22:~$ chmod 000 katalog1
+s28853@szuflandia22:~$ ls -l
+razem 172
+drwxrwx--- 2 s28853 domain users   4096 10-24 18:39  folderukos
+d--------- 4 s28853 domain users   4096 10-24 17:36  katalog1
+-rwxr--r-- 1 s28853 domain users   1975 10-23 16:06 'petla 2.rtf'
+-rwxr--r-- 1 s28853 domain users   1041 10-23 16:05 'petle 2.cpp'
+drwxr-xr-x 2 s28853 domain users   4096 10-22 12:26 'pętle ppgr'
+drwxr-xr-x 3 s28853 domain users   4096 10-08 12:43 'pprg 1'
+drwxr-xr-x 3 s28853 domain users   4096 10-08 10:34  windows
+-rwxr--r-- 1 s28853 domain users      3 10-22 12:24 'zad 1 pętle.cpp'
+-rwxr--r-- 1 s28853 domain users      0 10-23 14:58 'zad 2'
+-rwxr--r-- 1 s28853 domain users   1041 10-23 16:04 'zadanie 2 petle.cpp'
+-rwxr--r-- 1 s28853 domain users 138869 10-23 16:02 'zadanie 2 petle.exe'
+
+s28853@szuflandia22:~$ cd /home/PJWSTK/s28853/katalog1/katalog3
+-bash: cd: /home/PJWSTK/s28853/katalog1/katalog3: Brak dostępu
+s28853@szuflandia22:~$ cd katalog1
+-bash: cd: katalog1: Brak dostępu
+
+s28853@szuflandia22:~$ chmod 700 katalog1
+s28853@szuflandia22:~$ cd katalog1/katalog3
+s28853@szuflandia22:~/katalog1/katalog3$ cd -
+/home/PJWSTK/s28853
+s28853@szuflandia22:~$ s28853@szuflandia22:~$ 
+
+Zad 3
+
+
+echo komunikat > plik usuwa poprzedni komunikat napisany w  pliku, i nadpisuję nowy komunikat
+echo komunikat >> plik dodaje kolejny komunikat i nie likwiduje starego
+tail -f plik podczas otwarcia w innym oknie na bieżąco sprawdzał co jest wpisywane do pliku 
+
+
+s28853@szuflandia22:~$ ls -l
+razem 176
+drwxrwx--- 2 s28853 domain users   4096 10-24 18:39  folderukos
+drwx------ 4 s28853 domain users   4096 10-24 17:36  katalog1
+-rwxr--r-- 1 s28853 domain users   1975 10-23 16:06 'petla 2.rtf'
+-rwxr--r-- 1 s28853 domain users   1041 10-23 16:05 'petle 2.cpp'
+drwxr-xr-x 2 s28853 domain users   4096 10-22 12:26 'pętle ppgr'
+drwxr-xr-x 3 s28853 domain users   4096 10-08 12:43 'pprg 1'
+d--------x 2 s28853 domain users   4096 10-26 13:39  public_html
+drwxr-xr-x 3 s28853 domain users   4096 10-08 10:34  windows
+-rwxr--r-- 1 s28853 domain users      3 10-22 12:24 'zad 1 pętle.cpp'
+-rwxr--r-- 1 s28853 domain users      0 10-23 14:58 'zad 2'
+-rwxr--r-- 1 s28853 domain users   1041 10-23 16:04 'zadanie 2 petle.cpp'
+-rwxr--r-- 1 s28853 domain users 138869 10-23 16:02 'zadanie 2 petle.exe'
+s28853@szuflandia22:~$ cd folderukos
+s28853@szuflandia22:~/folderukos$ ls -l
+razem 8
+-rwxrwx--- 1 s28853 domain users 12 10-24 18:37 plik.txt
+-rw-r--r-- 1 s26836 domain users 12 10-24 18:39 text.txt
+s28853@szuflandia22:~/folderukos$
+
+
+s28853@szuflandia22:~/folderukos$ vim plik.txt
+
+witam witam
+
+osoby z którymi robiłem to s27424 s26836 ja s28853
+
+
+
+
+
+
+Zad 4
+
+do katalogu domowego chmod 001 s28853
+do katalogu public_html chomd 001 public_html
+do pliku stron.html chmod 004 strona.html
