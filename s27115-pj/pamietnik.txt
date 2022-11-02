@@ -1,0 +1,14 @@
+rrrr-mm-dd
+2022-10-08
+Mój drogi drogi pamiętniczku. obawiam się że padłem ofiarą strasznego i bezczelnego spisku bowiem udało mi się usunąć poprzedni gotowy pamiętnik i teraz muszę 
+napisać nowy.
+
+na pierwszych zajęciach dowiedziałem się kilku nowych rzeczy:
+-budowa systemu plików linuxa 
+-komenda pwd 
+-podstawowe informacje o uprawnieniach 
+-co to jest quota
+-ścierzki względne i bezwzględne 
+-tego żeby nie klikać Ctrl+Alt+F1 zanim nie dowiem się co robi Alt+F7
+-jak ukrywane są foldery w linuxie 
+-to że na linuksie wszystko jest plikiem (nawet folder) 

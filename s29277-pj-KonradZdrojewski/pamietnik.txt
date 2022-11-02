@@ -1,0 +1,7 @@
+09.10.2022
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczylem/lam sie:
+- Podstawowych polecen Linuxa (cd, pwd, ls, cat, ssh, nano, mkdir, touch, cp, rm, mv, echo)
+- Generowanie pary kluczy (jeden prywatny, drugi publiczny) 
+- Dodawanie do github klucza publicznego
+- Komend gitowych (add, init, clone, push, commit)
+
