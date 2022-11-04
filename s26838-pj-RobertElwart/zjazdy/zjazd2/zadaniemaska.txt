@@ -1,0 +1,25 @@
+Zadanie:
+= Przeczytać opis polecenia wewnętrznego umask i wypróbować jego działanie sprawdzając,
+a następnie zmieniając swoją maskę trybu pliku i tworząc za każdym razem nowe pliki (przy użyciu polecenia touch plik)
+
++ mkdir test
++ cd test
++ umask
+022 moja maska
+
+przed ustawieniem nowej maski stworzyłem plik1.txt
+z uprawnieniami -rw-r--r-- 1 s26838 domain users 0 11-04 12:13 plik1.txt
+
++ touch plik1.txt
++ umask 666
++ touch plik2.txt
++ ls -l
+---------- 1 s26838 domain users 0 11-04 12:34 plik2.txt
++ umask 000
++ touch plik3.txt
+-rw-rw-rw- 1 s26838 domain users 0 11-04 12:37 plik3.txt
+
+= Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana
++ negacja
+
+
