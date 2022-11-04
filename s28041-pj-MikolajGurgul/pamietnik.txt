@@ -1,0 +1,17 @@
+09.10.2022
+
+Moj pamietniczek z zajec ukos. Na pierwszych zajeciach poznalem oraz nauczylem sie:
+
+- przegladania uzytych juz wczesniej komend poprzez strzalki na klawiaturze
+- automatycznego dokanczania slowa/komendy/nazwy folderu poprzez klawisz tabulacji
+- automatycznego kopiowania tekstu poprzez zaznaczenie fragmentu kodu i wklejenie go srodkowym przyciskiem myszy/scroll
+- wykorzystywania pomocy poprzez komende man np. man ls
+- w manualu (man) opisywanie komendy z argumentami kwadratowymi sa opcjonalne i nie trzeba ich uzywac. 
+Natomiast argumenty w nawiasach okraglych lub bez, sa obowiazkowe i trzeba je podawac.
+- sciezki wzgledne oraz bezwzgledne. Roznica polega na tym, ze sciezka wzgledna rozpoczyna sie od katalogu w ktorym znajduje sie plik. 
+W terminalu wyglada to: ./test/tescik/100
+Natomiast sciezka bezwzgledna to sciezka od drzewa katalogow. W terminalu: /Desktop/Ukos/Katalog/ja
+- poruszanie sie po katalogach, oraz podstawowe komendy: cd -> zmiana katalogu, pwd -> wyswietlenie aktualnego katalogu, ls -> wyswietlenie zawartosci,
+mkdir -> stworzenie katalogu, rmdir -> usuniecie katalogu, touch -> stworzenie pliku, nano -> edycja oraz jezeli nie ma takiego pliku to rowniez stworzenie
+pliku, oraz wiele wiecej
+- klonowanie repozytoriow z gita, forkowanie istniejacego repozytorium, tworzenie pull requestow, commitowanie i pushowanie na githuba
