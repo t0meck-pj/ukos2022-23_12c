@@ -1,7 +1,0 @@
-1. mkdir ukos, cd ukos, mkdir katalog, cd katalog, mkdir katalog2, mkdir katalog 3, cd,mkdir klamka
-2.mkdir zajecia2.txt, mkdir zajecia2.log, mkdir inny.txt, mkdir dane.txt
-3. mkdir -p ukos/to/jest/dluga/nazwa
-4. cd to, cd jest, cd dluga, cd nazwa, mkdir dane.txt
-5. rmdir *.txt
-6. rmdir katalog/katalog2
-7. rm -r klamka

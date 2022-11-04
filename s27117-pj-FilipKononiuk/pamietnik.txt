@@ -1,7 +1,0 @@
-09.10.2022
-Moj drogi pamietniczku dzisiaj nauczylem sie:
--czym jest BASH
--poruszac sie swobodnie po terminalu
--korzystac z szuflandii
--tworzyć i kasować katalogi/pliki w linuxie poprzez terminal
-Jesli naucze sie czegos jeszcze wroce i poinformuje cie o tym!
