@@ -1,5 +1,0 @@
-9.10.2022
-Moj drogi pamietniczku, podczas dzisiejszego zjazdu nauczylem sie:
--dodawac klucz ssh do gita
--klonowac repozytorium z github przy pomocy ssh
-
