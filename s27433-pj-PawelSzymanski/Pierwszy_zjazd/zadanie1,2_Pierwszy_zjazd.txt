@@ -1,0 +1,93 @@
+
+Zadania 1.
+2. Wyświetl zawartość aktualnego katalogu.
+Polecenia:
+s27433@szuflandia22:[~]: ls
+ukos  windows
+3.Sprawdź gdzie aktualnie się znajdujesz.
+Polecenia:
+s27433@szuflandia22:[~]: pwd
+/home/PJWSTK/s27433
+4.Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+Polecenia:
+s27433@szuflandia22:[~]: cd windows/desktop/
+5.Sprawdź gdzie jesteś.
+Polecenia:
+s27433@szuflandia22:[~/windows/desktop]: pwd
+/home/PJWSTK/s27433/windows/desktop
+6.Wyświetl zawartość bieżącego katalogu.
+Polecenia:
+s27433@szuflandia22:[~/windows/desktop]: ls
+'$RECYCLE.BIN'                  cplus         Lightroom.lnk          repo0
+'Adobe Lightroom Classic.lnk'   desktop.ini  'Microsoft Teams.lnk'   UKOS
+10.Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+Polecenia:
+s27433@szuflandia22:[~/windows/desktop]: cd ././././././ (Przelicza przejścia pomiędzy katalogami)
+11.Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie.
+Polecenia:
+s27433@szuflandia22:[~/windows/desktop]: cd /root 
+Komentarz:
+-Żeby dostać się do folderu "root" należy uruchomić go jako administrator
+-bash: cd: /root: Brak dostępu
+13.Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1
+Komentarz:
+Zamiana na wersje tekstową
+
+14.A teraz co się stanie po: Alt+F7
+Komentarz:
+Zmiana na wersje graficzną
+Zadania 2.
+1. Korzystajac z komend cd oraz mkdir stworz nastepujace drzewo katalogow w swoim katalogu domowym(w dowolnym podkatalogu, albo bezposrednio w ~)
+
+ukos
+|\katalog
+|	|\katalog2
+|	 \katalog3
+ \klamka
+
+Polecenia:
+mkdir -p ukos/{katalog/{katalog2,katalog3},klamka/} 
+Komentarz:
+Ukosniki pozwalają na tworzenie kolejnych katalogow natomiast klamry na tworzą katalogow na wybranym katalogu
+
+2. W katalogu ukos/klamka stworz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt
+
+Polecenia:
+
+touch zajecia2.txt (stworzenie pliku) 
+touch zajecia2.log 
+touch inny.txt 
+touch nowy.txt 
+
+3. Za pomoca jednego polecenia mkdir stworz w katalogu ukos nastepujacy katalog: ukos/to/jest/dluga/nazwa
+
+Polecenia:
+
+ukos/to/jest/dluga/nazwa
+
+4. Nastepnie umiesc w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+
+Polecenia:
+
+cd ukos\ to\ jest\ dluga\ nazwa ->  ukos\ to\ jest\ dluga\ nazwa
+touch dane.txt 
+
+5. Usun z katalogu ukos/klamka wszystkie pliki z roszerzeniem txt
+
+Polecenia:
+
+rm *.txt -> usuniecie wszystkich plikow z rozszerzeniem .txt 
+
+6. Usun katalog ukos/katalog/katalog2
+
+Polecenia:
+
+rmdir  katalog2 -> usuniecie folderu 
+
+7. Usun cały katalog klamka za pomoca jednego polecenia
+
+Polecenia:
+
+rm -r klamka
+Komentarz:
+Parametr "r" pozwala na usunięcie całego katalogu
