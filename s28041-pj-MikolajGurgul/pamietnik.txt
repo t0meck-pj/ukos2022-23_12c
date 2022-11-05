@@ -15,3 +15,10 @@ Natomiast sciezka bezwzgledna to sciezka od drzewa katalogow. W terminalu: /Desk
 mkdir -> stworzenie katalogu, rmdir -> usuniecie katalogu, touch -> stworzenie pliku, nano -> edycja oraz jezeli nie ma takiego pliku to rowniez stworzenie
 pliku, oraz wiele wiecej
 - klonowanie repozytoriow z gita, forkowanie istniejacego repozytorium, tworzenie pull requestow, commitowanie i pushowanie na githuba
+
+22.10.2022
+
+- nadawanie uprawnien do plikow oraz jakie sa ich skutki, ktore uprawnienia musimy komus nadac, a ktore lepiej, zeby dany plik nie posiadal,
+abysmy nie byli stratni i nie otrzymali niepozadanych dzialan
+- komunikacje na zywo w pliku w terminalu
+- wyswietlenie strony domowej na stronie w przegladarce stworzonej w terminalu w swoim katalogu domowym
