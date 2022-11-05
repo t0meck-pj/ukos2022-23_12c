@@ -1,0 +1,15 @@
+Zadania:
+1. Wchodzę w VM>ubunu desktop>System tools>LXTerminal
+2. ls
+3. pwd
+4. cd ./windows/desktop
+5. pwd
+6. ls
+7. ls -l /home
+8. cd ./pictures
+9. pwd
+10. jestem w tym samym miejscu, katalogu
+11. cd /home
+12. odmowa dostępu, brak uprawnień
+13. wyświetla się ekran z wersją systemu Ubuntu 18.04.3 LTS ....
+14. wychodzę z widoku z (zadania 13) i wracam do widoku graficznego i terminala

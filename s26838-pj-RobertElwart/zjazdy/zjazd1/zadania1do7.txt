@@ -1,0 +1,17 @@
+Zadania od 1 - 7:
+1. mkdir ukos -> cd ukos/
+mkdir katalog -> cd katalog/
+mkdir katalog2 katalog3
+cd ..
+mkdir klamka
+2. cd klamka
+touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+cd ..
+3. mkdir -p ukos/to/jest/długa/nazwa
+4. vim ukos/to/jest/długa/nazwa/dane.txt
+5. cd klamka/
+   rm *.txt
+6. rmdir katalog/katalog2
+7. rm -r klamka
+
+
