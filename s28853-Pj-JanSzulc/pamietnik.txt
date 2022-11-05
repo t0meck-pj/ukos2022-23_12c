@@ -1,0 +1,8 @@
+16.10.2022
+Mój kochany pamiętniku
+-Nauczyłem się tworzyć usuwać i przemiesczć sie po katalogach
+-dowiedziałem sie ze / nie moze być uzyty w nazwach plów i katalogów
+-problem sprawia mi scieżki oraz cofanie sie na nich.
+-także problemem jest dla mnie git
+-nauczyłem się otwierać i zapisywać pliki tekstowe  w vim 
+-nauczyłem się podstaw Git

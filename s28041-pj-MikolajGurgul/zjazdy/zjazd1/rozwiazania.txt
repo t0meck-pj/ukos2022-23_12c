@@ -1,0 +1,61 @@
+1. Korzystajac z komend cd oraz mkdir stworz nastepujace drzewo katalogow w swoim katalogu domowym(w dowolnym podkatalogu, albo bezposrednio w ~)
+
+ukos
+|\katalog
+|	|\katalog2
+|	 \katalog3
+ \klamka
+
+Polecenia:
+
+cd ~ -> przejscie do katalogu domowego
+cd Desktop -> przejscie do pulpitu
+mkdir -p ukos/{katalog/{katalog2,katalog3},klamka/} -> utworzenie katalogu z parametrem pozwalajacy na tworzenie zagniezdzonych katalogow. Ukosnik pozwala na tworzenie kolejnych poziomow, natomiast klamry na tworzenie katalogow na wybranym poziomie
+
+2. W katalogu ukos/klamka stworz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt
+
+Polecenia:
+
+cd .. -> wyjscie z folderu katalog do folderu ukos
+cd klamka -> przejscie do folderu klamka
+touch zajecia2.txt -> stworzenie pliku zajecia2.txt
+touch zajecia2.log -> stworzenie pliku zajecia2.log
+touch inny.txt -> stworzenie pliku inny.txt
+touch nowy.txt -> stworzenie pliku nowy.txt
+
+3. Za pomoca jednego polecenia mkdir stworz w katalogu ukos nastepujacy katalog: ukos/to/jest/dluga/nazwa
+
+Polecenia:
+
+cd .. -> wyjscie z podfolderu klamka
+mkdir 'ukos to jest dluga nazwa' -> utworzenie katalogu ukos/to/jest/dluga/nazwa
+
+4. Nastepnie umiesc w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+
+Polecenia:
+
+cd ukos\ to\ jest\ dluga\ nazwa -> wejscie do folderu ukos\ to\ jest\ dluga\ nazwa
+touch dane.txt -> stworzenie pliku dane.txt
+
+5. Usun z katalogu ukos/klamka wszystkie pliki z roszerzeniem txt
+
+Polecenia:
+
+cd.. -> wychodzimy z podfolderu ukos\ to\ jest\ dluga\ nazwa do folderu ukos
+cd klamka -> przejscie do podfolderu klamka
+rm *.txt -> usuniecie wszystkich plikow z rozszerzeniem .txt (pozostaje tylko plik zajecia2.log)
+
+6. Usun katalog ukos/katalog/katalog2
+
+Polecenia:
+
+cd .. -> wyjscie z podfolderu klamka do ukos
+cd katalog -> przejscie do podfolderu katalog
+rmdir  katalog2 -> usuniecie bez parametru pustego folderu katalog2 (pozostaje katalog3)
+
+7. Usun ca³y katalog klamka za pomoca jednego polecenia
+
+Polecenia:
+
+cd .. -> wyjscie z podfolderu katalog do folderu ukos
+rm -r klamka -> usuniecie z parametrem folderu klamka w ktorym znajdowal sie plik zajecia2.log. Jest opcja z parametrem -rf do plikow i katalogow zabezpieczonych, które potrzebuja wymuszenia do usuniecia. Jednak uzycie tego parametru bez zastanowienia moze spowodowac spore uszkodzenia komputera badz utrate waznych danych.
