@@ -7,7 +7,10 @@ TRYB MC: Udało się również utworzyć folder i plik.txt w nieswoim folderze z
 -Nie mamy uprawnien dl cd, wiec cd test oraz cd /home/PJWSTK/s27117/test jak i cd /home/PJWSTK/s27117/test/test3/ nie zadziałało.
 -polecenie chmod nie zadziałało. Można go użyć natomiast przy użyciu ścieżki bezwzględnej w tym przypadku chmod a+rwx /home/PJWSTK/s27117/test/test3
 -cd - nie zadziałało z powodu braku uprawnień.
-3. Stworzyłem plik.txt o nazwie zadgrupowe.txt, wpisałem do niego "skrypt" echo dotyczący wyświetlenia komunikatu, następnie ta treść wpisała się do pliku, poleceniem cat wszedłem do pliku, następnie przyznałem do pliku wszystkie uprawnienia żeby grupowicze mogli zobaczyć. Po dodaniu drugiego znaku ">" tekst wyświetla się 2 razy.
+3. Stworzyłem plik.txt o nazwie zadgrupowe.txt, wpisałem do niego "skrypt" echo dotyczący wyświetlenia komunikatu, następnie ta treść wpisała się do pliku, poleceniem cat wszedłem do pliku, następnie przyznałem do pliku wszystkie uprawnienia żeby grupowicze mogli zobaczyć. Po dodaniu drugiego znaku ">" tekst wyświetla się 2 razy
+Wykonywane wraz z:
+Kacper Ruta s28866
+Lavdanskyi Dmytro s29103
 4.Minimalne uprawnienia żeby strona się pokazała
 dla strona.html r-----r--
 dla katalogu public,.html: --------x
