@@ -1,0 +1,11 @@
+Zjazd 1/
+Dzisiaj na wykładzie nauczyłem się:
+-jak poruszać się w środowisku unixowym
+-jak połączyć virtualboxa z istniejącym obrazem
+-jak obsługiwać gita
+Zjazd 2/
+Dowiedziałem się więcej w kwestii uprawnień
+Co robi polecenie chmod
+Jak się nim posługiwać
+co robi > oraz >> w zakresie wstawiania tekstu
+komenda tail -f
