@@ -1,4 +1,6 @@
-		Zadania Z Midnight Commanderem nie dało się zrobić, brak na szuflandi
+		Uprawnienia w mc zmienia się poprzez klikanie w odpowiednie kryteria.
+		Drzewko katalogów można robić graficznie
+
 *Zad1*
 
 				{	mkdir katalogN

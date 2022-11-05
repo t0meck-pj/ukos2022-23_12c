@@ -1,3 +1,4 @@
+//tworzymy drzewko katalogów
 mkdir ukos
 cd ukos
 mkdir katalog
@@ -6,13 +7,13 @@ cd katalog
 mkdir katalog2
 mkdir katalog3
 cd ../klamka
-touch zajecia2.txt
+touch zajecia2.txt 	//tworzymi pliki
 touch zajecia2.log
 touch inny.txt
 touch nowy.txt
-mkdir ../../ukos/to/jest/dluga/nazwa -p
-cd ../../ukos/to/jest/dluga/nazwa
+mkdir ../../ukos/to/jest/dluga/nazwa -p		//tworzymy wiele folderów na raz
+cd ../../ukos/to/jest/dluga/nazwa	
 touch dane.txt
 rm ../../../../klamka/*.txt
 rmdir ../../../../katalog/katalog2
-rm ../../../../ klamka -r
+rm ../../../../ klamka -r	//katalog usuwamy z -r

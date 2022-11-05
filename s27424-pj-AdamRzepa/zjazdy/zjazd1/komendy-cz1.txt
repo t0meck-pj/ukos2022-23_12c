@@ -1,7 +1,7 @@
 Zadania
-ls
-pwd
-cd ./Desktopc
+ls  //sprawdzam zawartosc katalogu
+pwd //sprawdzam sciezke 
+cd ./Desktopc //wchodzę do folderu Desktopc za pomocą sciezki wzglednej
 pwd
 ls
 ls ../../ubuntu
