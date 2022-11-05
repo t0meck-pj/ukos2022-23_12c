@@ -1,0 +1,69 @@
+s26964@szuflandia22:~/windows/desktop/ukos$ mkdir katalog
+s26964@szuflandia22:~/windows/desktop/ukos$ mkdir klamka
+s26964@szuflandia22:~/windows/desktop/ukos$ cd katalog
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ mkdir katalog2
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ mkdir katalog3
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos$ cd klamka
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ touch zajęcia2.txt
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ touch zajęcia2.log
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ toucz inny.txt
+-bash: toucz: nie znaleziono polecenia
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ touch inny.txt
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ touch nowy.txt
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ tree
+.
+├── inny.txt
+├── nowy.txt
+├── zajęcia2.log
+└── zajęcia2.txt
+
+0 directories, 4 files
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos$ mkdir ukos/to/jest/dluga/nazwa
+mkdir: nie można utworzyć katalogu „ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/desktop/ukos$ mkdir "ukos/to/jest/dluga/nazwa"
+mkdir: nie można utworzyć katalogu „ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/desktop/ukos$ mkdir "ukos/to/jest/dluga/nazwa"
+mkdir: nie można utworzyć katalogu „ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/desktop/ukos$ mkdir -p ukos/to/jest/dluga/nazwa
+s26964@szuflandia22:~/windows/desktop/ukos$ ls
+katalog  klamka  ukos
+s26964@szuflandia22:~/windows/desktop/ukos$ cd ukos/to/jest/dluga/nazwa
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ toucz dane.txt
+-bash: toucz: nie znaleziono polecenia
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ touch dane.txt
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ cd ......
+-bash: cd: ......: Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ cd.
+-bash: cd.: nie znaleziono polecenia
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ cd..
+-bash: cd..: nie znaleziono polecenia
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos/ukos/to$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos/ukos$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos$ cd klamka
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ rm *.txt
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ ls
+zajęcia2.log
+s26964@szuflandia22:~/windows/desktop/ukos/klamka$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos$ rmdir ukos/katalog/katalog2
+rmdir: nie udało się usunąć 'ukos/katalog/katalog2': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/desktop/ukos$ cd katalog
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ rm katalog2
+rm: nie można usunąć 'katalog2': Jest katalogiem
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ rm -p katalog2
+rm: błędna opcja -- 'p'
+Napisz „rm --help” dla uzyskania informacji.
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ rm -r katalog2
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ ls
+katalog3
+s26964@szuflandia22:~/windows/desktop/ukos/katalog$ cd ..
+s26964@szuflandia22:~/windows/desktop/ukos$ cd ..
+s26964@szuflandia22:~/windows/desktop$ cd ukos
+s26964@szuflandia22:~/windows/desktop/ukos$ rm -r klamka
+s26964@szuflandia22:~/windows/desktop/ukos$ ls
+katalog  ukos
+s26964@szuflandia22:~/windows/desktop/ukos$

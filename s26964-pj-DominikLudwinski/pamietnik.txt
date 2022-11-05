@@ -1,0 +1,18 @@
+Mój drogi pamiętniku, na zajęciach nauczyłem się:
+--------------------------------------------------------------------------------------------
+09.10.2022r
+-nauczyłem się obsługi github
+-nauczyłem się podstawowych komend 
+-nauczyłem się tworzenia katalogów i plików tekstowych
+-nauczyłem się tworzenia klucza ssh do githuba
+-nauczyłem się commit, pull i push
+-miałem problem z cd/root, myślę, że jak zainstaluje obraz linuxa to będę mógł to sprawdzić
+-nie działała mi komenda alt+f7 i ctrl+alt+f1 ale to problem taki jak wyżej
+--------------------------------------------------------------------------------------------
+23.10.2022r
+-nauczyłem się jak kolejnych komend, które pomogą mi w obsłudze terminala
+-zainstalowałem obraz wirtualnej maszyny(linux)
+-miałem problem z materiałem dlatego przyłożyłem się do tego w domu
+-zadanie sprawiły mi trochę problemu przez co zajęły mi dużo czasu
+-podczas robienia zadań, przećwiczyłem sobie materiał i go zrozumiałem
+-nie zrozumiałem ostatniego zadania(umask), i chciałbym żeby zostało to wytłumaczone na ćwiczeniach

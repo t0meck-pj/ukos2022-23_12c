@@ -1,0 +1,256 @@
+****************************Zadanie1*************************************
+Nie ma możliwości zrobienia z MC ponieważ nie ma tego na szuflandi
+
+s26964@szuflandia22:~$ ls
+windows
+s26964@szuflandia22:~$ cd windows/
+s26964@szuflandia22:~/windows$ ls
+desktop
+s26964@szuflandia22:~/windows$ mkdir Katalog_1
+s26964@szuflandia22:~/windows$ ls
+desktop  Katalog_1
+s26964@szuflandia22:~/windows$ cd Katalog_1/
+s26964@szuflandia22:~/windows/Katalog_1$ ls
+s26964@szuflandia22:~/windows/Katalog_1$ mkdir zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ mkdir kolo
+s26964@szuflandia22:~/windows/Katalog_1$ mkdir zadania
+s26964@szuflandia22:~/windows/Katalog_1$ cd zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ touch zjazd1.txt
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ touch zjazd2.txt
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd kolo
+s26964@szuflandia22:~/windows/Katalog_1/kolo$ touch kolo1.txt
+s26964@szuflandia22:~/windows/Katalog_1/kolo$ touch kolo2.txt
+s26964@szuflandia22:~/windows/Katalog_1/kolo$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd zadania/
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ touch zadanie1.txt
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ chmod g
+chmod: brakujący argument po „g”
+Napisz „chmod --help” dla uzyskania informacji.
+s26964@szuflandia22:~/windows/Katalog_1$ chmod g zjazd
+chmod: błędne uprawnienia „g”
+Napisz „chmod --help” dla uzyskania informacji.
+s26964@szuflandia22:~/windows/Katalog_1$ chmod g+x zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ chmod g zjazd
+chmod: błędne uprawnienia „g”
+Napisz „chmod --help” dla uzyskania informacji.
+s26964@szuflandia22:~/windows/Katalog_1$ ls -l
+razem 12
+drwxr-xr-x 2 s26964 domain users 4096 10-27 19:01 kolo
+drwxr-xr-x 2 s26964 domain users 4096 10-27 19:01 zadania
+drwxr-xr-x 2 s26964 domain users 4096 10-27 19:00 zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ ls
+kolo  zadania  zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ chmod 222 kolo
+s26964@szuflandia22:~/windows/Katalog_1$ ls -l
+razem 12
+d-w--w--w- 2 s26964 domain users 4096 10-27 19:01 kolo
+drwxr-xr-x 2 s26964 domain users 4096 10-27 19:01 zadania
+drwxr-xr-x 2 s26964 domain users 4096 10-27 19:00 zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ chmod 123 zadania
+s26964@szuflandia22:~/windows/Katalog_1$ chmod 321 zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ ls -l
+razem 12
+d-w--w--w- 2 s26964 domain users 4096 10-27 19:01 kolo
+d--x-w--wx 2 s26964 domain users 4096 10-27 19:01 zadania
+d-wx-w---x 2 s26964 domain users 4096 10-27 19:00 zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ cd kolo
+-bash: cd: kolo: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1$ cd zadania
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ cd ../kolo
+-bash: cd: ../kolo: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ cd ~/windows/Katalog_1/kolo
+-bash: cd: /home/PJWSTK/s26964/windows/Katalog_1/kolo: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ cd ../zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ../kolo
+-bash: cd: ../kolo: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ~/windows/Katalog_1/kolo
+-bash: cd: /home/PJWSTK/s26964/windows/Katalog_1/kolo: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd /
+s26964@szuflandia22:/$ ls
+bin   dev  home        initrd.img.old  lib32  libx32      media  opt   root  sbin  sys  usr  vmlinuz
+boot  etc  initrd.img  lib             lib64  lost+found  mnt    proc  run   srv   tmp  var  vmlinuz.old
+s26964@szuflandia22:/$ cd usr
+s26964@szuflandia22:/usr$ ls
+bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+s26964@szuflandia22:/usr$ cd ..
+s26964@szuflandia22:/$ cd root
+-bash: cd: root: Brak dostępu
+s26964@szuflandia22:/$ cd home
+s26964@szuflandia22:/home$ ls
+ladaml  lost+found  PJWSTK
+s26964@szuflandia22:/home$ cd PJWSTK/
+s26964@szuflandia22:/home/PJWSTK$ ls
+s26964@szuflandia22:/home/PJWSTK$ cd s27280
+s26964@szuflandia22:/home/PJWSTK/s27280$ ls
+'!'   public_html   ukos   windows
+s26964@szuflandia22:/home/PJWSTK/s27280$ cd windows
+s26964@szuflandia22:/home/PJWSTK/s27280/windows$ ls
+desktop
+s26964@szuflandia22:/home/PJWSTK/s27280/windows$ cd desktop/
+s26964@szuflandia22:/home/PJWSTK/s27280/windows/desktop$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280/windows/desktop$ ls -l
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280/windows/desktop$ mkdir Siemka
+mkdir: nie można utworzyć katalogu „Siemka”: Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280/windows/desktop$ cd ..
+s26964@szuflandia22:/home/PJWSTK/s27280/windows$ ls
+desktop
+s26964@szuflandia22:/home/PJWSTK/s27280/windows$ touch kukułcze_jajko
+touch: nie można dotknąć 'kukułcze_jajko': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280/windows$ mkdir kukułcze_jajo
+mkdir: nie można utworzyć katalogu „kukułcze_jajo”: Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280/windows$ cd ..
+s26964@szuflandia22:/home/PJWSTK/s27280$ ls
+'!'   public_html   ukos   windows
+s26964@szuflandia22:/home/PJWSTK/s27280$ touch kukułcze_jajko
+touch: nie można dotknąć 'kukułcze_jajko': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280$ mkdir kukułcze_jajko
+mkdir: nie można utworzyć katalogu „kukułcze_jajko”: Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280$ rmdir ukos
+rmdir: nie udało się usunąć 'ukos': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280$ cd ukos
+-bash: cd: ukos: Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280$ rmdir windowns
+rmdir: nie udało się usunąć 'windowns': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:/home/PJWSTK/s27280$ rmdir windows/
+rmdir: nie udało się usunąć 'windows/': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280$ cd !
+-bash: cd: !: Nie jest katalogiem
+s26964@szuflandia22:/home/PJWSTK/s27280$ touch !
+touch: nie można dotknąć '!': Brak dostępu
+s26964@szuflandia22:/home/PJWSTK/s27280$ rm !
+rm: usunąć zabezpieczony przed zapisem plik zwykły '!'? n
+s26964@szuflandia22:/home/PJWSTK/s27280$ ls
+'!'   public_html   ukos   windows
+s26964@szuflandia22:/home/PJWSTK/s27280$ cat !
+
+Zauważyłem, że nie można się przemieszczać między katalogami jeżeli nie mamy uprawnień. W żadnen sposób nie udało przejść mi się do katalogu do którego nie mam dostepu
+W katalogu domowym kolegi mogłem poruszać się do pewnego momentu(Do wejścia do pulpitu). Nie mogłem utworzyć pliku ani katalogu. Wyjątkiem był plik '!'. Który moglem obejrzeć i usunąć.
+
+****************************Zadanie2*************************************
+s26964@szuflandia22:~/windows/Katalog_1$ ls
+kolo  zadania  zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ cd kolo
+s26964@szuflandia22:~/windows/Katalog_1/kolo$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/kolo$ ls -a
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/kolo$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd zadania
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd zadania
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 0 kolo
+chmod: nie ma dostępu do 'kolo': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmodz 000 kolo
+-bash: chmodz: nie znaleziono polecenia
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 kolo
+chmod: nie ma dostępu do 'kolo': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 ../kolo
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmodz 000../zadania
+-bash: chmodz: nie znaleziono polecenia
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 ../zadania
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 ../zjazd
+chmod: nie ma dostępu do '../zjazd': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 zjazd
+chmod: nie ma dostępu do 'zjazd': Brak dostępus26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 ../../Katalog_1
+chmod: nie ma dostępu do '../../Katalog_1': Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 /../Katalog_1
+chmod: nie ma dostępu do '/../Katalog_1': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ chmod 000 ../../Katalog_1
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$
+s26964@szuflandia22:~/windows/Katalog_1/zadania$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd zadania
+-bash: cd: zadania: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1$ cd kolo
+-bash: cd: kolo: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1$ cd zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ chmod 000 zjazd
+chmod: nie ma dostępu do 'zjazd': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ chmod 000 ../zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ..
+s26964@szuflandia22:~/windows/Katalog_1$ cd zjazd
+-bash: cd: zjazd: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1$ chmod 321 zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ cd ..
+s26964@szuflandia22:~/windows$ chmod 000 katalog_1
+chmod: nie ma dostępu do 'katalog_1': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows$ chmod 000 Katalog_1
+s26964@szuflandia22:~/windows$ cd Katalog_1/zjazd
+-bash: cd: Katalog_1/zjazd: Brak dostępu
+s26964@szuflandia22:~/windows$ chmod 555 Katalog_1/zjazd
+chmod: nie ma dostępu do 'Katalog_1/zjazd': Brak dostępu
+s26964@szuflandia22:~/windows$ cd Katalog_1/
+-bash: cd: Katalog_1/: Brak dostępu
+s26964@szuflandia22:~/windows$ chmod 555 Katalog_1/
+s26964@szuflandia22:~/windows$ cd katalog
+-bash: cd: katalog: Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows$ cd Katalog_1/
+s26964@szuflandia22:~/windows/Katalog_1$ chmod 555 zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ cd ..
+s26964@szuflandia22:~/windows$ chmod 000 Katalog_1/
+s26964@szuflandia22:~/windows$ cd Katalog_1/zjazd
+-bash: cd: Katalog_1/zjazd: Brak dostępu
+s26964@szuflandia22:~/windows$ chmod Katal
+chmod: brakujący argument po „Katal”
+Napisz „chmod --help” dla uzyskania informacji.
+s26964@szuflandia22:~/windows$ cd Katalog_1/
+-bash: cd: Katalog_1/: Brak dostępu
+s26964@szuflandia22:~/windows$ cd zjazd
+-bash: cd: zjazd: Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows$ chmod 555 Katalog_1/
+s26964@szuflandia22:~/windows$ cd Katalog_1/
+s26964@szuflandia22:~/windows/Katalog_1$ ls
+kolo  zadania  zjazd
+s26964@szuflandia22:~/windows/Katalog_1$ cd zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd -
+/home/PJWSTK/s26964/windows/Katalog_1
+s26964@szuflandia22:~/windows/Katalog_1$ cd zjazd
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ chmod 000 ../Katalog_1
+chmod: nie ma dostępu do '../Katalog_1': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ chmod 000 Katalog_1
+chmod: nie ma dostępu do 'Katalog_1': Nie ma takiego pliku ani katalogu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ chmod 000 ../../Katalog_1
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd -
+-bash: cd: /home/PJWSTK/s26964/windows/Katalog_1: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd -
+-bash: cd: /home/PJWSTK/s26964/windows/Katalog_1: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd - -
+-bash: cd: za dużo argumentów
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ../..
+-bash: cd: ../..: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ../../
+-bash: cd: ../../: Brak dostępu
+s26964@szuflandia22:~/windows/Katalog_1/zjazd$ cd ../../../
+-bash: cd: ../../../: Brak dostępu
+
+cd mozemy użyć wtedy kiedy mamy dostęp do nadrzędnego folderu
+nie mozemy przeskoczyć do ABC/XYZ jezeli nie mamy dostępu do ABC
+chmod możemy używać wtedy kiedy mamy jesteśmy w folderze nadrzędnym lub w podrzędnym ale mamy dostęp do nadrzędnego
+cd -  nie możemy użyć poniewaz nie mamy dostępu
+
+****************************Zadanie3*************************************
+Zadanie robię z Mateusz Andrzejak s27280
+
+Uprawnienia które musi mieć katalog domowy to read
+Uprawnienia które musi mieć katalog kolegi to read
+Uprawnienia które musi mieć plik to read,write,execute
+tail -f sprawdza co jest wpisywane do pliku na bierząco
+> zmienia zawartość pliku na to co wpisujemy
+>> dopisuje do pliku zawartość
+
+
+****************************Zadanie4*************************************
+Uprawnienia minimalne dla katalogu domowego to read dla other
+Uprawnienia minimalne dla katalogu public_html to uprawnienie do wejścia(x)
+Brak możliwości sprawdzenia tego z domu za pomocą szuflandi
