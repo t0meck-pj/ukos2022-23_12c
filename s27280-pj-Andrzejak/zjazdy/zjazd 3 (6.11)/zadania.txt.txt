@@ -1,0 +1,12 @@
+1:
+	A:
+	przy uzyciu programu ps wyswietlilem procesy, wykonujac program ps z atrybutem -a dostalem rowniez liste uzytkownikow odpowiedzialnych za proces
+	gdy wykonalem program z atrybutem x pokazaly mi sie wszystkie procesy w tym te systemowe. uzywajac ps axu dostalem pelna liste procesow, uzytkownikow, pid, oraz warstwe w ktorej dane procesy sa wykonywane
+	znak zapytania jest podany w kolumnie która odpowiada za podanie danej warstwy systemowej w ktorej proces jest wykonywany
+	
+	B:
+	do wyswietlenia wszystkich procesow bash musialem polaczyc kilka komend, ps axu | grep bash | grep -v grep
+	do pokazania procesow uzytkownika root potrzebowalem uzyc ps axu | grep root
+
+2:
+	
