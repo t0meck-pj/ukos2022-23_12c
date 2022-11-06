@@ -72,3 +72,37 @@ katalog2 katalog3
 
 zad 2 w katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log inny.txt nowy.txt
 
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ cd klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ pwd
+/home/ubuntu/ukos/klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+inny.txt nowy.txt zajęcia2.log zajęcia2.txt
+
+zad 3 Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog;
+ukos/to/jest/dluga/nazwa
+
+ubuntu@bss-ubu1804:~/ukos$ mkdir -p ukos/to/jest/dluga/nazwa
+
+zad 4 następnie w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+ubuntu@bss-ubu1804:~/ukos$ touch ukos/to/jest/dluga/nazwa/dane.txt
+
+zad 5 usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
+
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+zajęcia2.log
+
+zad 6 usuń katalog ukos/katalog/katalog2
+
+ubuntu@bss-ubu1804:~/ukos$ rm -dir ./katalog/katalog2
+rm: remove directory './katalog/katalog2'? Y
+
+zad 7 Usuń katalog klamka za pomocą jednego polecenia
+
+ubuntu@bss-ubu1804:~/ukos$ rm -dir klamka
+rm: descend into directory 'klamka'? y
+rm: remove regular empty file 'klamka/zajęcia2.log'? y
+rm: remove directory 'klamka'? y
+
