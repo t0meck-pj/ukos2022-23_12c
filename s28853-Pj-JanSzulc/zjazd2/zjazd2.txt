@@ -1,4 +1,7 @@
-zad 1
+zad 1  utworzyć w katalogu niedużą strukture katalogów
+
+katalogi i uprawnienia jakie nadawałem
+
 s28853@szuflandia22:~$ mkdir katalog1
 s28853@szuflandia22:~$ chmod 700 katalog1
 s28853@szuflandia22:~$ chmod g+r katalog1
@@ -50,11 +53,26 @@ razem 0
 -r-x---r-x 1 s28853 domain users 0 10-24 17:25 plik3
 s28853@szuflandia22:~/katalog1/katalog3$
 
+midnight commander
+
 s28853@szuflandia22:~$ mc
 w MC trzeba wejść w plik/zmień uprawnienia i zaznaczyć x jakie się chcę uzyskać
 
-ZAD 2
+ZAD 2 w utworzonej strukturze katalogw na swoim koncie podkatalogów 
+przeprowadź eksperymenty
+usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
 
+usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
+
+W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+
+W jakich przypadkach możemy wykonać polecenie chmod ? 
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+
+Czy możemy także wrócić korzystając z polecnia cd - ?
+
+odpowiedzi
 
 cd możemy wykonać w przypadkach kiedy mamy dostę uprawnienia dostępu do katalogu
 
@@ -65,6 +83,7 @@ Nie ponieważ mamy brak dostępu do katalogu nadrzędnego.
 
 cd - możemy wrócić korzystając z tego polecenia wracamy z drzewa katalogów
 
+moje komendy do powyrzszych odpowiedzi
 
 s28853@szuflandia22:~/katalog1$ cd katalog3
 s28853@szuflandia22:~/katalog1/katalog3$ cd ..
@@ -119,7 +138,9 @@ s28853@szuflandia22:~/katalog1/katalog3$ cd -
 /home/PJWSTK/s28853
 s28853@szuflandia22:~$ s28853@szuflandia22:~$ 
 
-Zad 3
+Zad 3 W zespołach 2- lub 3-osobowych (w opisie zadania na githubie proszę umieścić login osób z zespołu) wypróbować możliwość komunikacji przez współdzielony plik
+: na jednym z kont w zespole utworzyć pusty plik i przydzielić odpowiednie uprawnienia dostępu (do pliku i do katalogu domowego). 
+Wpisywać i odczytywać komunikaty przy użyciu poleceń:
 
 
 echo komunikat > plik usuwa poprzedni komunikat napisany w  pliku, i nadpisuję nowy komunikat
@@ -160,8 +181,63 @@ osoby z którymi robiłem to s27424 s26836 ja s28853
 
 
 
-Zad 4
+Zad 4 naleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE
+ tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). 
+Umieścić w nim plik o nazwie strona.html 
 
 do katalogu domowego chmod 001 s28853
 do katalogu public_html chomd 001 public_html
 do pliku stron.html chmod 004 strona.html
+
+zad umask 
+
+ubuntu@bss-ubu1804:~$ umask
+0002
+ubuntu@bss-ubu1804:~$ touch plik1.
+ubuntu@bss-ubu1804:~$ ls -l
+total 48
+drwxr-xr-x  2 ubuntu ubuntu 4096 Nov  2 11:02 Desktop
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Documents
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Downloads
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Music
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Pictures
+-rw-rw-r--  1 ubuntu ubuntu    0 Nov  6 16:21 plik1.
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Public
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 16 14:09 s28853-Pj-JanSzulc
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Templates
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 17 18:10 test1
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 14 21:38 ukos
+drwxrwxr-x 12 ubuntu ubuntu 4096 Nov  2 11:48 ukos2022-23_12c
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Videos
+
+zmiana maski W opisie bash-a (man) przeczytać opis polecenia wewnętrznego umask i wypróbować jego działanie sprawdzając, 
+a następnie zmieniając swoją maskę trybu pliku i tworząc za każdym razem nowe pliki
+
+ubuntu@bss-ubu1804:~$ umask 0022
+ubuntu@bss-ubu1804:~$ umask
+0022
+ubuntu@bss-ubu1804:~$ touch plik2
+ubuntu@bss-ubu1804:~$ ls -l
+total 48
+drwxr-xr-x  2 ubuntu ubuntu 4096 Nov  2 11:02 Desktop
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Documents
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Downloads
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Music
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Pictures
+
+zmiana uprawnien w pliku plik2
+
+-rw-rw-r--  1 ubuntu ubuntu    0 Nov  6 16:21 plik1.
+-rw-r--r--  1 ubuntu ubuntu    0 Nov  6 16:22 plik2
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Public
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 16 14:09 s28853-Pj-JanSzulc
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Templates
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 17 18:10 test1
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 14 21:38 ukos
+drwxrwxr-x 12 ubuntu ubuntu 4096 Nov  2 11:48 ukos2022-23_12c
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Videos
+ubuntu@bss-ubu1804:~$ umask 0002
+
+Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
+
+jest wykonywana operacja and not

@@ -6,7 +6,6 @@ Mój kochany pamiętniku
 -także problemem jest dla mnie git
 -nauczyłem się otwierać i zapisywać pliki tekstowe  w vim 
 -nauczyłem się podstaw Git
-<<<<<<< HEAD
 02.11.2022
 -Nauczyłem się zmieniać uprawnienia za pomocą chmod
 -Nauczyłem się zmieniać dziedzićzenie uprawnien przez pliki za pomocą umask
@@ -15,5 +14,4 @@ Mój kochany pamiętniku
 -dowiedziałem się trochę o poruszanu w szuflandi
 -nauczyłem się przesyłania zawartości tekstowej do pliku za pomocą >> i >
 
-=======
->>>>>>> 787466b1adc67c417e261607271f6c3833c9d0d7
+
