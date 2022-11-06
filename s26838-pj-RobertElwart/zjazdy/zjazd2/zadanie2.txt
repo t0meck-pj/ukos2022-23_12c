@@ -1,0 +1,35 @@
+Zadanie 2:
+W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperymenty:
+
+= usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+
+	podkatalog1
+	|
+	\
+	 pk1
+	   |
+	    \
+	     sekret  drwxr-xr-x 2 s26838 domain users 4096 11-02 16:59 sekret
+
++ chmod u-r,u-w sekret
++ ls -l
+d---r--r-- 2 s26838 domain users 4096 11-02 16:59 sekret
++ chmod g-r,a-r sekret
++ ls -l
+d--------- 2 s26838 domain users 4096 11-02 16:59 sekret
++ cd sekret
+-bash: cd: sekret/: Brak dostępu
+
++ chmod u-r,u-w,u-x pk2 
++ ls -l
+d---r-xr-x 3 s26838 domain users 4096 11-02 16:59 pk2
++ chmod g-r,g-x pk2
++ chmod a-r,a-x pk2
++ ls -l
+d--------- 3 s26838 domain users 4096 11-02 16:59 pk2
+-bash: cd: pk2/: Brak dostępu
+cd możemy użyć tylko wtedy kiedy jesteśmy w danym folderze, który modyfikujemy
+kiedy mamy uprawnienie do zapisu/zmiany zawartości pliku/katalogu
+tak
+tak
+

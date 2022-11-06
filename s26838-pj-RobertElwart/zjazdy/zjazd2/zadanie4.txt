@@ -1,0 +1,28 @@
+Zadanie 4:
+
+= Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). 
+Umieścić w nim plik o nazwie strona.html o następującej zawartości:
+<HTML>
+
+<BODY>
+
+<H1>To jest moja strona domowa</H1>
+
+</BODY>
+
+</HTML>
+
++ mkdir public_html
++ cd public_html
++ ls -l
+razem 0
+s26838@szuflandia22:~/public_html$ touch strona.html
+s26838@szuflandia22:~/public_html$ vim strona.html 
+
+++ minimalne uprawnienia dla strona_html
+a+r tylko
+++ minimalne uprawnienia dla public_html
+a+x
+++ minimalne uprawnienia dla katalogu domowego
+chmod -w- s26838
+u rwx - - - - w -

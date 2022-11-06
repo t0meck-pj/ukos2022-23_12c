@@ -1,6 +1,6 @@
 rrrr-mm-dd
 2022-10-08
-Mój drogi drogi pamiętniczku. obawiam się że padłem ofiarą strasznego i bezczelnego spisku bowiem udało mi się usunąć poprzedni gotowy pamiętnik i teraz muszę 
+Mój drogi pamiętniczku obawiam się że padłem ofiarą strasznego i bezczelnego spisku bowiem udało mi się usunąć poprzedni gotowy pamiętnik i teraz muszę 
 napisać nowy.
 
 na pierwszych zajęciach dowiedziałem się kilku nowych rzeczy:
@@ -12,3 +12,33 @@ na pierwszych zajęciach dowiedziałem się kilku nowych rzeczy:
 -tego żeby nie klikać Ctrl+Alt+F1 zanim nie dowiem się co robi Alt+F7
 -jak ukrywane są foldery w linuxie 
 -to że na linuksie wszystko jest plikiem (nawet folder) 
+
+rrrr-mm-dd
+2022-10-22
+Mój drogi pamiętnikczu udało mi się rozwiązać straszny i bezczelny spisek związany z kontami na githubie.
+Mam już teraz wszystko założone na uczelniany mail z poprawną nazwą oraz jestem również poprawie dodany do classroma z podstaw programowania.
+Muszę rozwiązać tylko problem z uprawnieniami folderu w którym trzymam sklonowane gity bo coś jest nie ten teges.
+
+na drugich zajęciach dowiedziałem się kilku nowych rzeczy:
+-jak używać chmod 
+-jak działają uprawnienia 
+-czym różnią się w przypadku windowsa prawa od uprawnień
+	Literatura Windowsowa rozróżnia te 2 terminy następująco:
+		Prawo do systemu - np. prawo zmiany daty, prawo wyłączenia systemu
+		Uprawnienie do zasobu - uprawnienie zapisu/odczytu/wykonania pliku 
+-czym jest 9 literek przy pliku po wpisaniu komedny ls -l
+	Pierwszy znak w tym ciągu określa typ pliku:
+							#- plik zwykły (ordinary file)
+							#d katalog (directory)
+							#p łącze nazwane (named pipe)
+							#l dowiązanie symboliczne (symbolic link)
+							#b urządzenie blokowe (block device)
+							#c urządzenie znakowe (character device)
+							#s gniazdo (socket)
+							#i kilka innych (zależnie od rodzaju systemu).
+	Pozostałych 9 znaków tworzy 3 trójki o postaci: rwxrwxrwx (występują litery rwx oraz znak -)	
+	 Znaki te określają uprawnienia dostępu do pliku.Wystąpienie litery oznacza, że dane uprawnienie jest nadane.
+	1. trójka odnosi się do  właściciela pliku,
+ 	2. do uprawnień grupy właściciela,
+ 	3. do wszystkich innych użytkowników danego systemu.
+	każda litera odnosi się do innych uprawnień i działa to różnie dla folderów oraz plików.

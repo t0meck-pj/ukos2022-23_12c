@@ -1,0 +1,56 @@
+Zadanie 1:
+
+= Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych.
++ mkdir podkatalog1
++ cd podkatalog1/
++ touch plik.txt
++ mkdir pk2
++ cd pk2/
++ touch czekam_na_kokolke.txt
++ mkdir sekret
+
+= Przydzielić różne uprawnienia dostępu:
++ ls -l
+razem 4
+-rw-r--r-- 1 s26838 domain users    0 11-02 16:59 czekam_na_kokolke.txt
+drwxr-xr-x 2 s26838 domain users 4096 11-02 16:59 sekret
+
++ chmod a-x sekret
+drw-r--r-- 2 s26838 domain users 4096 11-02 16:59 sekret
++ cd ..
++ chmod g-w plik.txt
++ chmod o-w , o-x plik.txt
+
+= następnie spróbować wejść do katalogów domowych innych uczestników zajęć i sprawdzić, które z obiektów są tam dla nas dostępne (i w jakim sensie).
+
++ cd s26836
++ ls
+folder public_html ukos windows zadanie1
+
++ folder jest dostępny > plik.txt + vim plik.txt + zostawiłem autograf ;0
+grupa może RW- , odczytać i pisać
+inni nie mogą nic - - -
++ cd public_html
+public_html jest dostępny, w nim strona html tylko do odczytu
++ cd ukos
+ukos jest dostępny, można zostawić własny plik i go modyfikować, cudze pliki mogę tylko odczytać
+
+= Spróbować utworzyć własny plik w cudzym katalogu ("kukułcze jajko") oraz spróbować usunąć cudzy plik we własnym katalogu (co można zaobserwować ?). Wypróbować powyższe operacje:
+
++ cd ukos
++ ls -l
+razem 8
+drwxrwxr-x 2 s26836 domain users 4096 10-25 14:10 pelny
+drwxrwxr-x 3 s26836 domain users 4096 10-25 14:09 pusty
++ cd pusty
++ touch kukułczejajko.txt
++ cd ..
++ cd pelny
++ ls -l
+-rw-r--r-- 1 s26836 domain users 28 10-25 14:10 text.txt
++ rm text.txt
+rm: usunąć zabezpieczony przed zapisem plik zwykły 'text.txt'? yes
++ ls -l
+razem 0
+
+
