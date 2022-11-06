@@ -1,3 +1,8 @@
+0:
+	po uzyciu komend ls -a | grep D wyswietlilem wszystkie katalogi 		zawierajace D w swojej nazwie
+	 gdy uzylem ls -a | grep D > lista_plikow_z_literka_d.txt utworzyl sie plik .txt w ktorym byla lista wypisanych rzeczy z literka D
+	gdy wykonalem ls -a | grep D | tee lista_plikow_z_literka_d_2.txt plik tekstowy sie rowniez stworzyl ale i odrazu wyswietlil w porownaniu do poprzedniego rozwiazania
+
 1:
 	A:
 	przy uzyciu programu ps wyswietlilem procesy, wykonujac program ps z atrybutem -a dostalem rowniez liste uzytkownikow odpowiedzialnych za proces
@@ -9,4 +14,13 @@
 	do pokazania procesow uzytkownika root potrzebowalem uzyc ps axu | grep root
 
 2:
+	odpalilem program gedit, wg. programu ps edytor tekstu ma pid 4067 gdy wpisalem komende kill 4067 
+	po wywolaniu killall bash nie zaobserwowalem zadnych zmian.
+	kill zadzialal na program CLion.
 	
+3:
+	gdy uzylem polecenia cat > wynik3_1.txt, wpisalem witaj a nastepnie uzylem skrotu klawiszowego CTRL+C nic sie nie zapisalo, jednak gdy ponowilem probe na innym pliku txt uzywajac skrotu CTRL+D fraza "witaj" zapisała się w podanym pliku. uzywajac CTRL+C zamykamy program "od razu" jednak gdy uzyjemy CTRL+D program zapisze to co zostalo wykonane a nastepnie sie zakończy.
+	
+4:
+	gdy odpalilem ponownie edytor tekstu, jednak teraz przy pomocy teminala. nastepnie zamrozilem proces skrotem CTRL+Z. gdy "przejechalem"
+	okienkiem terminala po zamrozonym gedit terminal zaczal sie glitchować w oknie gedit. komenda bg przywrocilem program a przy pomocy fg dalem go na pierwszy plan, po odplaleniu gedit z & (vscode i gimp tak samo). zobaczylem sobie jakie maja numerki przy pomocy polecenia jobs i zebym mogl je przywracac
