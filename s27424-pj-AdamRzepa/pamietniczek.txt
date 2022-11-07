@@ -9,3 +9,10 @@ Co robi polecenie chmod
 Jak się nim posługiwać
 co robi > oraz >> w zakresie wstawiania tekstu
 komenda tail -f
+Zjazd 3/
+Dowiedziałem się o wstrzymywaniu procesów (bg,fg)
+Jak wyświetlić procesy
+Nauczyłem się obsługiwać strumienie, potoki
+Jak z nich korzystać w przydatny sposób
+Co robi CTRL D/Z/C podczas uruchomionego programu
+Jak działa polecenie kill
