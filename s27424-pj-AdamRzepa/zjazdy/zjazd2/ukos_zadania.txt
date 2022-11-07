@@ -51,3 +51,9 @@ tail -f plik na bieżąco sprawdza co jest wpisywane do pliku
 *Zad4*
 Żeby móc wyświetlić stornę musimy nadać plikowi uprawnienia minimum read dla "inni" czyli o
 A folderowy public_html musimy nadac minimalnie x czyli uprawnienie do "wejścia" do danego katalogu
+
+UMASK
+Operacja NOT AND
+dzięki umask może ustwaić jakie uprawnienia mają mieć domyślnie pliki
+gdy ustawimy maskę 0444
+to nowo utworzyony plik nie będzie miał odczytu
