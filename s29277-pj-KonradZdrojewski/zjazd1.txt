@@ -1,0 +1,80 @@
+zadanie pierwsze
+zad.1
+-win+cmd
+zad.2
+-ls
+zad.3
+-pwd
+zad.4
+-cd windows/desktop/
+zad.5
+-pwd
+zad.6
+-ls
+zad.7
+-------------
+zadanie drugie
+zad.1
+-mkdir ukos
+-cd ukos
+-mkdir katalog
+-mkdir klamka
+-cd katalog
+-mkdir katalog2
+-mkdir katalog3
+-cd ~
+zad.2
+-cd ukos/klamka
+-touch zajecia2.txt
+-touch zajecia2.log
+-touch inny.txt
+-touch nowy.txt
+zad.3
+-cd ..
+-mkdir -p ukos/to/jest/dluga/nazwa
+zad.4
+-touch ukos/to/jest/dluga/nazwa/dane.txt 
+zad.5
+-cd ~
+-cd ukos/klamka
+-rm *.txt
+zad.6
+-cd ..
+-cd katalog
+-rm -r katalog2
+zad.7
+-rm -r ../klamka
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
