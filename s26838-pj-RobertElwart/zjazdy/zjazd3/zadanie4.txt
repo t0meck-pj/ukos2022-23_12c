@@ -1,0 +1,19 @@
+ZADANIE 4:
+
+= Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. 
+Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+
++ gedit &
++ geany &
++ netbeans &
++ leafpad &
+
++ jobs
+
+[1]   Running                 gedit &
+[2]   Running                 geany &
+[3]   Running                 netbeans &
+[4]-  Running                 leafpad &
+
++fg % [1]
+geany
