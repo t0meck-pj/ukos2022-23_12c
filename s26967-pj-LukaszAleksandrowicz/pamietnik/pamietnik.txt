@@ -1,0 +1,24 @@
+Kochany pamietniczku pisze to poraz n-ty bo baly czas mi nie wychodzi
+ale walcze na dzisiejszych zajeciach u naszego spoko wykladowcy
+nauczylem sie:
+1. Uzywania prostych i nieszkodliwych komend w terminalu linux takich jak >
+oczywiscie zartuje takich jak ls mkdir cd rm itd.
+2. Ze nie korzystamy z vima bo ciezko sie wychodzi.
+3 . dalej walcze z gitem jest to dla mnie program malo intuicyjny ale
+moze sie uda go ogarnac.
+Zjazd 2 Pamietniczku ty moj kochany na dzisiejszych zajeciach nauczylem sie:
+1. Jakie beledy popelnilem w poprzednich zadaniach 
+2.Jak je naprawic
+3.Jak nie wstawiac plikow na git
+4.Oraz wlasnie zaczynam czytac o uprawnieniach i dostepach w linux.
+5. Nauczyłem się jak posługiwać się z uprawnieniami w linux jest to złożony 
+i dosyć trudny temat oraz zadania były dosyć trudne ale mam nadziję że sobie poradziłem 
+6.dalej są delikatne problemy z gitem ale ogarniemy 
+
+Zjazd 3 pamiętniczku dzisiejszy zjazd był dla mnie najciekawszy najbardziej podobają mi się lekcje gdzie pracujemy razem mamy interakcje jestesmy pytani o wnioski itd.
+1. Nauczyłem się używać polecenia grep które naprawdę wydaje się przydatne i można z nim wiele zrobić tym bardziej z opcją tee 
+2.I ogolnie procesy i strumieniowanie to cikawy temat dodatkowo nauczyłem się korzystać z polecenia ps 
+3. Nauczyłem się jak działa polecenie kill
+4. Do czego jest CTRL+C orz czym się różni od CTRL+D oraz jak działa CTRL+Z 
+
+Z każdym kolejnym zjazdem czuje się coral pewniej w linux i chyba czas najwyższy bo za miesiąc kolokwium.
