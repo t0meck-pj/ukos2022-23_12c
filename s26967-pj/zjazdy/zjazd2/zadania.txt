@@ -1,0 +1,190 @@
+
+//ZADANIE 1 
+//Zrobienie katalogów
+s26967@szuflandia22:~$ mkdir katalog1
+s26967@szuflandia22:~$ cd katalog1/
+s26967@szuflandia22:~/katalog1$ mkdir katalog2
+s26967@szuflandia22:~/katalog1$ mkdir katalog3
+s26967@szuflandia22:~/katalog1$ touch katalog2.txt
+s26967@szuflandia22:~/katalog1$ touch katalog3.txt
+s26967@szuflandia22:~/katalog1$ cd katalog2
+s26967@szuflandia22:~/katalog1/katalog2$ touch koniec
+
+//Nadanie jakis uprawnien 
+s26967@szuflandia22:~$ chmod u+rwx katalog1
+s26967@szuflandia22:~$ cd katalog1
+s26967@szuflandia22:~/katalog1$ ls -l
+razem 8
+drwxr-xr-x 2 s26967 domain users 4096 11-03 21:41 katalog2
+-rw-r--r-- 1 s26967 domain users    0 11-03 21:40 katalog2.txt
+drwxr-xr-x 2 s26967 domain users 4096 11-03 21:40 katalog3
+-rw-r--r-- 1 s26967 domain users    0 11-03 21:40 katalog3.txt
+s26967@szuflandia22:~/katalog1$ chmod a+r katalog 2.txt
+chmod: nie ma dostępu do 'katalog': Nie ma takiego pliku ani katalogu
+chmod: nie ma dostępu do '2.txt': Nie ma takiego pliku ani katalogu
+s26967@szuflandia22:~/katalog1$ chmod a+r katalog2.txt
+s26967@szuflandia22:~/katalog1$ ls -l
+razem 8
+drwxr-xr-x 2 s26967 domain users 4096 11-03 21:41 katalog2
+-rw-r--r-- 1 s26967 domain users    0 11-03 21:40 katalog2.txt
+drwxr-xr-x 2 s26967 domain users 4096 11-03 21:40 katalog3
+-rw-r--r-- 1 s26967 domain users    0 11-03 21:40 katalog3.txt
+s26967@szuflandia22:~/katalog1$ nano katalog2.txt
+
+
+Aby powrócić do nano, użyj "fg".
+
+[1]+  Zatrzymano              nano katalog2.txt
+s26967@szuflandia22:~/katalog1$ nano katalog2.txt
+s26967@szuflandia22:~$ chmod o+rw katalog1
+
+
+//Przejscie do katalogu kolegi 
+s26967@szuflandia22:~$ cd s27298
+-bash: cd: s27298: Nie ma takiego pliku ani katalogu
+s26967@szuflandia22:~$ cd ..
+s26967@szuflandia22:/home/PJWSTK$ cd s27298
+s26967@szuflandia22:/home/PJWSTK/s27298$ ls
+katalog1  katalog2  s27298-pj-MaciejWojtowicz  windows
+s26967@szuflandia22:/home/PJWSTK/s27298$ cd katalog1
+-bash: cd: katalog1: Brak dostępu
+s26967@szuflandia22:/home/PJWSTK/s27298$ cd katalog2
+s26967@szuflandia22:/home/PJWSTK/s27298/katalog2$ ls
+podkatalog3  podkatalog4
+s26967@szuflandia22:/home/PJWSTK/s27298/katalog2$ mkdir jajo
+mkdir: nie można utworzyć katalogu „jajo”: Brak dostępu
+s26967@szuflandia22:/home/PJWSTK/s27298/katalog2$ ls -l
+razem 8
+drwxr-xr-x 2 s27298 domain users 4096 11-03 21:42 podkatalog3
+drwxr-xr-x 2 s27298 domain users 4096 11-03 21:42 podkatalog4
+s26967@szuflandia22:/home/PJWSTK/s27298/katalog2$ touch jajo.txt
+touch: nie można dotknąć 'jajo.txt': Brak dostępu
+s26967@szuflandia22:/home/PJWSTK/s27298/katalog2$ rm podkatalog4
+rm: nie można usunąć 'podkatalog4': Jest katalogiem
+
+//Brak dostępu do niektórych katalogow oraz nie mozna utworzyć kukułczego jaja nie mozna rowniez usuwac ogolnie to nic nie mozna 
+
+
+
+//ZADANIE2
+././ usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+s26967@szuflandia22:/home/PJWSTK$ cd s26967
+s26967@szuflandia22:~$ ls
+katalog1  s26967-pj-LukaszAleksandrowicz  windows
+s26967@szuflandia22:~$ cd katalog1
+s26967@szuflandia22:~/katalog1$ cd katalog2
+s26967@szuflandia22:~/katalog1/katalog2$ chmod 000 koniec
+
+././././usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
+ s26967@szuflandia22:~/katalog1/katalog2$ cd ..
+s26967@szuflandia22:~/katalog1$ chmod 000 katalog2
+s26967@szuflandia22:~/katalog1$ cd katalog 2
+-bash: cd: za dużo argumentów
+
+W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+s26967@szuflandia22:~/katalog1$ cd katalog2
+-bash: cd: katalog2: Brak dostepu
+Polecenie cd moze wykonać tylko wtedy kiedy mamy dostęp do nadrzednego katalogu oraz uprawnienia do poruszania się po katalogach 
+
+W jakich przypadkach mozemy wykonać polecenie chmod ? 
+Kiedy znajdujemy sie w folderze nadrzednym albo podrzednym i mamy dostrp do katalogu.
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+Nie możemy przeskoczyć do podrzędnego katalogu jesli nie mamy dostępu do nadrzędnego.
+s26967@szuflandia22:~$ cd ././katalog2
+-bash: cd: ././katalog2: Nie ma takiego pliku ani katalogu
+s26967@szuflandia22:~$ cd katalog2
+-bash: cd: katalog2: Nie ma takiego pliku ani katalogu
+s26967@szuflandia22:~$ cd ../../katalog2
+-bash: cd: ../../katalog2: Nie ma takiego pliku ani katalogu
+s26967@szuflandia22:~$ cd katalog 1
+-bash: cd: za dużo argumentów
+s26967@szuflandia22:~$ cd katalog1
+s26967@szuflandia22:~/katalog1$ ls
+katalog2  katalog2.txt  katalog3  katalog3.txt
+s26967@szuflandia22:~/katalog1$ cd katalog3
+s26967@szuflandia22:~/katalog1/katalog3$ cd ../katalog1
+-bash: cd: ../katalog1: Nie ma takiego pliku ani katalogu
+s26967@szuflandia22:~/katalog1/katalog3$ 
+
+Czy możemy także wrócić korzystając z polecnia cd - ?
+Nie! nie możeby użyć tego polecenia ponieważ jest brak dostępu 
+
+
+./././ZADANIE3
+Zadanie Robione z Maciejm Wójtowicz s27298
+Katalog domowy musi miec uprawnienia read 
+s26967@szuflandia22:~$ chmod g+r katalog_wszyscy/
+s26967@szuflandia22:~$ chmod g+o katalog_wszyscy/
+s26967@szuflandia22:~$ chmod o+r katalog_wszyscy/
+katalog1  s26967-pj-LukaszAleksandrowicz  windows
+s26967@szuflandia22:~$ mkdir katalog_wszyscy
+s26967@szuflandia22:~$ cd katalog_wszyscy/
+s26967@szuflandia22:~/katalog_wszyscy$ touch elo.txt
+s26967@szuflandia22:~/katalog_wszyscy$ chmod u+r
+chmod: brakujący argument po „u+r”
+Napisz „chmod --help” dla uzyskania informacji.
+s26967@szuflandia22:~/katalog_wszyscy$ chmod u+r elo.txt
+s26967@szuflandia22:~/katalog_wszyscy$ cd ..
+s26967@szuflandia22:~$ chmod u+r katalog_wszyscy/
+s26967@szuflandia22:~$ ls -l
+razem 16
+Katolog Macka tez musi miec uprawnienia resd 
+drwx---rw- 4 s26967 domain users 4096 11-03 22:03 katalog1
+drwxr-xr-x 2 s26967 domain users 4096 11-03 23:06 katalog_wszyscy
+drwxr-xr-x 4 s26967 domain users 4096 10-10 19:11 s26967-pj-LukaszAleksandrowicz
+drwxr-xr-x 3 s26967 domain users 4096 10-08 10:34 windows
+
+Plik musi mieć uprawnienia read,write,execute
+
+./././Polecenie echo oraz cat 
+s27298@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ echo tresc > elo.txt
+s27298@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ cat elo.txt
+tresc
+s27298@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$
+
+tail -f  Ta komenda prawdza co jest wpisywane na bierzaco taki ala live podglad na zywo 
+> Wypisuje w pliku to co wpisujemy 
+>> dadaje do pliku 
+
+
+
+
+
+./././././ZADANIE 4
+s26967@szuflandia22:~$ ls
+katalog1  katalog_wszyscy  s26967-pj-LukaszAleksandrowicz  windows
+s26967@szuflandia22:~$ mkdir public_html
+s26967@szuflandia22:~$ cd public_html
+s26967@szuflandia22:~/public_html$ ls -l
+razem 0
+s26967@szuflandia22:~/public_html$ touch strona.html
+s26967@szuflandia22:~/public_html$ nano strona.html
+s26967@szuflandia22:~/public_html$ 
+
+--Najmniejsze uprawnienia potrzebne dla strony to a+r
+
+--Najmniejsze uprawnienia potrzebne dla public to a+x
+
+
+-- Minimalne uprawnienia dla katalogu domowego to chmod -w- s26967 u rwx----w-
+
+
+
+
+
+
+./././././././././ OSTATNIE ZADANKO 
+s26967@szuflandia22:~/test$ touch witam.txt
+s26967@szuflandia22:~/test$ umask 754
+s26967@szuflandia22:~/test$ touch witam2.txt
+s26967@szuflandia22:~/test$ ls -l
+razem 0
+-rw-r--r-- 1 s26967 domain users 0 11-04 20:17 witam
+-----w--w- 1 s26967 domain users 0 11-04 20:18 witam2.txt
+-----w--w- 1 s26967 domain users 0 11-04 20:18 witam.txt
+s26967@szuflandia22:~/test$ umask 000
+s26967@szuflandia22:~/test$ touch witam3.txt
+ 
+Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ?
+Operacja ta to chyba negacja

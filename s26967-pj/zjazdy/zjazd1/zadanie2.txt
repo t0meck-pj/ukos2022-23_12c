@@ -1,0 +1,35 @@
+1.Korzystając z komend cd oraz mkdir stwórz następujące drzewo katalogów w swoim katalogu domowym (w dowolnym podkatalogu, albo bezpośrednio w ~):
+AD 1.
+a.)mkdir ukos
+b.)cd ukos
+c.)mkdir katalog 
+d.)cd katalog 
+e.)mkdir katalog 2
+f.)mkdir katalog 3
+g.)cd ..
+h.)mkdir klamka
+
+2.W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+AD 2.
+a.)cd klamka
+b.)touch zajecia2.log
+c.)touch zajecia2.txt
+d.)touch inny.txt
+e.)touch nowy.txt
+
+
+3. Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
+AD 3.mkdir ../../ukos/to/jest/dluga/nazwa -p
+
+4. następnie umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+AD 4.touch dane.txt
+
+5. Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
+AD 5.rm klamka/*.txt
+
+6. Usuń katalog ukos/katalog/katalog2
+AD 6.rmdir katalog/katalog2
+
+
+7. Usuń cały katalog klamka za pomocą jednego polecenia
+AD 7.rm klamka -r

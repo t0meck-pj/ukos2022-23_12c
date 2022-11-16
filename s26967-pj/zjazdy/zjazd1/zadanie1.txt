@@ -1,0 +1,41 @@
+1.Uruchom terminal.
+AD 1.Otwieram 
+
+2.Wyświetl zawartość aktualnego katalogu.
+AD 2. ls
+
+3.Sprawdź gdzie aktualnie się znajdujesz.
+AD 3.pwd
+
+4.Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+AD 4. cd ./Desktop
+
+5.Sprawdź gdzie jesteś.
+AD 5. pwd
+
+6.Wyświetl zawartość bieżącego katalogu.
+AD 6. ls
+
+7.Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+AD 7. ls ..//..//kali
+
+8.Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej.
+AD 8. cd ../Pictures
+
+9.Sprawdź gdzie jesteś.
+AD 5. pwd
+
+10.Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+AD 10. cd ././././././ ( za daleko nie poszlismy bo zostajemy w Pictures
+
+11.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+AD 11. cd /home/kali
+
+12.Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie.
+AD 12.cd /root (Wyskakuje komunikat Permission denied a w internecie wyczytałem ze potrzebuje uprawnien do root ktory ma max uprawnienia)
+
+13.Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1
+AD 13. No co znikneły fajne kolorki a pojawiło sie smutny czarnobiały terminal.
+
+14.A teraz co się stanie po: Alt+F7
+AD 14. Ufff na całe szczescie wrocilismy do normalnego srodowiska.

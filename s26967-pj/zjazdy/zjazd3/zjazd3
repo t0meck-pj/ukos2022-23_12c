@@ -1,0 +1,519 @@
+Zadania
+0 (rozgrzewkowe)
+Przejdź do swojego katalogu domowego
+kali@kali:~$ cd ..
+
+Wydaj komendę: ls -a
+kali@kali:/home$ ls -a
+.  ..  kali
+
+
+Zobacz ile plików wypisało.
+.  ..  kali
+Teraz wydaj komendę: ls -a | grep D
+kali@kali:/home$ ls -a | grep DZadania
+0 (rozgrzewkowe)
+Przejdź do swojego katalogu domowego
+kali@kali:~$ cd ..
+
+Wydaj komendę: ls -a
+kali@kali:/home$ ls -a
+.  ..  kali
+
+
+Zobacz ile plików wypisało.
+.  ..  kali
+Teraz wydaj komendę: ls -a | grep D
+kali@kali:/home$ ls -a | grep D
+
+Zobacz ile teraz jest wyników. Co się stało?
+Nic sie nie stało bo nie mam katalowó z d w nazwie ale jak wypisze polecenie ls -a | grep k
+kali@kali:/home$ ls -a | grep k
+kali
+otrzymuje to 
+Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu wejściowym, które pasują do wzorca. Tu podano wzorzec jako "D".
+
+A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+kali@kali:/home$ ls -a | grep D >Dzien_dobry.txt
+bash: Dzien_dobry.txt: Permission denied
+
+Zobacz czy utworzył sie jakiś plik?
+Musiałem wejsc do katalogu kali i dopiero wtedy plik sie utworzył
+
+Jaka jest jego treść?
+Desktop
+Documents
+Downloads
+Dzien_dobry.txt
+
+Co znaczy | oraz co znaczy > ?
+Przekierowanie standardowego wyjscia do wejscia
+
+A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+kali@kali:~$ ls -a | grep D |tee Dzien_dobry1.txt
+Desktop
+Documents
+Downloads
+Dzien_dobry1.txt
+Dzien_dobry.txt
+
+
+Zobacz czy plik się utworzył?
+Tak plik sie utworzył.
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Nie dosyć że utwzorzył to tez przekierował i wyświetlił.
+Co robi program tee?
+Jest to takie jak Pan powiedział przekierowanie z podglądem.
+
+1
+Program ps służy do wyświetlania listy procesów. 
+
+Zadania:
+
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+ps
+kali@kali:~$ man ps 
+Wyświetli informacje o wyborze aktywch procesow.
+
+ps -a
+kali@kali:~$ ps -a
+    PID TTY          TIME CMD
+   1479 pts/0    00:00:00 ps
+Wybierze wszystkie procesy poza 2 liderami i procesami z poza terminala
+
+ps x
+opcje moga byc roznie formatowane 
+kali@kali:~$ ps x (tu juz nie wklejam wszystkiego)
+
+ps axu
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
+ps axu
+
+Pokazało nam wszystkie procesy 
+
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+W kolumnie TTY a jest to powłoka(terminal) w którym to się dzieje 
+Nie wiesz? A gdzie może być wyjaśnienie?
+w Internecie albo poleceniem man w konsoli 
+
+B: Jak wykonasz poniższe 2 zadania?
+
+Wyświetl wszystkie procesy bash
+kali@kali:~$ ps aux | grep bash | grep -v grep
+kali        1340  0.0  0.2   7944  4968 pts/0    Ss   12:35   0:00 /bin/bash
+
+Pokazuje w jakim terminalu kto gdzie kiedy zostal odpalony 
+
+Wyświetl wszystkei procesy należące do użytkownika root
+kali@kali:~$ ps u | grep root | grep -v grep
+kali@kali:~$ ps aux | grep root | grep -v grep
+
+
+
+
+2
+INFO: Zadanie do wykonania na linuxie z dostępnym środowiskiem graficznym.
+
+PID jest to indentyfikator procesu ([P]rocess [ID]entificator). Za jego pomocą możesz odwołać się do danego procesu za pomocą różnych mechanizmów systemu. Jednym z takich mechanizmów jest wysłanie sygnału (na przykład zakończenia) do procesu. Do tego można użyć komendy kill (może brzmi ona dość brutalnie, ale cóż, informatyka nie jest dla mięczaków). Komenda ta domyślnie wysyła sygnał zakończenia procesu do zadanego procesu.
+
+Zadanie:
+
+Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+
+Zobacz jaki ma on PID - przyda się do tego komenda ps.
+ps aux | grep gedit | grep -v grep
+
+Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+kill 3995
+wyłączył się program 
+
+UWAGA: Niektóre programy przechwytują sygnały i mogą je częściowo blokować. 
+			Jeśli program nie wyłącza się, to zobacz jaka jest jego reakcja.
+			Zobacz czy możesz wysłać do niego SIGKILL (gdzie sprawdzisz jak to zrobić?)
+
+Zobacz działanie komendy killall bash
+Zobaczyłem komenda nie działa 
+
+Zobacz czy kill zadziała dla dowolnego procesu.
+A tu tak jak na zajeciach dałem killall -9 bash i zamknął mi sie terminal 
+
+
+
+
+3
+W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest CTRL+C lub jak to jest często podawane C-c lub ^C. Niektórzy z Państwa już go mieli okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w terminalu. Proszę go przetestować w taki sposób, że:
+
+Uruchom komendę cat be parametrów
+kali@kali:~$ cat
+
+
+Wciśnij CTRL+C i zobacz co się stanie
+Zatrzymało się działanie ( terminal odrzył)
+Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo. Tym razem nie wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy. Jest to bardzo przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze standardowego wejścia (stdin), ale w sposób możliwie bezpieczny.
+
+Zobacz co się stanie:
+
+Wydaj komendę cat > wynik3_1.txt
+kali@kali:~$ cat > wynik3_1.txt
+
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+Witaj^C
+
+Wciśnij CTRL+C
+przerwało sie 
+
+Zobacz co się znalazło w pliku wynik3_1.txt
+kali@kali:~$ nano wynik3_1.txt
+Mi sie właśnie nic nie znalazło 
+
+
+
+Wydaj komendę cat > wynik3_2.txt
+kali@kali:~$ cat > wynik3_2.txt
+
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+kali@kali:~$ cat > wynik3_2.txt
+
+
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+Wcisnąłem 2 razy 
+
+Zobacz co się znalazło w pliku wynik3_2.txt
+kali@kali:~$ cat > wynik3_2.txt
+
+
+W opisie rozwiązania zadania umieść:
+
+jak rozumiesz co się stało?
+Rozumiem to w ten sposób że CTRL+D zapisuje zmiany i przerywa działanie programu (strumienia) 
+A CTRL+C tylko przerywa dziłanie.
+
+czym oba te przykłady się różnią?
+Różnią się kombinacją klawiszy a poza tym rezultatem ponieważ tak jak napisałem wyżej CTRL+D zapisuje zmiany 
+
+DLACZEGO się różnią?
+Poniewaz CTRL+D działa inaczej w porównianiu do CTRL+C nie zakłuca sygnały tylko go jedynie zamyka przez co jest bezpieczniejszy 
+
+
+
+
+
+
+4
+INFO: Zadanie do wykonania na linuxie z dostępnym środowiskiem graficznym.
+
+CTRL+Z służy do wstrzymania bieżącego procesu i przeniesienia go do tła. To znaczy, że program jest w pamięci, ale nie wykonuje żadnych operacji. Jest wstrzymany.
+
+Zobacz co się stanie:
+
+Wpisz komendę gimp (lub np. edytor tekstowy gedit)
+gedit wpisuje
+ 
+W terminalu w którym sie to uruchomiło wciśnij CTRL+Z
+Klikam CTRL+Z nic nie reaguje Jak przegiągam okno po ekranie to moge nim malować 
+jak wpisze bg nagle wszystko się pojawia 
+A fg blokuje nam terminal
+
+Spróbuj coś wyklikać w gimpie / gedicie
+wkleiłem
+
+
+Otwórz dowolne inne okno i przesuń je tak by częściowo nachodziło na okno gimpa / gedita i potem je odsuń by odsłonić w pełni okno gimpa / gedita
+Zrobione tak jak na ćwiczeniach
+
+Co się stało? Wstrzymaliśmy program gimp/gedit. Program wstrzymany za pomocą kombinacji CTRL+Z jest przenoszony w tło (background). Efekt jest taki, że taki program przestaje odpowiadać na cokolwiek.
+dokładnie 
+
+Komenda bg służy do wznowienia w tle wstrzymanego programu. Zobacz:
+
+Wpisz komendę: bg
+to już wpisywałem wcześniej 
+
+Jak widać gimp/gedit ożył (jeśli nie, to zapytaj prowadzącego)
+
+Komenda fg służy do wznowienia na pierwszym planie wstrzymanego wcześniej procesu. Zobacz co się stanie:
+
+Wpisz komendę: fg
+to również wpisywałem spowrotem blokuje nam terminal  
+
+Jak widać proces wrócił i można wcisnąć na przykład CTRL+C aby go zakończyć.
+
+W momencie uruchamiania programu, możemy od razu nakazać wykonanie go w tle. Służy do tego znak & umieszczony na końcu instrukcji.
+
+Zobacz:
+INFO: Jeśli jakiegoś programu nie ma to zastąp go innym, który znasz.
+
+Wykonaj komendę gimp &
+gimp &
+
+Wykonaj komendę gedit &
+gedit &
+
+Wykonaj komendę geany &
+geany &
+
+Zobacz co się stało (domyślam się, że uruchomiły się 3 programy, a na terminalu ciągle można coś pisać.
+
+
+
+Kolejna komenda to jobs. Służy ona do wyświetlania listy zadań (jobów; nie mylić z procesami) przeniesionych do tła.
+Tak jak na wykładzie sleep 1000 &
+ 
+
+
+Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+potem możemy wpisać jobs
+
+składnia: fg %(numer jobu)
+
+a potem fg %1 i znowu mamy zablokowany terminal i nie działa nam gedit
+
+Zobacz ile teraz jest wyników. Co się stało?
+Nic sie nie stało bo nie mam katalowó z d w nazwie ale jak wypisze polecenie ls -a | grep k
+kali@kali:/home$ ls -a | grep k
+kali
+otrzymuje to 
+Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu wejściowym, które pasują do wzorca. Tu podano wzorzec jako "D".
+
+A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+kali@kali:/home$ ls -a | grep D >Dzien_dobry.txt
+bash: Dzien_dobry.txt: Permission denied
+
+Zobacz czy utworzył sie jakiś plik?
+Musiałem wejsc do katalogu kali i dopiero wtedy plik sie utworzył
+
+Jaka jest jego treść?
+Desktop
+Documents
+Downloads
+Dzien_dobry.txt
+
+Co znaczy | oraz co znaczy > ?
+Przekierowanie standardowego wyjscia do wejscia
+
+A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+kali@kali:~$ ls -a | grep D |tee Dzien_dobry1.txt
+Desktop
+Documents
+Downloads
+Dzien_dobry1.txt
+Dzien_dobry.txt
+
+
+Zobacz czy plik się utworzył?
+Tak plik sie utworzył.
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Nie dosyć że utwzorzył to tez przekierował i wyświetlił.
+Co robi program tee?
+Jest to takie jak Pan powiedział przekierowanie z podglądem.
+
+1
+Program ps służy do wyświetlania listy procesów. 
+
+Zadania:
+
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+ps
+kali@kali:~$ man ps 
+Wyświetli informacje o wyborze aktywch procesow.
+
+ps -a
+kali@kali:~$ ps -a
+    PID TTY          TIME CMD
+   1479 pts/0    00:00:00 ps
+Wybierze wszystkie procesy poza 2 liderami i procesami z poza terminala
+
+ps x
+opcje moga byc roznie formatowane 
+kali@kali:~$ ps x (tu juz nie wklejam wszystkiego)
+
+ps axu
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
+ps axu
+
+Pokazało nam wszystkie procesy 
+
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+W kolumnie TTY a jest to powłoka(terminal) w którym to się dzieje 
+Nie wiesz? A gdzie może być wyjaśnienie?
+w Internecie albo poleceniem man w konsoli 
+
+B: Jak wykonasz poniższe 2 zadania?
+
+Wyświetl wszystkie procesy bash
+kali@kali:~$ ps aux | grep bash | grep -v grep
+kali        1340  0.0  0.2   7944  4968 pts/0    Ss   12:35   0:00 /bin/bash
+
+Pokazuje w jakim terminalu kto gdzie kiedy zostal odpalony 
+
+Wyświetl wszystkei procesy należące do użytkownika root
+kali@kali:~$ ps u | grep root | grep -v grep
+kali@kali:~$ ps aux | grep root | grep -v grep
+
+
+
+
+2
+INFO: Zadanie do wykonania na linuxie z dostępnym środowiskiem graficznym.
+
+PID jest to indentyfikator procesu ([P]rocess [ID]entificator). Za jego pomocą możesz odwołać się do danego procesu za pomocą różnych mechanizmów systemu. Jednym z takich mechanizmów jest wysłanie sygnału (na przykład zakończenia) do procesu. Do tego można użyć komendy kill (może brzmi ona dość brutalnie, ale cóż, informatyka nie jest dla mięczaków). Komenda ta domyślnie wysyła sygnał zakończenia procesu do zadanego procesu.
+
+Zadanie:
+
+Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+
+Zobacz jaki ma on PID - przyda się do tego komenda ps.
+ps aux | grep gedit | grep -v grep
+
+Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+kill 3995
+wyłączył się program 
+
+UWAGA: Niektóre programy przechwytują sygnały i mogą je częściowo blokować. 
+			Jeśli program nie wyłącza się, to zobacz jaka jest jego reakcja.
+			Zobacz czy możesz wysłać do niego SIGKILL (gdzie sprawdzisz jak to zrobić?)
+
+Zobacz działanie komendy killall bash
+Zobaczyłem komenda nie działa 
+
+Zobacz czy kill zadziała dla dowolnego procesu.
+A tu tak jak na zajeciach dałem killall -9 bash i zamknął mi sie terminal 
+
+
+
+
+3
+W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest CTRL+C lub jak to jest często podawane C-c lub ^C. Niektórzy z Państwa już go mieli okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w terminalu. Proszę go przetestować w taki sposób, że:
+
+Uruchom komendę cat be parametrów
+kali@kali:~$ cat
+
+
+Wciśnij CTRL+C i zobacz co się stanie
+Zatrzymało się działanie ( terminal odrzył)
+Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo. Tym razem nie wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy. Jest to bardzo przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze standardowego wejścia (stdin), ale w sposób możliwie bezpieczny.
+
+Zobacz co się stanie:
+
+Wydaj komendę cat > wynik3_1.txt
+kali@kali:~$ cat > wynik3_1.txt
+
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+Witaj^C
+
+Wciśnij CTRL+C
+przerwało sie 
+
+Zobacz co się znalazło w pliku wynik3_1.txt
+kali@kali:~$ nano wynik3_1.txt
+Mi sie właśnie nic nie znalazło 
+
+
+
+Wydaj komendę cat > wynik3_2.txt
+kali@kali:~$ cat > wynik3_2.txt
+
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+kali@kali:~$ cat > wynik3_2.txt
+
+
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+Wcisnąłem 2 razy 
+
+Zobacz co się znalazło w pliku wynik3_2.txt
+kali@kali:~$ cat > wynik3_2.txt
+
+
+W opisie rozwiązania zadania umieść:
+
+jak rozumiesz co się stało?
+Rozumiem to w ten sposób że CTRL+D zapisuje zmiany i przerywa działanie programu (strumienia) 
+A CTRL+C tylko przerywa dziłanie.
+
+czym oba te przykłady się różnią?
+Różnią się kombinacją klawiszy a poza tym rezultatem ponieważ tak jak napisałem wyżej CTRL+D zapisuje zmiany 
+
+DLACZEGO się różnią?
+Poniewaz CTRL+D działa inaczej w porównianiu do CTRL+C nie zakłuca sygnały tylko go jedynie zamyka przez co jest bezpieczniejszy 
+
+
+
+
+
+
+4
+INFO: Zadanie do wykonania na linuxie z dostępnym środowiskiem graficznym.
+
+CTRL+Z służy do wstrzymania bieżącego procesu i przeniesienia go do tła. To znaczy, że program jest w pamięci, ale nie wykonuje żadnych operacji. Jest wstrzymany.
+
+Zobacz co się stanie:
+
+Wpisz komendę gimp (lub np. edytor tekstowy gedit)
+gedit wpisuje
+ 
+W terminalu w którym sie to uruchomiło wciśnij CTRL+Z
+Klikam CTRL+Z nic nie reaguje Jak przegiągam okno po ekranie to moge nim malować 
+jak wpisze bg nagle wszystko się pojawia 
+A fg blokuje nam terminal
+
+Spróbuj coś wyklikać w gimpie / gedicie
+wkleiłem
+
+
+Otwórz dowolne inne okno i przesuń je tak by częściowo nachodziło na okno gimpa / gedita i potem je odsuń by odsłonić w pełni okno gimpa / gedita
+Zrobione tak jak na ćwiczeniach
+
+Co się stało? Wstrzymaliśmy program gimp/gedit. Program wstrzymany za pomocą kombinacji CTRL+Z jest przenoszony w tło (background). Efekt jest taki, że taki program przestaje odpowiadać na cokolwiek.
+dokładnie 
+
+Komenda bg służy do wznowienia w tle wstrzymanego programu. Zobacz:
+
+Wpisz komendę: bg
+to już wpisywałem wcześniej 
+
+Jak widać gimp/gedit ożył (jeśli nie, to zapytaj prowadzącego)
+
+Komenda fg służy do wznowienia na pierwszym planie wstrzymanego wcześniej procesu. Zobacz co się stanie:
+
+Wpisz komendę: fg
+to również wpisywałem spowrotem blokuje nam terminal  
+
+Jak widać proces wrócił i można wcisnąć na przykład CTRL+C aby go zakończyć.
+
+W momencie uruchamiania programu, możemy od razu nakazać wykonanie go w tle. Służy do tego znak & umieszczony na końcu instrukcji.
+
+Zobacz:
+INFO: Jeśli jakiegoś programu nie ma to zastąp go innym, który znasz.
+
+Wykonaj komendę gimp &
+gimp &
+
+Wykonaj komendę gedit &
+gedit &
+
+Wykonaj komendę geany &
+geany &
+
+Zobacz co się stało (domyślam się, że uruchomiły się 3 programy, a na terminalu ciągle można coś pisać.
+
+
+
+Kolejna komenda to jobs. Służy ona do wyświetlania listy zadań (jobów; nie mylić z procesami) przeniesionych do tła.
+Tak jak na wykładzie sleep 1000 &
+ 
+
+
+Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+potem możemy wpisać jobs
+
+składnia: fg %(numer jobu)
+
+a potem fg %1 i znowu mamy zablokowany terminal i nie działa nam gedit
