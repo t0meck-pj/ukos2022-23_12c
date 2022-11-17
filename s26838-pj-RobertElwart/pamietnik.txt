@@ -1,0 +1,9 @@
+9.10.2022
+Mój drogi pamiętniczku:
+- nauczyłem się tworzyć konto na githubie,
+- zalogowałem się do szuflandii,
+- dodałem klucz ssh do githuba,
+18.10.2022
+-klonować repozytorium z gita,
+
+

@@ -1,0 +1,133 @@
+xeon@e11:~$ ls 
+ Dokumenty   Games   Muzyka   Obrazy   Pobrane   Publiczny   Pulpit   snap   Szablony  'VirtualBox VMs'   Wideo
+xeon@e11:~$ cd Pulpit
+xeon@e11:~/Pulpit$ ls
+C++  ISO  PDF  ukos
+xeon@e11:~/Pulpit$ mkdir zadania
+xeon@e11:~/Pulpit$ cd zadania 
+xeon@e11:~/Pulpit/zadania$ mkdir ukos
+xeon@e11:~/Pulpit/zadania$ ls
+ukos
+xeon@e11:~/Pulpit/zadania$ cd ukos
+xeon@e11:~/Pulpit/zadania/ukos$ mkdir katalog
+xeon@e11:~/Pulpit/zadania/ukos$ cd katalog
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ mkdir katalog2
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ mkdir katalog3
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ ls
+katalog2  katalog3
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ cd Pulpit/zadania/ukos
+bash: cd: Pulpit/zadania/ukos: Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ cd
+xeon@e11:~$ ls
+ Dokumenty   Games   Muzyka   Obrazy   Pobrane   Publiczny   Pulpit   snap   Szablony  'VirtualBox VMs'   Wideo
+xeon@e11:~$ cd Pulpit
+xeon@e11:~/Pulpit$ ls
+C++  ISO  PDF  ukos  zadania
+xeon@e11:~/Pulpit$ cd zadania
+xeon@e11:~/Pulpit/zadania$ ls
+ukos
+xeon@e11:~/Pulpit/zadania$ cd ukos
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog
+xeon@e11:~/Pulpit/zadania/ukos$ mkdir klamka
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  klamka
+xeon@e11:~/Pulpit/zadania/ukos$ cd klamka
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ toutch zajecia2.txt
+bash: toutch: nie znaleziono polecenia
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ touch zajecia2.txt 
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ touch zajecia2.log 
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ touch inny.txt
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ nowy.txt
+bash: nowy.txt: nie znaleziono polecenia
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ touch nowy.txt
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ ls
+inny.txt  nowy.txt  zajecia2.log  zajecia2.txt
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ mkdir ~/Pulpit/zadania/ukos/to/jest/dluga/nazwa
+mkdir: nie można utworzyć katalogu „/home/xeon/Pulpit/zadania/ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ mkdir /Pulpit/zadania/ukos/to/jest/dluga/nazwa 
+mkdir: nie można utworzyć katalogu „/Pulpit/zadania/ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ cd
+xeon@e11:~$ mkdir ~/Pulpit/zadania/ukos/to/jest/dluga/nazwa
+mkdir: nie można utworzyć katalogu „/home/xeon/Pulpit/zadania/ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+xeon@e11:~$ man mkdir
+
+[1]+  Zatrzymano              man mkdir
+xeon@e11:~$ mkdir -p  ~/Pulpit/zadania/ukos/to/jest/dluga/nazwa
+xeon@e11:~$ ls
+ Dokumenty   Games   Muzyka   Obrazy   Pobrane   Publiczny   Pulpit   snap   Szablony  'VirtualBox VMs'   Wideo
+xeon@e11:~$ cd Pulpit
+xeon@e11:~/Pulpit$ cd
+xeon@e11:~$ cd Pulpit
+xeon@e11:~/Pulpit$ ls
+C++  ISO  PDF  ukos  zadania
+xeon@e11:~/Pulpit$ cd zadania
+xeon@e11:~/Pulpit/zadania$ ls
+ukos
+xeon@e11:~/Pulpit/zadania$ cd ukos
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  klamka  to
+xeon@e11:~/Pulpit/zadania/ukos$ cd to
+xeon@e11:~/Pulpit/zadania/ukos/to$ ls
+jest
+xeon@e11:~/Pulpit/zadania/ukos/to$ cd jest
+xeon@e11:~/Pulpit/zadania/ukos/to/jest$ ls 
+dluga
+xeon@e11:~/Pulpit/zadania/ukos/to/jest$ cd dluga
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga$ ls
+nazwa
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga$ cd nazwa 
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ ls
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ cd ~/Pulpit
+xeon@e11:~/Pulpit$ ls
+C++  ISO  PDF  ukos  zadania
+xeon@e11:~/Pulpit$ cd zadania
+xeon@e11:~/Pulpit/zadania$ ls
+ukos
+xeon@e11:~/Pulpit/zadania$ cd ukos/to/jest/dluga/nazwa
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ ls
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ touch dane.txt
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ ls
+dane.txt
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ cd ~ukos
+bash: cd: ~ukos: Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ cd ~/ukos
+bash: cd: /home/xeon/ukos: Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos/to/jest/dluga/nazwa$ cd ~/Pulpit
+xeon@e11:~/Pulpit$ ls
+C++  ISO  PDF  ukos  zadania
+xeon@e11:~/Pulpit$ cd zadania
+xeon@e11:~/Pulpit/zadania$ ls
+ukos
+xeon@e11:~/Pulpit/zadania$ cd ukos
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  klamka  to
+xeon@e11:~/Pulpit/zadania/ukos$ cd klamka
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ ls
+inny.txt  nowy.txt  zajecia2.log  zajecia2.txt
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ rm nowy.txt inny.txt zajecia2.txt
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ ls
+zajecia2.log
+xeon@e11:~/Pulpit/zadania/ukos/klamka$ cd ~/Pulpit/zadania/ukos
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  klamka  to
+xeon@e11:~/Pulpit/zadania/ukos$ rm -r /katalog/katalog2
+rm: nie można usunąć '/katalog/katalog2': Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos$ rm -r ukos/katalog/katalog2
+rm: nie można usunąć 'ukos/katalog/katalog2': Nie ma takiego pliku ani katalogu
+xeon@e11:~/Pulpit/zadania/ukos$ rm -r ~/Pulpit/zadania/ukos/katalog/katalog2
+xeon@e11:~/Pulpit/zadania/ukos$ la
+bash: la: nie znaleziono polecenia
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  klamka  to
+xeon@e11:~/Pulpit/zadania/ukos$ katalog
+bash: katalog: nie znaleziono polecenia
+xeon@e11:~/Pulpit/zadania/ukos$ cd katalog
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ ls
+katalog3
+xeon@e11:~/Pulpit/zadania/ukos/katalog$ cd ~/Pulpit/zadania/ukos
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  klamka  to
+xeon@e11:~/Pulpit/zadania/ukos$ rm -r klamka
+xeon@e11:~/Pulpit/zadania/ukos$ ls
+katalog  to

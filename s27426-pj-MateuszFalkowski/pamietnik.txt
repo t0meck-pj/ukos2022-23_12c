@@ -1,0 +1,5 @@
+09.10.2022
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczyłem sie że:
+- dodawać klucz ssh do gita
+- klonować repozytorium z github przy użyciu ssh
+
