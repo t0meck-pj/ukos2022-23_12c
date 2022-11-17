@@ -1,0 +1,15 @@
+Zadanie 7:
+Zobacz czy utworzył sie jakiś plik?
+Tak
+Jaka jest jego treść?
+Informajce wyjściowe komendy ls -a
+Co znaczy | oraz co znaczy > ?
+| przenosi informacje zebrane przez komende do innej komendy 
+> przenosi informacje wyjściowe do pliku 
+Zadanie 9:
+Zobacz czy plik się utworzył?
+Tak
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Identyczna do poprzedniej próby
+Co robi program tee?
+Kopiuje dane wyjściowe komendy do pliku i wyświetla je na ekrane 

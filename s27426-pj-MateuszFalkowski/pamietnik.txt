@@ -3,3 +3,18 @@ Moj drogi pamietniczku na dzisiejszych zajeciach nauczyłem sie że:
 - dodawać klucz ssh do gita
 - klonować repozytorium z github przy użyciu ssh
 
+23.10.2022
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczyłem sie że:
+- prawo i uprawnienie znaczą dla Linuxa to samo
+- odczytywania uprawnień do plików przy uzyciu komendy ls
+- zmieniać uprawnienia do plików przy użyciu komendy chmod
+
+06.11.2022
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczyłem sie że:
+- można sortować wyniki polecenia ls przy użyciu polecenia grep
+- można przenosić wyniki poleceń do pliku
+- korzystać z polecenia tee
+- obsługi polecenia ps
+- obsługi polecenia kill
+- skrótów klawiszowych ctrl+C,ctrl+D,ctrl+Z
+- przenoszenie procesów z i do tła
