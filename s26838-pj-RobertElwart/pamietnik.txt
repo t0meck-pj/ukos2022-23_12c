@@ -5,5 +5,17 @@ Mój drogi pamiętniczku:
 - dodałem klucz ssh do githuba,
 18.10.2022
 -klonować repozytorium z gita,
+Zjazd 2:
+- nadgoniłem cały temat,
+- nauczyłem się przydzielać uprawnienia i je odbierać,
+- usuwać cudze pliki w katalogach,
+- znam operacje na bitach domyślnych uprawnień dostępu oraz maski,
+Zjazd 3:
+14.11.2022
+- potrafię wyświetlać dane procesy, basha, systemowe,
+- danego użytkownika,
+- potrafię rozpoznać PID danego procesu,
+- zakończyć dany proces, ale także go uruchomić,
+- miałem ostatnio problemy z systematycznością, ale już mam je za sobą,
 
 
