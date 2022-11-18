@@ -1,7 +1,15 @@
+Wyświetl zawartość aktualnego katalogu.
+
 ubuntu@bss-ubu1804:~$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+
+Sprawdź gdzie aktualnie się znajdujesz.
+
 ubuntu@bss-ubu1804:~$ pwd
 /home/ubuntu
+
+Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+
 ubuntu@bss-ubu1804:~$ cd desktop
 bash: cd: desktop: No such file or directory
 ubuntu@bss-ubu1804:~$ cd desktop/
@@ -9,10 +17,19 @@ bash: cd: desktop/: No such file or directory
 ubuntu@bss-ubu1804:~$ cd
 ubuntu@bss-ubu1804:~$ cd
 ubuntu@bss-ubu1804:~$ cd Desktop/
+
+Sprawdź gdzie jesteś
+
 ubuntu@bss-ubu1804:~/Desktop$ pwd
 /home/ubuntu/Desktop
+
+Wyświetl zawartość bieżącego katalogu.
+
 ubuntu@bss-ubu1804:~/Desktop$ ls
 adding-packages-permanently-info.txt  passwords-info.txt
+
+Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego
+
 ubuntu@bss-ubu1804:~/Desktop$ ls ../
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ubuntu@bss-ubu1804:~/Desktop$ ls ../../
@@ -35,15 +52,33 @@ etc   lib             mnt         run   sys       var
 ubuntu@bss-ubu1804:~/Desktop$ cd ../Pictures/
 ubuntu@bss-ubu1804:~/Pictures$ cd ..
 ubuntu@bss-ubu1804:~$ cd Desktop
+
+Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej.
+
 ubuntu@bss-ubu1804:~/Desktop$ cd ~/Pictures/
+
+Sprawdź gdzie jesteś.
+
 ubuntu@bss-ubu1804:~/Pictures$ pwd
 /home/ubuntu/Pictures
+
+Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+
 ubuntu@bss-ubu1804:~/Pictures$ cd ././././././
+zostajemy w naszym katalogu w którym jesteśmy niezależnie ile "./" byśmy wpisali"
+
+Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+
 ubuntu@bss-ubu1804:~/Pictures$ cd ~
+
+Zobacz co się stanie jak wpiszesz komendę 'cd /root'
+
 ubuntu@bss-ubu1804:~$ cd/root
 bash: cd/root: No such file or directory
 ubuntu@bss-ubu1804:~$ cd /root
 bash: cd: /root: Permission denied
+
+Nie mamy uprawnień
 
 13. Przełączyło mnie do terminala w trybie tekstowym
 14. Powrót do wersji graficznej

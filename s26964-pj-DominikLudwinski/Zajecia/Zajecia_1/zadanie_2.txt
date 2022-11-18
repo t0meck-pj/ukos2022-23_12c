@@ -1,3 +1,6 @@
+Korzystając z komend cd oraz mkdir stwórz następujące drzewo 
+katalogów w swoim katalogu domowym (w dowolnym podkatalogu, albo bezpośrednio w ~):
+
 s26964@szuflandia22:~/windows/desktop/ukos$ mkdir katalog
 s26964@szuflandia22:~/windows/desktop/ukos$ mkdir klamka
 s26964@szuflandia22:~/windows/desktop/ukos$ cd katalog
@@ -19,6 +22,9 @@ s26964@szuflandia22:~/windows/desktop/ukos/klamka$ tree
 └── zajęcia2.txt
 
 0 directories, 4 files
+
+W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+
 s26964@szuflandia22:~/windows/desktop/ukos/klamka$ cd ..
 s26964@szuflandia22:~/windows/desktop/ukos$ mkdir ukos/to/jest/dluga/nazwa
 mkdir: nie można utworzyć katalogu „ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
@@ -26,9 +32,15 @@ s26964@szuflandia22:~/windows/desktop/ukos$ mkdir "ukos/to/jest/dluga/nazwa"
 mkdir: nie można utworzyć katalogu „ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
 s26964@szuflandia22:~/windows/desktop/ukos$ mkdir "ukos/to/jest/dluga/nazwa"
 mkdir: nie można utworzyć katalogu „ukos/to/jest/dluga/nazwa”: Nie ma takiego pliku ani katalogu
+
+Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
+
 s26964@szuflandia22:~/windows/desktop/ukos$ mkdir -p ukos/to/jest/dluga/nazwa
 s26964@szuflandia22:~/windows/desktop/ukos$ ls
 katalog  klamka  ukos
+
+następnie umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+
 s26964@szuflandia22:~/windows/desktop/ukos$ cd ukos/to/jest/dluga/nazwa
 s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest/dluga/nazwa$ toucz dane.txt
 -bash: toucz: nie znaleziono polecenia
@@ -45,10 +57,16 @@ s26964@szuflandia22:~/windows/desktop/ukos/ukos/to/jest$ cd ..
 s26964@szuflandia22:~/windows/desktop/ukos/ukos/to$ cd ..
 s26964@szuflandia22:~/windows/desktop/ukos/ukos$ cd ..
 s26964@szuflandia22:~/windows/desktop/ukos$ cd klamka
+
+Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
+
 s26964@szuflandia22:~/windows/desktop/ukos/klamka$ rm *.txt
 s26964@szuflandia22:~/windows/desktop/ukos/klamka$ ls
 zajęcia2.log
 s26964@szuflandia22:~/windows/desktop/ukos/klamka$ cd ..
+
+Usuń katalog ukos/katalog/katalog2
+
 s26964@szuflandia22:~/windows/desktop/ukos$ rmdir ukos/katalog/katalog2
 rmdir: nie udało się usunąć 'ukos/katalog/katalog2': Nie ma takiego pliku ani katalogu
 s26964@szuflandia22:~/windows/desktop/ukos$ cd katalog
@@ -63,6 +81,9 @@ katalog3
 s26964@szuflandia22:~/windows/desktop/ukos/katalog$ cd ..
 s26964@szuflandia22:~/windows/desktop/ukos$ cd ..
 s26964@szuflandia22:~/windows/desktop$ cd ukos
+
+Usuń cały katalog klamka za pomocą jednego polecenia
+
 s26964@szuflandia22:~/windows/desktop/ukos$ rm -r klamka
 s26964@szuflandia22:~/windows/desktop/ukos$ ls
 katalog  ukos
