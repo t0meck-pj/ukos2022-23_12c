@@ -1,0 +1,39 @@
+zad 0 (rozgrzewkowe)
+ls -a //wyswietla wszystko w folderze, również pliki z .
+ls -a | grep D //Wyswietli wszystko z D w treści
+ls -a | grep D > lista_plikow_z_literka_d.txt //wyniki z polecenia zapiszą się w tym pliku
+	| Potok służy do łączenia dwóch lub więcej poleceń, a w tym przypadku dane wyjściowe jednego polecenia działają jako dane wejściowe innego polecenia
+	> Przekierwoanie do pliku (nadpisywanie)
+ls -a | grep D | tee lista_plikow_z_literka_d_2.txt // zapisuje plik oraz odrazu wyswietla
+tee nadpisuje plik i wyswietla od razu jego tresc
+zad 1
+ps wyswietla procesy
+ps -a //wyswietla procesy nie związane z terminalem	
+ps -u // lista uzytkownik 
+ps axu // uzytkownicy ktorzy korzystaja z procesu , wszystkie procesy
+co oznacza znak zapytania w 7 kolumnie?
+? oznacza powłokę terminal/ tam gdzie tty to dany terminal
+gdy znak zapytania nie potrzebny terminal/ procesy które nie mają terminala
+ps axu | grep bash | grep -v grep wyświetla procesy odpowiedzlane za basha za wyjątkiem tego polecenia
+ps axu | grep bash | grep -v grep| cut -d ' ' -f 5 // ucina spację oraz wyswietla kolumnę
+ps axu | grep bash | grep -v grep| awk '{ print $2 }'// wyswietla 2 kolumnę
+=
+ps axu | grep bash |awk '/bash/{ print $2 }'
+ps-u root //wyswietli procesy roota
+zad 2
+komenda kill wysyła sygnały
+domyślnie sygnał 15 (sugestia,że nadejdzie rychły koniec)
+ps axu | grep gedit | grep -v grep//wyswietla proces gedit
+domyślniue do zabicia procesu
+killall bash -9 // zabija proces basha które może zostać zabity
+zad 3
+CTRL C Przerywa program nie zapisująć co się stało
+CTRL D Zapisuję to co się stało w programie ( bezpieczne wyjscie)
+cat > wynik3_1.txt // przy ctrl d zapiszę tekst // przy ctrl C nie
+zad 4
+CTRL+Z służy do wstrzymania bieżącego procesu i przeniesienia go do tła
+gedit & // wstrzymujemy ctrl z
+Komenda bg służy do wznowienia w tle wstrzymanego programu.
+Komenda fg służy do wznowienia na pierwszym planie wstrzymanego wcześniej procesu
+jobs aktywne aplikacje/zadania
+fg %* // wznów polecenie o numerze *
