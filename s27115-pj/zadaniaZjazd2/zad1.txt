@@ -1,0 +1,51 @@
+Zadania wykonałem z Mikołaj Gurgul s28041
+
+s27115@szuflandia22:/home/PJWSTK$ cd s27115
+s27115@szuflandia22:~$ ls
+katalog  s-27115  windows
+s27115@szuflandia22:~$ cd ..
+s27115@szuflandia22:/home/PJWSTK$ cd s28041
+s27115@szuflandia22:/home/PJWSTK/s28041$ ls
+repo  ukoslaby  windows
+s27115@szuflandia22:/home/PJWSTK/s28041$ cd ukoslaby
+-bash: cd: ukoslaby: Brak dostępu
+s27115@szuflandia22:/home/PJWSTK/s28041$ cd ukoslaby
+s27115@szuflandia22:/home/PJWSTK/s28041/ukoslaby$ touch 'kukułcze jajko'
+s27115@szuflandia22:/home/PJWSTK/s28041/ukoslaby$ ls -la
+razem 8
+drwxrwx--- 2 s28041 domain users 4096 10-23 15:04  .
+drwxr-xr-x 7 s28041 domain users 4096 10-23 14:58  ..
+-rw-r--r-- 1 s27115 domain users    0 10-23 15:04 'kukułcze jajko'
+s27115@szuflandia22:/home/PJWSTK/s28041/ukoslaby$ 
+
+
+s27115@szuflandia22:~$ ls
+katalog  s-27115  ukos2022-23_12c.gitls  windows
+s27115@szuflandia22:~$ rm -r ukos2022-23_12c.gitls
+s27115@szuflandia22:~$ ls
+katalog  s-27115  windows
+s27115@szuflandia22:~$ rm -r katalog
+rm: usunąć zabezpieczony przed zapisem katalog 'katalog/jajco'? y
+s27115@szuflandia22:~$ mkdir katalog
+s27115@szuflandia22:~$ cd katalog
+s27115@szuflandia22:~/katalog$ mkdir katalog1
+s27115@szuflandia22:~/katalog$ mkdri katalog2
+-bash: mkdri: nie znaleziono polecenia
+s27115@szuflandia22:~/katalog$ mkdir katalog2
+s27115@szuflandia22:~/katalog$ cd ..
+s27115@szuflandia22:~$ ls
+katalog  s-27115  windows
+s27115@szuflandia22:~$ chmod 770 katalog 
+s27115@szuflandia22:~$ ls
+katalog  s-27115  windows
+s27115@szuflandia22:~$ cd katalog
+s27115@szuflandia22:~/katalog$ ls
+ katalog1   katalog2  'kukulcze jajko.txt'
+s27115@szuflandia22:~/katalog$ rm 'kukulcze jajko.txt'
+rm: usunąć zabezpieczony przed zapisem pusty zwykły plik 'kukulcze jajko.txt'? yes
+s27115@szuflandia22:~/katalog$ ls
+katalog1  katalog2
+s27115@szuflandia22:~/katalog$ 
+
+
+Zadanie w Midnight Commander nie wykonane ponieważ nie był jeszcze skonfigurowany 
