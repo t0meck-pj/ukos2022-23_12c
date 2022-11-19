@@ -48,7 +48,7 @@ ukos
 Polecenia:
 mkdir -p ukos/{katalog/{katalog2,katalog3},klamka/} 
 Komentarz:
-Ukosniki pozwalają na tworzenie kolejnych katalogow natomiast klamry na tworzą katalogow na wybranym katalogu
+Ukosniki pozwalają na tworzenie kolejnych katalogow natomiast klamry
 
 2. W katalogu ukos/klamka stworz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt
 

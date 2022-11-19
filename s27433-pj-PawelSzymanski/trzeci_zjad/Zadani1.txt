@@ -1,0 +1,23 @@
+Zad 1. 
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+1.	Jak myślisz, co oznacza znak zapytania w kolumnie 2?:
+- Uknown value
+ 
+    B:
+1.	Wyświetl wszystkie procesy bash
+- ps aux | grep bash
+2.	Wyświetl wszystkei procesy należące do użytkownika root
+-ps aux | grep root | grep -v grep
+Zad 2.
+1.	gedit &
+2.	879
+3.	Kill 879 // Kill -9 // Kill SIGKILL 879
+4.	Zamyka bashe
+5.	Nie zadziała dla dowolnego procesu
+Zad 3.
+1.	W pliku nie zapisal się 
+2.	Plik został poprawnie zapsiany i zamknięty
+Zad 4. 
+1.	Program został zatrzymany i generuje „mozaika” 
+Bg – wznawia zatrzymane progarmy w tle
+Fg – wznowienia na pierwszym planie wstrzymanego wcześniej procesu.
