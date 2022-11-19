@@ -1,0 +1,33 @@
+Zadanie.3.
+= Wydaj komendę cat > wynik3_1.txt
++cat > wynik3_1.txt
+= Wpisz tekst witaj bez wciskania klawisza Enter i Wciśnij CTRL+C
++ witaj^C
+= Zobacz co się znalazło w pliku wynik3_1.txt
++ vim wynik3_1.txt 
++ nic, plik jest pusty
+= Wydaj komendę cat > wynik3_2.txt
++ cat > wynik3_2.txt
+= Wpisz tekst witaj bez wciskania klawisza Enter, Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
++ witaj^D
+= Zobacz co się znalazło w pliku wynik3_2.txt
++ vim wynik3_2.txt 
+w pliku znajduje się tekst który wcześniej wpisałem
+wynik3_2.txt 
+pojawił się tekst który wcześniej wpisałem
+
+= jak rozumiesz co się stało?
+= czym oba te przykłady się różnią?
+= DLACZEGO się różnią?
+
+Przykład 1:
+CTRL+C
+program został zamknięty zanim tekst został wysłany do strumienia wejściowego
+Przykład 2:
+CTRL D
+przetwarza cały wiersz nawet jeśli zapomnimy dodać enter na końcu wiersza
+
+Różnią się tym że w pierwszym wypadku kazaliśmy drastycznie zaprzestać pracy programu,
+a w drugim kazaliśmy zakończyć program i dać mu przetworzyć dane które wczesniej mu
+podaliśmy.
+

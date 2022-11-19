@@ -19,10 +19,13 @@ razem 0
 s26838@szuflandia22:~/public_html$ touch strona.html
 s26838@szuflandia22:~/public_html$ vim strona.html 
 
-++ minimalne uprawnienia dla strona_html
-a+r tylko
+++ minimalne uprawnienia dla katalogu domowego
+chmod u-rwx,g-rwx,o-rw s26838
+o --------x 
 ++ minimalne uprawnienia dla public_html
 a+x
-++ minimalne uprawnienia dla katalogu domowego
-chmod -w- s26838
-u rwx - - - - w -
+a --------x 
+++ minimalne uprawnienia dla strona_html
+o ------r-- 
+
+
