@@ -1,0 +1,86 @@
+Zadanie 0 (rozgrzewkowe)
+
+Przejdź do swojego katalogu domowego
+cd /
+
+Teraz wydaj komendę: ls -a | grep D
+Zobacz ile teraz jest wyników. Co się stało?
+Odp. Komenda wypisuje wszystkie pliki które zawierają słowo D
+
+A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+Zobacz czy utworzył sie jakiś plik?
+Jaka jest jego treść?
+Co znaczy | oraz co znaczy > ?
+Odp. Komenda zwraca pliki z literą D do pliku lista_plikow_z_literka_d.txt.
+> -> przekieruje do pliku i nadpisuje
+| -> łączy dwa lub więcej poleceń
+
+
+A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+Zobacz czy plik się utworzył?
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Co robi program tee?
+tree nadpisuje plik i wyświetla jego treść
+-------------------------------------------------------------------------------------------------------
+Zadanie 1 
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+ps
+komenda służy do wyświetlania procesów 
+
+ps -a
+atrybut a dodaje nazwę uzytkownika odpowiedzialnego za proces
+
+ps x
+wszystkie procesy łącznie z systemowymi
+
+ps axu
+lista wszystkich procesów z nazwami użytkowników,również procesy systemowe oraz pid
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+odpowiada za podanie danej warstwy systemowej w której proces jest wykonywany
+
+B: Jak wykonasz poniższe 2 zadania?
+Wyświetl wszystkie procesy bash
+ps axu | grep bash | grep -v grep
+
+Wyświetl wszystkei procesy należące do użytkownika root
+ps axu | greep root
+-------------------------------------------------------------------------------------------------------------------
+Zadanie 2
+!!!kill wysła sygnały!!!
+killall -9 zabije proces basha, ale tylko wtedy kiedy może być zabity
+-------------------------------------------------------------------------------------------------------------------
+Zadanie 3
+Uruchom komendę cat be paramet
+Wciśnij CTRL+C i zobacz co się stanie
+nic się nie zapisało w pliku
+
+Zobacz co się stanie:
+Wydaj komendę cat > wynik3_1.txt
+Wpisz tekst witaj bez wciskania klawisza Enter
+Wciśnij CTRL+C
+Zobacz co się znalazło w pliku wynik3_1.txt
+w programie nic nie zostało zapisane ponieważ ctrl+c konczy proces
+
+
+Wydaj komendę cat > wynik3_2.txt
+Wpisz tekst witaj bez wciskania klawisza Enter
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+Zobacz co się znalazło w pliku wynik3_2.txt
+w pliku zapisał się tekst 
+ctrl+d zapisuje to co zrobiliśmy i dopiero zakończy proces
+-------------------------------------------------------------------------------------------------------------------
+Zadanie 4
+W terminalu w którym sie to uruchomiło wciśnij CTRL+Z
+Spróbuj coś wyklikać w gimpie / gedicie
+ctrl+z zatrzymuje bieżacy proces i przenosi go do tła
+
+Komenda bg służy do wznowienia w tle wstrzymanego programu. Zobacz:
+bg -> wznowienie działania programu
+
+Komenda fg służy do wznowienia na pierwszym planie wstrzymanego wcześniej procesu. Zobacz co się stanie:
+fg -> wznawia działanie programu wcześniej zatrzymanego
+
+jobs -> wyświetla nam aktywne aplikacje/zadania
+
+fg %(numer jobu) -> znawia polecenie o numerze (numer jobu)
