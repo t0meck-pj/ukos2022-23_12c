@@ -1,0 +1,6 @@
+jak rozumiesz co się stało?
+ctrl+C przerwało działanie programu , a ctrl+D zatrzymało działanie programu
+czym oba te przykłady się różnią?
+w przypadku użycia ctrl+D pojawił się napis witaj w pliku
+DLACZEGO się różnią?
+ponieważ ctrl+C przerwało działanie programu nie zapisując linijki która była w trakcie tworzenia , a ctrl+D zakończyło program wraz z dokończeniem trwającej operacji 

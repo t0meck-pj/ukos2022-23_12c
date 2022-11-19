@@ -1,0 +1,12 @@
+A
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+Nie wiesz? A gdzie może być wyjaśnienie
+man ps
+znak ? oznacza brak konsoli która wywołała podany proces
+
+B
+1.Wyświetl wszystkie procesy bash
+ps -T
+
+Wyświetl wszystkei procesy należące do użytkownika root
+ps -u root
