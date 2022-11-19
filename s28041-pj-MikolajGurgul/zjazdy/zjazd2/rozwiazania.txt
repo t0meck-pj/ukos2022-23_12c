@@ -1,0 +1,163 @@
+Zadanie 1 
+Utworzyc we wlasnym katalogu domowym nieduża strukture podkatalogow i 
+plikow tekstowych. Przydzielic rozne uprawnienia dostepu, nastepnie 
+sprobowac wejsc do katalogow domowych innych uczestnikow zajec i 
+sprawdzic, ktore z obiektow sa tam dla nas dostepne (i w jakim sensie). 
+Sprobowac utworzyc wlasny plik w cudzym katalogu ("kukulcze jajko") oraz 
+sprobowac usunac cudzy plik we wlasnym katalogu (co mozna zaobserwowac ?). 
+Wyprobowac powyzsze operacje:
+w trybie tekstowym;
+przy użyciu programu Midnight Commander (mc);
+
+Praca w grupie z Krzysztof Cieslik s27115
+
+Mkdir ukoslaby
+
+Chmod 770 ukos laby -> uprawnienia do czytania, zapisu i wykonania dla 
+wlasciciela i grupy, brak uprawnien dla innych
+
+s28041@szuflandia22:~$ cd ukoslaby/
+s28041@szuflandia22:~/ukoslaby$ ls
+'kukulcze jajko'
+s28041@szuflandia22:~/ukoslaby$ rm kukulcze\ jajko 
+rm: remove write-protected regular empty file 'kukulcze jajko'? 
+
+Potwierdzenie y
+
+Plik zostaje usuniety
+
+s28041@szuflandia22:~$ cd ..
+s28041@szuflandia22:/home/PJWSTK$ cd s27115
+s28041@szuflandia22:/home/PJWSTK/s27115$ ls
+s-27115  windows
+s28041@szuflandia22:/home/PJWSTK/s27115$ ls
+katalog  s-27115  windows
+s28041@szuflandia22:/home/PJWSTK/s27115$ cd katalog/
+s28041@szuflandia22:/home/PJWSTK/s27115/katalog$ touch 'kukulcze 
+jajko'.txt
+s28041@szuflandia22:/home/PJWSTK/s27115/katalog$ ls
+ katalog1   katalog2  'kukulcze jajko.txt'
+s28041@szuflandia22:/home/PJWSTK/s27115/katalog$ 
+
+Nie ma midgnight commandera
+
+Zadanie2
+W utworzonej na swoim koncie strukturze podkatalogow przeprowadzic 
+eksperymenty:
+usuwajac wszelkie uprawnienia dostepu do katalogu biezacego
+usuwajac wszelkie uprawnienia dostepu do katalogu nadrzednego 
+(nadkatalogu).
+W jakich przypadkach mozemy wykonac wtedy polecenie cd ? 
+W jakich przypadkach mozemy wykonac polecenie chmod ? 
+Czy mozemy bezposrednio przeskoczyc do katalogu ABC/XYZ, jesli nie mamy 
+uprawnienia wstepu do ABC, ale mamy do XYZ ?
+Czy mozemy takze wrocic korzystajac z polecnia cd - ?
+
+s28041@szuflandia22:~/ukoslaby$ cd zadanie2/
+s28041@szuflandia22:~/ukoslaby/zadanie2$ ls
+s28041@szuflandia22:~/ukoslaby/zadanie2$ mkdir zad
+s28041@szuflandia22:~/ukoslaby/zadanie2$ cd zad/
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ ls
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ chmod 000 zad
+chmod: cannot access 'zad': No such file or directory
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ chmod 000 .
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ chmod 000 zadanie2
+chmod: cannot access 'zadanie2': Permission denied
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ 
+
+Brak dostepu do zmiany uprawnien do nadrzednego folderu
+
+W jakich przypadkach mozemy wykonać wtedy polecenie cd ?
+
+Mozemy wyjsc poleceniem cd .. do katalogu nadrzednego
+
+Polecenia cd mozemy uzyć w momencie w ktorym mamy uprawnienia r-x, dzieki 
+ktorym mamy odczyt oraz wykonanie
+
+W jakich przypadkach mozemy wykonac polecenie chmod ?
+
+Po wyjsciu do katalogu nadrzednego mozna zmienic uprawnienia 
+
+Czy mozemy bezposrednio przeskoczyc do katalogu ABC/XYZ, jesli nie mamy 
+uprawnienia wstepu do ABC, ale mamy do XYZ ?
+
+s28041@szuflandia22:~/ukoslaby$ chmod 770 zadanie2
+s28041@szuflandia22:~/ukoslaby$ chmod 770 zadanie2/zad
+s28041@szuflandia22:~/ukoslaby$ chmod 000 zadanie2
+s28041@szuflandia22:~/ukoslaby$ cd zadanie2/zad
+-bash: cd: zadanie2/zad: Brak dostepu
+
+Czy mozemy takze wrocic korzystajac z polecnia cd - ?
+
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ chmod 000 ..
+s28041@szuflandia22:~/ukoslaby/zadanie2/zad$ cd -
+/home/PJWSTK/s28041/ukoslaby
+
+Omijamy katalog, do ktorego nie mamy dostepu
+
+Zadanie3
+W zespolach 2- lub 3-osobowych (w opisie zadania na githubie prosze 
+umieccic login osob z zespolu) wyprobowac mozliwosc komunikacji przez 
+wspoldzielony plik: na jednym z kont w zespole utworzyc pusty plik i 
+przydzielic odpowiednie uprawnienia dostepu (do pliku i do katalogu 
+domowego). Wpisywac i odczytywac komunikaty przy uzyciu polecen:
+echo tresc_komunikatu > plik
+cat plik
+Sprawdzic, jaki skutek powoduje zamiana operatora > na operator >> w 
+poleceniu echo. Uruchom także drugi terminal i wykonaj w nim komende tail 
+-f plik i powtorz powyzsze cwiczenie w pierwszym terminalu (komunikacja za 
+pomoca pliku).
+
+Zadanie wykonane razem z Krzyskiem, indeks s27115
+
+Pierwszy terminal
+
+s28041@szuflandia22:/home/PJWSTK/s27115$ echo zadanie3 > zad3/zad3plik
+s28041@szuflandia22:/home/PJWSTK/s27115$ cat zad3/zad3plik
+zadanie3
+s28041@szuflandia22:/home/PJWSTK/s27115$ echo kukulcze_jajo >> 
+zad3/zad3plik
+s28041@szuflandia22:/home/PJWSTK/s27115$ cat zad3/zad3plik
+zadanie3
+kukulcze_jajo
+s28041@szuflandia22:/home/PJWSTK/s27115$ echo dalsza_czesc_zadania3 > 
+zad3/za3plik
+-bash: zad3/za3plik: Brak dostepu
+
+Drugi terminal
+
+s28041@szuflandia22:~$ cd ..
+s28041@szuflandia22:/home/PJWSTK$ cd s27115
+s28041@szuflandia22:/home/PJWSTK/s27115$ tail -f zad3/zad3plik
+
+Po tej komendzie w drugim terminalu pozostaje wciaz otwarty plik i nie mozna sie do niego dostac. Natomiast wlasciciel pliku 
+moze wysylac nam wiadomosci, ktore bedziemy widziec. Wiadomosci tekstowe widac normalnie, natomiast liczby trzeba podawac
+w ''.
+
+Zadanie 4
+Znalezc w swoim katalogu domowym podkatalog public_html (jesli go nie ma, 
+to utworzyc; musi sie on nazywac DOKLADNIE tak jak podano, pisane malymi 
+literami z podkresleniem zamiast spacji pomiedzy slowami). Umiescic w nim 
+plik o nazwie strona.html o nastepujacej zawartosci:
+<HTML>
+<BODY>
+<H1>To jest moja strona domowa</H1>
+</BODY>
+</HTML>
+Sprawdzic, jakie sa minimalne uprawnienia dostepu, ktore trzeba 
+przydzielic do:
+katalogu domowego;
+katalogu public_html;
+pliku strona.html, aby zawartosc pliku byla widoczna w przegladarce 
+internetowej pod adresem 
+http://szuflandia.pjwstk.edu.pl/~nazwa_konta/strona.html
+
+s28041@szuflandia22:~$ mkdir public_html
+s28041@szuflandia22:~$ nano strona.html
+s28041@szuflandia22:~$ chmod 704 strona.html
+s28041@szuflandia22:~$ cd ..
+s28041@szuflandia22:~$ chmod public_html
+
+Tworzymy folder oraz plik, w ktorym wpisujemy formulke do wyswietlenia napisu. Nastepnie zmieniamy uprawnienia (zostawiamy sobie, dla
+naszego bezpieczenstwa edycji) i nastepnie wchodzimy na adres strony http://szuflandia.pjwstk.edu.pl/~s28041/strona.html gdzie widzimy
+wpisany przez nas napis.

@@ -1,0 +1,60 @@
+Zadania
+
+Kolejne polecenia zaleza od poprzednich.
+
+1.    Uruchom terminal.  ->  ubuntu, klikamy show all applications i wpisujemy "terminal"
+
+2.    Wyswietl zawartosc aktualnego katalogu.
+
+	ubuntu@ubuntu:~$ ls - > wyswietla aktualna zawartosc folderu
+
+3.    Sprawdz gdzie aktualnie sie znajdujesz.
+	
+	ubuntu@ubuntu:~$ pwd -> wyswietla sciezke katalogow, w ktorym aktualnie sie znajdujemy np. /home/ubuntu
+
+4.    Przejdz do katalogu Pulpit za pomoca sciezki wzglednej
+
+	ubuntu@ubuntu:~$ cd Desktop/ -> przechodzimy do katalogu pulpit z miejsca w ktorym aktualnie sie znajdujemy
+
+5.    Sprawdz gdzie jestes.
+
+	ubuntu@ubuntu:~$ pwd -> home/ubuntu/Dekstop aktualnie znajduje sie w katalogu Dekstop
+
+6.    Wyswietl zawartosc biezacego katalogu.
+
+	ubuntu@ubuntu:~$ ls -> w katalogu znajduje sie ubiquity.desktop
+
+7.    Wyswietl zawartosc swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+
+	ubuntu@ubuntu:~$ ls .. wyswietla zawartosc poprzedniego katalogu alternatywna wersja to ls /home/ubuntu
+
+8.    Przejdz do katalogu Obrazy w twoim katalogu domowym za pomoca sciezki wzglednej.
+
+	ubuntu@ubuntu:~$ cd ../Pictures -> wpierw cofnelismy sie, a nastepnie do razu przeszlismy do innego folderu
+
+9.    Sprawdz gdzie jestes.
+
+	ubuntu@ubuntu:~$ pwd -> obecnie znajduje sie w home/ubuntu/Pictures
+
+10.   Zobacz do jakiego katalogu przejdziesz za pomocą sciezki ././././././
+
+	ubuntu@ubuntu:~$ cd ././././././ -> caly czas wchodze do folderu w ktorym obecnie sie znajduje
+
+11.   Przejdz do swojego katalogu domowego za pomoca sciezki bezwzglednej.
+
+	ubuntu@ubuntu:~$ cd /ubuntu/home -> przechodze do katalogu domowego
+
+12.   Zobacz co sie stanie jak wpiszesz komende 'cd /root'. Jak juz to zrobisz, zastanow sie co sie stalo. Poszukaj w Internecie.
+
+	ubuntu@ubuntu:~$ cd /root -> bash: cd: /root: Permission denied. Jestem na zwyklym uzytkowniku i nie mam dostepu do zadnego folderu 
+	roota. Musialbym nadac uprawnienia do folderu na kazdego uzytkownika, albo sprobowac wejsc do folderu juz jako root.
+
+13.   Zobacz, co sie stanie, jesli wcisniesz kombinacje klawiszy: Ctrl+Alt+F1
+
+	W moim przypadku zostalem na maszynie wirtualnej wyrzucony do ekranu logowania. Powrot do terminala, w ktorym bylem nastapil po 
+	wcisnieciu Ctrl+Alt+F2	
+
+14.   A teraz co sie stanie po: Alt+F7
+
+	Po wcisnieciu na maszynie wirtualnej na ubuntu 22.04 powoduje to czarny ekran. Natomiast na LinuxMint zostalem przeniesiony do
+	tekstowego GUI
