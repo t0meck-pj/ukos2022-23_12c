@@ -1,0 +1,90 @@
+Rozgrzewkowe
+1.Przejdz do swojego katalogu domowego.
+2.Wydaj komende ls-a
+3.Zobacz ile plikow wypisalo.
+-3 pliki.
+4.Teraz wydaj komende: ls -a | grep D
+5.Zobacz ile teraz jest wynikow. Co sie stalo?
+-wypisalo wszystkie pliki ktore zaczynaja sie na wskazany wzorzec w tym przypadku uzylem "u".
+6.A teraz wykonaj komende ls -a | grep D > lista_plikow_z_literka_d.txt
+7.Zobacz czy utworzy sie jakis plik.
+-po wpisaniu: la -a | grep u > plik.txt utworzyl sie plik.txt 
+*.Jaka jest jego tresc?
+-Plikami zaczynajace sie na litere "u".
+*. Co znaczy | i co znaczy >?
+| pipe- sluzy do laczenie dwoch lub wiecej polecen. Najczescij poprzez polaczenie standardowego wyjscia 
+jednego procesu ze standardowym wejsciem drugiego
+> operator przekierowania standardowego wyjścia do pliku (nadpisywanie).
+8/9.A teraz wykonaj komende ls -a | greep u | tee plik1.txt
+-utworzylo plik jak komenda powyzej "la -a | grep u > plik.txt utworzyl sie plik.txt"
+dodatkowo dzieki programowi "tee" wyswietlilo odarzu zawartosc utworzonego pliku.
+
+1
+A.Zobacz co sie stanie jezeli wpiszemy w terminalu:
+1.ps
+-wyswietla liste procesow dla biezacej powloki 
+2.ps -a 
+-wyswietla wszystkie procesy z wyjatkiem liderow sesji i procesow niezwiazanych z terminalem
+3.ps x
+-wyswietla wszystie procesy nawet jezeli nie sa one powiazane z biezacym tty
+4.ps axu
+-znaki zapytania to procesy ktore nie maja przypisanego terminala sterujacego (ang. deamons)
+B. Jak wykonasz ponizsze 2 zadania?
+1.wyswietl wszystkie procesy bash
+-ps uxa | grep bash | (grep -v grep) -> komenda w nawiasach sluzy do usuniecia pliku co ma w nazwie grep aby pozostaly tylko procesy bash
+2.wyswietl wszystkie procesy nalezace do uzytkownika root
+- ps -U root - wyswietla wszystkie procesy nalezace do uzytwkonika root
+
+2
+
+Zadanie
+1. Uruchom wybrany przez ciebie graficzny edytor tekstowy
+- Uruchomilem gedit.
+2. Zobacz jaki ma on PID - przyda sie do tego komenda ps
+- Znalazlem PID dzieki komendndzie: ps axu | grep gedit | grep -v grep
+3. Wydaj komende kill w taki sposob aby ten edytor sie wylaczyl zobacz czy to dziala.
+- Po wpisaniu kill 6066 gedit sie wylaczyl
+- Po ponowynym wlaczeniu edytora tekstu program rozniez zamyka sie przy uzciu komendy kill -SIGKILL 6324
+4.Zobacz dzialanie komendy killall bash
+-killall bash nie zadzialalo
+-killall -9 bash wylaczylo terminal(9 aby miec pewnosc ze wyskalny sygnal nie zostanie przechwycony lub zignorowany)
+
+3
+1.Uruchom komende cat bez parametro
+2.Wcisnij CTRL+C i zobacz co sie stanie
+-zamyka program
+
+Zobacz co sie stanie:
+1. Wydaj komende cat > wynik3_1.txt
+2. Wpisz tekst "witaj" bez wciskania klawisza Enter
+3. Wcisnij CTRL+C
+4.Zobacz co sie znalazlo w pliku wynik3_1.txt
+- plik jest pusty
+
+1. Wydaj komende cat > wynik3_2.txt
+2. Wpisz tekst witaj bez wciskania klawisza Enter
+3. Wcisnij CTRL+D
+4. Zobacz co sie znalazlo w pliku wynik3_2.txt
+- Po wcisnieciu CTRL+D(x2) program sie wylaczyl, w pliku znajduje sie napis "witaj"
+-CTRL+C - zamyka program ktory usunie zawartosc ktora nie zostala przetworzona
+-CTRL+D - bierze niepelny wiersz i przetwarza go, dlatego po uzyciu CTRL+D .txt nie jest pusty a po CTRL+D tak
+
+4
+
+1.Wpisz komende gimp(lub gedit)
+2.W terminalu w ktorym sie to uruchomilo wcisnij CTRL+Z
+3.Sprobuj cos wyklikac w gimpie/gedit
+-nic sie nie da zrobic, aplikacja wsytzymana 
+4.Otworz dowolne inne okno i przen je tak by czesciowo nachodzilo na okno gimpa/gedit 
+potem je odsun by odslonic w pelni okno gimpa/gedit
+-tworzy sie slad widziany czasami kiedy program sie zawiesi
+
+1.Wpisz komende bg
+-program juz nie jest wstrzymany 
+
+1.Wpisz komende fg
+-sluzy do wznowienia na pierwszym planie wstrzymanego wczesniej procesu
+-komenda jobs wyswietla liste zadan przeniesionych do tla
+-fg %2 - przywracanie programu nr2 
+Komendy powyzej sluza do korzystania z kilku aplikacji jednoczesnie i przelaczania sie pomiedzy nimi w terminalu
+bez koniecznosci otwierania nowego okna/sesji

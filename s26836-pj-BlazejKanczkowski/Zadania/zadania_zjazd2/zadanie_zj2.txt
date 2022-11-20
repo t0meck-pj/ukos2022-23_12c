@@ -1,0 +1,62 @@
+1.Utworzyc we wlasnym katalogu domowym nieduza strukture podkatalogow i plikow tekstowych. 
+Przydzielic rozne uprawnienia dostepu, nastepnie sprobowac wejsc do katalogow domowych innych uczestnikow 
+zajec i sprawdzic, ktore z obiektow sa tam dla nas dostepne (i w jakim sensie). 
+Sprobowac utworzyc wlasny plik w cudzym katalogu ("kukulcze jajko") oraz sprobowac usunac cudzy plik we wlasnym katalogu (co mozna zaobserwowac ?). 
+Wyprobowac powyzsze operacje:
+-w trybie tekstowym
+-przy uzyciu programu Midnight Commander (mc)
+
+*Utowrzylem strukture katalogow przy uzyciu mkdir a takze mc, touch, i nano komend w trybie tekstowym.
+Nadalem rozne uprawnienia za pomoca komendy chmod -g xxx. 
+Przy probie tworzenia plikow w cucdzych katalogach najczesciej wystepowaly bledy jak:
+-brak uprawnien do zapisu, brak uprawnien, do odczytu, calkowity brak uprawnien do otwarcia katalogu lub brak uprawnien do wprowadzania zmian.
+
+2. W utworzonej na swoim koncie strukturze podkatalogow przeprowadzic eksperymenty:
+-usuwajac wszelkie uprawnienia dostepu do katalogu biezacego
+-usuwajac wszelkie uprawnienia dostepu do katalogu nadrzednego (nadkatalogu)
+
+-W jakich przypadkach mozemy wykonac wtedy polecenie cd? 
+
+*tylko gdy mamy uprawnienia do przejscia przez wybrany katalog
+
+-W jakich przypadkach mozemy wykonac polecenie chmod? 
+
+*jedynie gdy nie zabralismy sobie dostepow.
+
+-Czy mozemy bezposrednio przeskoczyc do katalogu ABC/XYZ, jeśli nie mamy 
+uprawnienia wstępu do ABC, ale mamy do XYZ?
+
+*Nie mozna, wyskakuje komunikat o braku dostepu.
+
+-Czy mozemy takze wrocic korzystajac z polecnia cd - ?
+
+*Przy uzyciu cd -- mozna przeskoczyc folder z zabranymi dostepami
+
+3. W zespolach 2- lub 3-osobowych wyprobowac mozliwosc komunikacji przez wspoldzielony plik:
+na jednym z kont w zespole utworzyc pusty plik i przydzielic odpowiednie uprawnienia dostepu (do pliku i do katalogu domowego)
+Wpisywac i odczytywac komunikaty przy uzyciu polecen:
+-echo tresc_komunikatu >plik
+-cat plik
+Sprawdzic jaki skutek powoduje zmiana operatora > na operator >> w poleceniu echo. Uruchom takze drugi terminal
+i wykonaj w nim komede tail -f i powtorz powyzsze cwiczenie w pierwszym terminalu (komunikacja za pomoca pliku)
+
+*osoby z grupy: s28853,s27424
+*echo tresc_komunikatu >plik podmienia zawartosc pliku .txt 
+*zmiana operatora ">" na ">>" powoduje dodanie zawartosci do pliku a nie jego podmiane jak w poleceniu powyzej.
+*tail -f pokazuje wpisywane zmiany na biezaco 
+*cat plik pokazuje zawartosc pliku w terminalu bez koniecznosci wlaczania go
+
+4.Znalez w swoim katalogu domowym podkatalog public_html. Umiescic w nim plik o nazwie strona.html o nastepujacej zawartosci:
+<HTML>
+<BODY>
+<H1>To jest moja strona domowa</H1>
+</BODY>
+</HTML>
+Sprawdz jakie sa minimalne uprawnienia ktore trzeba przydzielic do:
+-katalogu domowego
+-katalogu public_html:
+-pliku strona.html aby zawartosc pliku byla widoczna w przegladarce internetowej pod adresem
+http://szuflandia.pjwstk.edu.pl/~nazwa_konta/strona.html
+
+-wyswietlic strone mozna tylko wtedy gdy folderowi public_html nadamy minimalne uprawnienia x czyli wejscia
+-wyswietlic strone mozna tylko wtedy gdy nadamy plikowi uminimum r czyli odczytu.
