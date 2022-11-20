@@ -1,0 +1,15 @@
+2 ls
+3 pwd
+4 cd /windows/desktop/
+5 pwd
+6 ls
+7 ls -l /home
+8 cd /Pictures/
+9 pwd
+10 ten samy katalog. nie zmieniamy go
+11 cd /home/
+12 odmowa dostepu. to chyba jest katalog glownego administratora systemu
+13 srodowisko tekstowe / terminal
+14 panel graficzny.
+
+

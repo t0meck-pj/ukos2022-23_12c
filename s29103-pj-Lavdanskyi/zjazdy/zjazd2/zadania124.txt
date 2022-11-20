@@ -1,0 +1,62 @@
+
+Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych.
+--Utworzylem kilka katalogow za polecenjem (MKDIR). Stworzylem w nich pliki (TOUCH).
+
+Przydzielić różne uprawnienia dostępu.
+-- Do jednego z katalogow uzylem (CHMOD 700)
+
+-- mkdir kat1
+-- chmod 700 kat1
+-- chmod g+r kat1
+
+do inego (CHMOD 505).
+
+-- mkdir kat2
+-- chmod 505 kat2
+-- chmod g+r kat2
+
+W jakich przypadkach możemy wykonać wtedy polecenie cd?
+-- Tylko jezeli mamy uprawienja dostepu do katalogu.
+
+W jakich przypadkach możemy wykonać polecenie chmod?
+-- Jezeli potrzebuemy zmienic uprawienja dostepu do katalogu albo jakiegos pliku.
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ?
+-- Nie mozemy, bo nie mamy postepu do katalogu nadrzednego.
+
+Czy możemy także wrócić korzystając z polecnia cd -?
+-- Tak. wracamy z drzewa katalogów
+
+Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). Umieścić w nim plik o nazwie strona.html o następującej zawartości:
+
+<HTML>
+
+<BODY>
+
+<H1>To jest moja strona domowa</H1>
+
+</BODY>
+
+</HTML>
+
+-- mkdir public_html
+-- cd public_html
+-- ls -l
+
+-- touch strona.html
+-- vim strona.html 
+
+minimalne uprawnienia dla katalogu domowego
+-- chmod u-rwx,g-rwx,o-rw s29103
+-- o --------x 
+
+minimalne uprawnienia dla public_html
+-- a+x
+-- a --------x
+
+minimalne uprawnienia dla strona_html
+-- o ------r-- 
+
+
+
+
