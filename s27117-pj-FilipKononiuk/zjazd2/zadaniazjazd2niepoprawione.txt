@@ -1,0 +1,18 @@
+1. TRYB TEKSTOWY: W nieswoim folderze z uprawnieniami rwxrwx--- mogę tworzyć foldery. Mogę również usunąć utworzony folder.
+-Czyiś plik tekstowy z uprawnieniami rwxrwx--- mogę edytować i przeglądać. Ponadto jego nazwa wyświetla się na zielono
+-Natomiast w pliku tekstowym z uprawieniami r--r----- nie mogę nic zapisywać, wyskakuje masa błędów np. E45: Opcja 'readonly' jest uprawniona
+Próbując zmienić uprawienia tego pliku chmodem wyskakuje "operacja niedozwolona"
+TRYB MC: Udało się również utworzyć folder i plik.txt w nieswoim folderze z uprawnieniami rwxrwx---. Udało również skasować obydwa. pliok tekstowy z uprawnieniami r--r----- mogę tylko, na co wskazują zresztą uprawnienia, przeczytać. Wciśniecie przycisku edycja kończy się błędem plik "..." nie jest dostępny do zapisu.
+2. Usuwajac wszelkie możliwe uprawnienia a-rwx, g-rwx, o-rwx, z katalogiem zrobić nic się nie da nawet wejsc.
+-Nie mamy uprawnien dl cd, wiec cd test oraz cd /home/PJWSTK/s27117/test jak i cd /home/PJWSTK/s27117/test/test3/ nie zadziałało.
+-polecenie chmod nie zadziałało. Można go użyć natomiast przy użyciu ścieżki bezwzględnej w tym przypadku chmod a+rwx /home/PJWSTK/s27117/test/test3
+-cd - nie zadziałało z powodu braku uprawnień.
+3. Stworzyłem plik.txt o nazwie zadgrupowe.txt, wpisałem do niego "skrypt" echo dotyczący wyświetlenia komunikatu, następnie ta treść wpisała się do pliku, poleceniem cat wszedłem do pliku, następnie przyznałem do pliku wszystkie uprawnienia żeby grupowicze mogli zobaczyć. Po dodaniu drugiego znaku ">" tekst wyświetla się 2 razy
+Wykonywane wraz z:
+Kacper Ruta s28866
+Lavdanskyi Dmytro s29103
+4.Minimalne uprawnienia żeby strona się pokazała
+dla strona.html r-----r--
+dla katalogu public,.html: --------x
+dla katalogu domowego: --x-----x
+

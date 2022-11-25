@@ -1,0 +1,39 @@
+===================================
+Zadania 0 rozgrzewkowe
+==================================
+1. do katalogu /home przechodz się poprzez cd ..
+2 i 3. spowodowało to wyświetlenie folderu ubuntu, vagrant oraz "." i ".."
+4/5 Komenda powoduje wypisanie wszystkich folderów i plików zawierających w nazwie "D" czyli w tym przypadku nic nie wypisuje.
+6/7. Podana komenda utworzyła pliczek lista_plikow_z_literka_d.txt z wypisanymi w środku nazwami folderów z literką D
+z moich obserwacji wynika, że znak ">" przekierowuje wynik komendy x do pliku .txt. Jeśli w danym pliku są jakieś dane nadpisze je. Jeśli plik txt nie istnieje to zostanie utworzony. Natomiast "|" to przedłużenie komendy/dodanie dodatkowych parametrów.
+8/9. został utworzony identyczny plik, tyle że jednocześnie wykonana komenda została wypisana w terminalu.
+Z moich obserwacji wynika, że program Tee służy do jednoczesnego wypisywania do konsoli i pliku danych.
+==================================
+Zadania 1.
+==================================
+1. ps - (process status) komenda ps sama w sobie bez żadnych innych paramterów wyświetla aktualne procesy dla aktualnej powłoki.
+ps -a - wypisuje procesy niezwiązane z terminalem.
+ps x - wypisuje wszystkie procesy również systemowe.
+ps axu - (a-all) (x-wszystkie) (u-users) - pokazuje wszystkie procesy również procesy użytkowników.
+Co oznaczają znaki zapytania w komsoli? Oznaczają one że procesy nie są zaalokowanu e do żadnego terminala.
+Wyświetl wszystkie procesy bash - ps aux | grep bash | grep -v grep | cut -d ' ' -f 2
+===================================
+Zadania 2.
+====================================
+po wpisaniu ps axu | grep code wyskakuje ściana tekstu, jednak proces znajdujący się najwyżej /usr/share/code/code --unity launch, ma PID 1597 (z tego co zdążyłem zauważyć ten PID jest zmienny) więc w moim przypadku komenda kill 1597 zamknęła program visual studio code. Mam świadomość że można jeszcze przefiltrować całość dodając grep -v grep, jednak wiele to nie daje, poza tym poradziłem sobie z tym już.
+kill -SIGKILL <PID> również zamknęło program. informacje jak go używać znalazłem pod man signal.
+killall bash nie zadziałało, natomiast podając dodatkowo parametr -9, który oznacza
+terminal, wyłącza terminal.
+Kill nie działa dla każdego procesu. Nie mam uprawnień przy procesach root'a, przy niektórych procesach użytkownika ubuntu nic się nie dzieje. Zamykając jeden z procesów użytkownika, zaobserwowałem wylogowanie się użytkownika i przeładowanie pulpitu.
+====================================
+Zadania 3.
+===================================
+po uruchomieniu cat'a, Ctrl+c zakończyło pracę cat'a.
+po wydaniu cat > wynik3_1.txt i bez klikania enter, klikając ctrl+c plik jest pusty.
+Po zrobieniu tego samego tylko że z ctrl+d, słowo witaj zostao zapisane.
+Z tego co rozumiem, ctrl+c zamyka od razu program, i bez wciskania entera nie zapisze pliku, natomiast ctrl+d zamyka tylko strumień wejściowy i zapisuje wynik, mimo braku wciśnięcia klawisza enter.
+==================================
+Zadania 4.
+==================================
+Program gedit po zatrzymaniu nie reaguje na kliknięcia. Ponadto tworzą się na nim jakieś artefakty kojarzące mi się z windowsem xp.
+Komenda jobs zadziałała. Po wpisaniu fg %2 przywróciło mi program geany z powrotem z stanu wstrzymania.

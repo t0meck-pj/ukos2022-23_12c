@@ -1,0 +1,11 @@
+1. TRYB TEKSTOWY: W nieswoim folderze z uprawnieniami rwxrwx--- mogę tworzyć foldery.
+-Plik tekstowy z uprawnieniami rwxrwx--- mogę edytować i przeglądać. Ponadto jego nazwa wyświetla się na zielono.
+-Natomiast w pliku tekstowym z uprawnieniami r--r----- nie mogę nic zapisywać. Wyskakuje masa błędów ostrzeżeń np E45: Opcja 
+'read only' jest ustawiona (wymuś poprzez !)
+Próbując zmienić uprawienia do tego pliku poprzez chmod a-rwx wyskakuje "operacja niedozwolona"
+co ciekawe w folderze utworzonym przez kogoś nie mogę nic stworzyć. Co jeszcze ciekawsze nie mogę nawet zmienić jego uprawnień przez chmod. Nie wiem cxzy robię coś źle czy jak...
+usuwając cudzy plik txt w swoim folderze poprzez rm otrzymuję "brak dostępu"
+TRYB MC: Udało się również utworzyć folder i plik .txt w nieswoim folderze z uprawnieniami rwxrwx---. Udało również mi się skasować obydwa.
+plik tekstowy z uprawnieniami r--r----- mogę tylko, na co wskazują zresztą uprawienia, przeczytać.Wciśniecie przycisku edycja konczy się
+błędem plik "..." nie jest dostepny do zapisu.
+W trybie mc nie mogę usunąć również katalogu jak i pliku utworzonego przez kogoś innego w moim folderze. Wyskakuje brak dostępu (13)
