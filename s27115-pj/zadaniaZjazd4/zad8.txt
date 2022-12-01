@@ -1,0 +1,4 @@
+Jak przyspieszyć wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupełnianie komend?
+
+wpisywanie komend można przyspieszyć za pomocą używania przycisku tab który podpowiada nam np. resztę ścieżki którą wpisujemy lub resztę nazwy pliku 
+
