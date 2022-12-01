@@ -1,0 +1,31 @@
+xeon@e11:~$ mkdir uko
+xeon@e11:~$ cd uko
+xeon@e11:~/uko$ ls
+xeon@e11:~/uko$ cat
+^Z
+[4]+  Zatrzymano              cat
+xeon@e11:~/uko$ cat > wynik3_1.txt
+witaj^C
+xeon@e11:~/uko$ cat wynik3_1.txt
+xeon@e11:~/uko$ nano wynik3_1.txt 
+
+
+Aby powrócić do nano, użyj "fg".
+
+[5]+  Zatrzymano              nano wynik3_1.txt
+xeon@e11:~/uko$ ls
+wynik3_1.txt
+xeon@e11:~/uko$  cat > wynik3_2.txt
+witajxeon@e11:~/cat wynik3_2.txtxt 
+witajxeon@e11:~/uko$ 
+
+W opisie rozwiązania zadania umieść:
+
+    jak rozumiesz co się stało?
+
+    czym oba te przykłady się różnią?
+
+    DLACZEGO się różnią?
+
+stało się tak ponieważ kombinacja crtl+c natychmias zakończyła proces cat co nie pozowoliło na zapisanie danych do pilku ,a opracacja ctrl + d zamkneła standardowe 
+wejście przez co treść została zapisana.

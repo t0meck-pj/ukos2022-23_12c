@@ -1,0 +1,10 @@
+xeon@e11:~$ ps x  |grep kate
+  11681 ?        Sl     0:01 /usr/bin/kate -b
+  11694 ?        S      0:00 tags.so [kdeinit5] tags local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/katepTMnEl.1.slave-socket
+  11695 ?        S      0:00 file.so [kdeinit5] file local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/kateMjYfek.2.slave-socket
+  11696 ?        Sl     0:00 thumbnail.so [kdeinit5] thumbnail local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/kateZvFbSP.4.slave-socket
+  11710 pts/1    S+     0:00 grep kate
+xeon@e11:~$ kill 11681
+kill bash u mnie nic nie robi 
+
+nie każdy proces da się wyłączyć przy pomocy kill 

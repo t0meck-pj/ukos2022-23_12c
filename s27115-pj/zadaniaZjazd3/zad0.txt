@@ -1,0 +1,28 @@
+xeon@e11:~$ z racji że robię tu u siebie to przejdę sobie do czegoś innego niż folder domowy żeby mieć tam pliki itd
+bash: z: nie znaleziono polecenia
+xeon@e11:~$ cd 
+xeon@e11:~$ cd Pulpit
+xeon@e11:~/Pulpit$ mkdir uko
+xeon@e11:~/Pulpit$ cd uko
+xeon@e11:~/Pulpit/uko$ touch Dplik.txt
+xeon@e11:~/Pulpit/uko$ ls
+Dplik.txt
+xeon@e11:~/Pulpit/uko$ touch innyplik.txt
+xeon@e11:~/Pulpit/uko$ ls
+Dplik.txt  innyplik.txt
+xeon@e11:~/Pulpit/uko$ ls -a | grep D
+Dplik.txt
+xeon@e11:~/Pulpit/uko$ ls -a | grep D > lista_plikow_z_literka_d.txt
+xeon@e11:~/Pulpit/uko$ ls
+Dplik.txt  innyplik.txt  lista_plikow_z_literka_d.txt
+xeon@e11:~/Pulpit/uko$ cat lista_plikow_z_literka_d.txt 
+Dplik.txt
+xeon@e11:~/Pulpit/uko$ treść tego pliku to strumień wyjściowy z polecenia grep nadpisany do pliku ,a z racji że plik nieistniał to został utworzony 
+bash: treść: nie znaleziono polecenia
+xeon@e11:~/Pulpit/uko$ zapis | przekazuje standardowe wyjście (w tym przypadku programu ls) do standardowego wejścia innego programu (w tym przypadku grep)
+bash: błąd składni przy nieoczekiwanym znaczniku `('
+xeon@e11:~/Pulpit/uko$ zapis > oznacza nadpisanie pliku standardowym wyjściem jakiegoś programu w tym przypadku grep
+bash: zapis: nie znaleziono polecenia
+xeon@e11:~/Pulpit/uko$  ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+Dplik.txt
+xeon@e11:~/Pulpit/uko$ tee w przeciwności do zapisu używającego sposobu z > poza zapisaniem standardowego wyjścia do pliku przekazuje je też do standardowego wyjścia 
