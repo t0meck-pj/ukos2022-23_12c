@@ -1,0 +1,26 @@
+    Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). Umieścić w nim plik o nazwie strona.html o następującej zawartości:
+
+<HTML>
+
+<BODY>
+
+<H1>To jest moja strona domowa</H1>
+
+</BODY>
+
+</HTML>
+
+Sprawdzić, jakie są minimalne uprawnienia dostępu, które trzeba przydzielić do:
+
+        katalogu domowego;
+
+        katalogu public_html;
+
+        pliku strona.html, aby zawartość pliku była widoczna w przeglądarce internetowej pod adresem http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
+
+
+Minimalne wymagane uprawnienia to
+dla innych użytkowników{ 
+execute dla katalogu domowego i public_html
+odczyt dla pliku strona.html 
+}
