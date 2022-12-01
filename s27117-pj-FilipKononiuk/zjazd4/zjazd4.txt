@@ -1,0 +1,47 @@
+========================
+Zad 0 rozgrzewkowe
+========================
+1. mogliśmy zapomnieć nadać własciwe uprawnienia.
+2. Zabrakło miejsca na quocie.
+========================
+Zadanie 1
+========================
+Przy pomocy ścieżki bezwzględnej: cd .. i ponownie cd ..
+Przy pomocy ścieżki bezwzględnej: cd /tmp/ukos/ala
+========================
+Zadanie 2
+========================
+przy pomocy komendy mkdir -p jan/kowalski
+========================
+Zadanie 3
+========================
+1. Przeniosłem przy pomocy mv test /home/PJWSTK/s27117/tmp/ala/nowy
+2. przy pomocy mv /home/PJWSTK/s27117/nowy ../s27117/tmp/ala/ma udało mi się przenieść katalog nowy do katalogu ma. Mam nadzieję że to o to chodziło.
+========================
+Zadanie 4
+========================
+-Można zamknąć aplikacje poprzez wpisanie w terminalu xkill i klikając okno otwartej aplikacji.
+-kolejny sposób to zamknięcie komendą kill. Trzeba wpisać ps aux (można też użyć | grep ... (w celu przefiltrowania procesów) znaleźć PID programu i w ten sposób go zamknąć.
+========================
+Zadanie 5
+========================
+Wypisałem wszystkie pliki i foldery poleceniem ls | grep ^al
+========================
+Zadanie 6
+========================
+-chmod 444 ala/ chmod a+r ala/ chmod a=r ala 
+-chmod 040 ala/ chmod g+r ala/ chmod g=r ala
+-chmod 700 ala/ chmod u+rwx ala/ chmod u=rwx ala
+========================
+Zadanie 7
+========================
+ls > nazwapliku.txt
+========================
+Zadanie 8
+========================
+Chodzi o Tab?
+========================
+Zadanie 9
+========================
+1. Można uruchomić program i potem go wstrzymać przy pomocy ctrl+z
+2. dać znak & po nazwie uruchamianego programu.

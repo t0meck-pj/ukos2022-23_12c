@@ -1,5 +1,0 @@
-pamietnik.txt
-plik.txt
-zjazd1
-zjazd2
-zjazd3
