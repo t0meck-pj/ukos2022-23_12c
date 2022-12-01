@@ -1,0 +1,38 @@
+xeon@e11:~$ kate
+^Z
+[6]+  Zatrzymano              kate
+xeon@e11:~$ bg
+[6]+ kate &
+xeon@e11:~$ fg
+nano wynik3_1.txt       (wd: ~/uko)
+
+
+Aby powrócić do nano, użyj "fg".
+
+[5]+  Zatrzymano              nano wynik3_1.txt  (katalog: ~/uko)
+(katalog: ~)
+xeon@e11:~$ geany &
+[7] 11921
+xeon@e11:~$ kate &
+[8] 11930
+xeon@e11:~$ chrome &
+[9] 11950
+xeon@e11:~$ bash: chrome: nie znaleziono polecenia
+ geany &
+[10] 11951
+[9]   Kod wyjścia 127        chrome
+xeon@e11:~$ jobs
+[1]   Zatrzymano              man ps  (katalog: ~/Pulpit/Ukos tryb venom kurwa/uko/s27115-pj/zadaniaZjazd3)
+[2]   Zatrzymano              man ps  (katalog: ~/Pulpit/Ukos tryb venom kurwa/uko/s27115-pj/zadaniaZjazd3)
+[3]   Zatrzymano              man ps -u root  (katalog: ~/Pulpit/Ukos tryb venom kurwa/uko/s27115-pj/zadaniaZjazd3)
+[4]-  Zatrzymano              cat  (katalog: ~/uko)
+[5]+  Zatrzymano              nano wynik3_1.txt  (katalog: ~/uko)
+[6]   Działa                 kate &
+[7]   Działa                 geany &
+[8]   Działa                 kate &
+[10]   Działa                 geany &
+xeon@e11:~$ fg %6
+kate
+^Z
+[6]+  Zatrzymano              kate
+xeon@e11:~$ 
