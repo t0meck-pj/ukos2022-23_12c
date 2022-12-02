@@ -39,7 +39,13 @@ s28041@szuflandia22:/home/PJWSTK/s27115/katalog$ ls
  katalog1   katalog2  'kukulcze jajko.txt'
 s28041@szuflandia22:/home/PJWSTK/s27115/katalog$ 
 
-Nie ma midgnight commandera
+Midnight commander
+
+W katalogu, w ktorym zostal utworzony plik, wpisana zostala komenda MC, 
+pojawila sie konsola Midnight Commandera. Na zaznaczonym pliku, 
+ktory zostal utworzony przez inna osobe kliknalem opcje 8 Delete. 
+Pokazala sie opcja: Delete file "test.txt" z opcjami Yes oraz No. 
+Po kliknieciu Yes, plik zostal skasowany, a po operacji wyszedlem opcja 10 Quit.
 
 Zadanie2
 W utworzonej na swoim koncie strukturze podkatalogow przeprowadzic 

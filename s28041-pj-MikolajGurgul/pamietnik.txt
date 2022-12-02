@@ -16,9 +16,25 @@ mkdir -> stworzenie katalogu, rmdir -> usuniecie katalogu, touch -> stworzenie p
 pliku, oraz wiele wiecej
 - klonowanie repozytoriow z gita, forkowanie istniejacego repozytorium, tworzenie pull requestow, commitowanie i pushowanie na githuba
 
-22.10.2022
+23.10.2022
 
 - nadawanie uprawnien do plikow oraz jakie sa ich skutki, ktore uprawnienia musimy komus nadac, a ktore lepiej, zeby dany plik nie posiadal,
 abysmy nie byli stratni i nie otrzymali niepozadanych dzialan
 - komunikacje na zywo w pliku w terminalu
 - wyswietlenie strony domowej na stronie w przegladarce stworzonej w terminalu w swoim katalogu domowym
+- ustawianie bazowych uprawnien dla nowo tworzonych plikow oraz katalogow za pomoca umask
+
+6.11.2022
+
+- przekierowywanie strumeni np aby lista wszystkich plikow zapisala sie do jakiegos konkretnego pliku
+- uruchamianie programow w tle
+- zatrzymywanie i wznawianie programow, ktore pracuja/pracowaly w tle
+- dzialanie przerywania wpisywania tekstu do pliku poleceniem CTRL+C oraz zatrzymaniem CTRL+D
+- wysylanie sygnalow, ktore zatrzymuja procesy
+- wyszukiwanie PID procesow, ktore obecnie dzialaja
+
+20.11.2022
+
+- utrwalanie zdobytej wiedzy oraz poszerzanie jej
+- wyszukiwanie plikow w obecnym folderze np. zaczynajacych sie od jakiejs litery
+- nadawanie plikom uprawnien w roznych wersjach
