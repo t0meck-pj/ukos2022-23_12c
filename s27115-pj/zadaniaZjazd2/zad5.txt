@@ -1,0 +1,4 @@
+W opisie bash-a (man) przeczytać opis polecenia wewnętrznego umask i wypróbować jego działanie sprawdzając,
+ a następnie zmieniając swoją maskę trybu pliku i tworząc za każdym razem nowe pliki (przy użyciu polecenia touch plik),
+ a później sprawdzając uzyskane uprawnienia dostępu do nich (polecenie ls -l).
+ Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
