@@ -1,0 +1,68 @@
+Nadaj uprawnienia do katalogu ala tak aby:
+
+    każdy mógł do niego wejść
+
+    tylko grupa mogła wyświetlić co w nim jest
+
+    właściciel ma pełne prawa
+
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+
+    oktalnej/ósemkowej/cyfrowej
+
+    literowej ze znakiem równości
+
+    literowej z plusami i minusami
+
+Wszystkie wersje powinny być zapisane w jednym poleceniu (bez używania && czy | )
+
+xeon@e11:~$ cd zad6
+xeon@e11:~/zad6$ ls
+xeon@e11:~/zad6$ mkdir ala 
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+drwxr-xr-x  2 xeon xeon 4,0K 12-02 22:57 ala
+xeon@e11:~/zad6$ chmod 000 ala
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+d---------  2 xeon xeon 4,0K 12-02 22:57 ala
+xeon@e11:~/zad6$ chmod 741 ala
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+drwxr----x  2 xeon xeon 4,0K 12-02 22:57 ala
+xeon@e11:~/zad6$ chmod 700 ala
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+drwx------  2 xeon xeon 4,0K 12-02 22:57 ala
+xeon@e11:~/zad6$ chmod u+w,u+r,u+x,g+r,o+x
+chmod: brakujący argument po „u+w,u+r,u+x,g+r,o+x”
+Napisz „chmod --help” dla uzyskania informacji.
+xeon@e11:~/zad6$ chmod u+w,u+r,u+x,g+r,o+x ala
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+drwxr----x  2 xeon xeon 4,0K 12-02 22:57 ala
+xeon@e11:~/zad6$ chmod u=rwx,g=--r,o=--x
+chmod: brakujący argument po „u=rwx,g=--r,o=--x”
+Napisz „chmod --help” dla uzyskania informacji.
+xeon@e11:~/zad6$ chmod u=rwx,g=--r,o=--x ala
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+drwx------  2 xeon xeon 4,0K 12-02 22:57 ala
+xeon@e11:~/zad6$ chmod u=rwx,g=r,o=x ala
+xeon@e11:~/zad6$ ls -lha
+razem 12K
+drwxr-xr-x  3 xeon xeon 4,0K 12-02 22:57 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-02 22:52 ..
+drwxr----x  2 xeon xeon 4,0K 12-02 22:57 ala
