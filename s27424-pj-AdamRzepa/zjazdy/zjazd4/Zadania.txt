@@ -52,5 +52,5 @@ zad 8
 Wcisnieie tab podpowiada komendy
 zad 9 uruchomienie programu , z wolnym terminalem.
 Program &
-Może uruchomić bez & a później zatrzymać proces
+Może uruchomić bez & a później zatrzymać proces (Ctrl + Z)
 Albo po prostu uruchomić program bez termianala
