@@ -1,0 +1,68 @@
+zad.1
+
+Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych.
+
+mkdir zad2.ukos
+cd zad2.ukos
+mkdir zad2.ukos1
+cd zad2.ukos1
+touch plik
+
+Przydzielić różne uprawnienia dostępu.
+
+
+-rw-r--r-- 1 s29277 domain users    0 11-17 21:44 plik
+
+chmod 761 plik
+
+ls -la
+
+-rwxrw---x 1 s29277 domain users    0 11-17 21:44 plik
+
+
+następnie spróbować wejść do katalogów domowych innych uczestników zajęć i sprawdzić,
+które z obiektów są tam dla nas dostępne (i w jakim sensie).
+
+
+
+zad2
+
+Zmiana uprawnień do katalogu bieżącego:
+chmod 000 ./
+
+Zmiana uprawnień do katalogu nadrzędnego:
+chmod 000 ../
+
+polecenie cd możemy wykonać do wyjścia z folderu bieżącego do pierwszego folderu w ktorym mamy uprawnienia
+
+polecenie chmod możemy wykonać w katalogu w którym mamy uprawnienia (jezeli nie mamy uprawnien do katalogu to nie mozna uzyc komendy chmod)
+
+Nie możemy przeskoczyć do katalogu XYZ przez katalog ABC gdy nie mamy uprawnien do katalogu ABC
+
+żeby wyjść z katalogu bieżącego,ale do katalogu nadrzędnego nie mamy uprawnień musimy wyjść za pomocą ścieżki bezwzględnej
+
+
+
+zad3 grupowe zrobione z Adam Rzepa: s27424
+
+katalog domowy musi mieć uprawnienia read oraz execute
+chmod o+r ./
+Plik musi mieć uprawnienia read oraz write oraz execute
+chmod 
+echo treść_komunikatu > plik (usuwa poprzedni komunikat napisany w tym pliku, i nadpisuję nowy)
+echo treść_komunikatu >> plik (dopisuje kolejny komunikat, nie nadpisując starego)
+tail -f plik na bieżąco sprawdza co jest wpisywane do pliku
+
+
+
+zad4 HTML
+
+minimalne uprawnienia dostępu:
+
+
+chmod 701 . działa
+
+chmod 701 public_html działa
+
+chmod 604 strona.html      działa
+
