@@ -1,2 +1,4 @@
-Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna się od al?
-ls | grep ^al 
+Jak zamknąć program, który nie reaguje na ctrl+c ?
+
+można spróbować użyć kill -9 pid lub kill -15 pid
+
