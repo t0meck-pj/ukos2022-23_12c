@@ -1,0 +1,62 @@
+Zadanie 0
+Brak wstarczających uprawnień do wykonania
+Brak miejsca w wydzielonej przestrzeni dla konta
+
+Zadanie 1
+Jak przejść do katalogu ala ale za pomocą:
+
+ścieżki względnej (relatywnej)
+cd ../..
+ścieżki bezwzględnej (absolutnej)
+/tmp/ukos/ala
+
+Zadanie 2
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
+
+mkdir jan/kowalski -p
+
+Zadanie 3
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak przenieść katalog ale do katalogu i używając:
+
+źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna)
+mv ../../kot/ma/ale /tmp/ukos/ala/ma/kota
+źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
+mv /tmp/ukos/kot/ma/ale .
+Zadanie 4
+Jak zamknąć program, który nie reaguje na ctrl+c ?
+komenda kill
+
+Zadnie 5
+Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna się od al?
+ls | grep al*
+
+Zadanie 6
+Nadaj uprawnienia do katalogu ala tak aby:
+
+każdy mógł do niego wejść
+
+tylko grupa mogła wyświetlić co w nim jest
+
+właściciel ma pełne prawa
+
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+
+oktalnej/ósemkowej/cyfrowej
+chmod 751 katalog
+literowej ze znakiem równości
+chmod o=x,g=rx,u=rwx katalog
+literowej z plusami i minusami
+chmod a+x,g+r,u+w katalog
+
+Zadanie 7
+Jak utworzyć plik z listą plików w bieżącym katalogu?
+ls > plik
+
+Zadanie 8
+Jak przyspieszyć wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupełnianie komend?
+Korzystanie z klawisza uzupełniania komend - TAB
+
+Zadanie 9 
+Jak uruchomić program by nie blokował terminala. Są 2 sposoby. Jakie?
+program &
+Ctrl + Z

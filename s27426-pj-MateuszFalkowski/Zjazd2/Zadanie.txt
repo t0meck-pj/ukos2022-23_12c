@@ -1,0 +1,2 @@
+Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
+maska tworzy domyślny zestaw uprawnień dla nowych plików

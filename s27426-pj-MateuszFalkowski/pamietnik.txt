@@ -11,7 +11,7 @@ Moj drogi pamietniczku na dzisiejszych zajeciach nauczyłem sie że:
 
 06.11.2022
 Moj drogi pamietniczku na dzisiejszych zajeciach nauczyłem sie że:
-- można sortować wyniki polecenia ls przy użyciu polecenia grep
+- można filtrować wyniki polecenia ls przy użyciu polecenia grep
 - można przenosić wyniki poleceń do pliku
 - korzystać z polecenia tee
 - obsługi polecenia ps
