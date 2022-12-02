@@ -1,0 +1,145 @@
+
+s27115@szuflandia22:~$ ls
+katalog  s-27115  windows
+s27115@szuflandia22:~$ ls eksperyment 
+ls: nie ma dostępu do 'eksperyment': Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~$ cd  eksperyment   
+-bash: cd: eksperyment: Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~$ mkdir eksperyment          
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  s-27115  windows
+s27115@szuflandia22:~$ cd eksperyment 
+s27115@szuflandia22:~/eksperyment$ mkdir katalog 
+s27115@szuflandia22:~/eksperyment$ chmod 000 
+chmod: brakujący argument po „000”
+Napisz „chmod --help” dla uzyskania informacji.
+s27115@szuflandia22:~/eksperyment$ chmod 000 .
+s27115@szuflandia22:~/eksperyment$ chmod 000 ..
+chmod: nie ma dostępu do '..': Brak dostępu
+s27115@szuflandia22:~/eksperyment$ chmod 700 .
+chmod: nie ma dostępu do '.': Brak dostępu
+s27115@szuflandia22:~/eksperyment$ cd ..
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  s-27115  windows
+s27115@szuflandia22:~$ rm -r eksperyment 
+rm: wejść w katalog 'eksperyment', zabezpieczony przed zapisem? y
+rm: usunąć zabezpieczony przed zapisem katalog 'eksperyment'? y
+rm: nie można usunąć 'eksperyment': Brak dostępu
+s27115@szuflandia22:~$ mkdir katalog
+mkdir: nie można utworzyć katalogu „katalog”: Plik istnieje
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  s-27115  windows
+s27115@szuflandia22:~$ mkdir katalog2
+s27115@szuflandia22:~$ cd katalog3
+-bash: cd: katalog3: Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~$ mkdir  katalog3
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  katalog2  katalog3  s-27115  windows
+s27115@szuflandia22:~$ rm -r katalog3
+s27115@szuflandia22:~$ cd katalog2
+s27115@szuflandia22:~/katalog2$ ls
+s27115@szuflandia22:~/katalog2$ mkdir katalog3
+s27115@szuflandia22:~/katalog2$ ls
+katalog3
+s27115@szuflandia22:~/katalog2$ chmod 000 .
+s27115@szuflandia22:~/katalog2$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s27115@szuflandia22:~/katalog2$ cd /katalog2/katalog3 
+-bash: cd: /katalog2/katalog3: Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~/katalog2$ chmod 400 .
+chmod: nie ma dostępu do '.': Brak dostępu
+s27115@szuflandia22:~/katalog2$ cd
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  katalog2  s-27115  windows
+s27115@szuflandia22:~$ chmod 400 katalog2
+s27115@szuflandia22:~$ cd katalog2
+-bash: cd: katalog2: Brak dostępu
+s27115@szuflandia22:~$ chmod 200 katalog2
+s27115@szuflandia22:~$ cd katalog2
+-bash: cd: katalog2: Brak dostępu
+s27115@szuflandia22:~$ chmod 700 katalog2
+s27115@szuflandia22:~$ cd katalog2
+s27115@szuflandia22:~/katalog2$ chmod 600 katalog2
+chmod: nie ma dostępu do 'katalog2': Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~/katalog2$ cd ..
+s27115@szuflandia22:~$ chmod 600 katalog2
+s27115@szuflandia22:~$ cd katalog2
+-bash: cd: katalog2: Brak dostępu
+s27115@szuflandia22:~$ chmod 500 katalog2
+s27115@szuflandia22:~$ cd katalog2
+
+
+
+
+
+
+eksperyment  katalog  katalog2  katalog3  s-27115  windows
+s27115@szuflandia22:~$ rm -r katalog3
+s27115@szuflandia22:~$ cd katalog2
+s27115@szuflandia22:~/katalog2$ ls
+s27115@szuflandia22:~/katalog2$ mkdir katalog3
+s27115@szuflandia22:~/katalog2$ ls
+katalog3
+s27115@szuflandia22:~/katalog2$ chmod 000 .
+s27115@szuflandia22:~/katalog2$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s27115@szuflandia22:~/katalog2$ cd /katalog2/katalog3 
+-bash: cd: /katalog2/katalog3: Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~/katalog2$ chmod 400 .
+chmod: nie ma dostępu do '.': Brak dostępu
+s27115@szuflandia22:~/katalog2$ cd
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  katalog2  s-27115  windows
+s27115@szuflandia22:~$ chmod 400 katalog2
+s27115@szuflandia22:~$ cd katalog2
+-bash: cd: katalog2: Brak dostępu
+s27115@szuflandia22:~$ chmod 200 katalog2 
+s27115@szuflandia22:~$ cd katalog2       
+-bash: cd: katalog2: Brak dostępu
+s27115@szuflandia22:~$ chmod 700 katalog2 
+s27115@szuflandia22:~$ cd katalog2       
+s27115@szuflandia22:~/katalog2$ chmod 600 katalog2 
+chmod: nie ma dostępu do 'katalog2': Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~/katalog2$ cd ..
+s27115@szuflandia22:~$ chmod 600 katalog2
+s27115@szuflandia22:~$ cd katalog2
+-bash: cd: katalog2: Brak dostępu
+s27115@szuflandia22:~$ chmod 500 katalog2
+s27115@szuflandia22:~$ cd katalog2
+s27115@szuflandia22:~/katalog2$ cd 
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  katalog2  s-27115  windows
+s27115@szuflandia22:~$ cd katalog2
+s27115@szuflandia22:~/katalog2$ ls
+katalog3
+s27115@szuflandia22:~/katalog2$ cd ..
+s27115@szuflandia22:~$ chmod 700 katalog2 
+s27115@szuflandia22:~$ chmod -r 700 katalog2 
+chmod: nie ma dostępu do '700': Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~$ chmod  700 katalog2 -r
+chmod: nie ma dostępu do '700': Nie ma takiego pliku ani katalogu
+s27115@szuflandia22:~$ man chmod
+
+[1]+  Zatrzymano              man chmod
+s27115@szuflandia22:~$ chmod  700 -R  katalog2 
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  katalog2  s-27115  windows
+s27115@szuflandia22:~$ cd katalog2
+s27115@szuflandia22:~/katalog2$ ls
+katalog3
+s27115@szuflandia22:~/katalog2$ katalog3
+-bash: katalog3: nie znaleziono polecenia
+s27115@szuflandia22:~/katalog2$ cd katalog3
+s27115@szuflandia22:~/katalog2/katalog3$ chmod 000 .
+s27115@szuflandia22:~/katalog2/katalog3$ cd -
+/home/PJWSTK/s27115/katalog2
+s27115@szuflandia22:~/katalog2$ cd katalog3
+-bash: cd: katalog3: Brak dostępu
+s27115@szuflandia22:~/katalog2$ chmod 700  katalog3
+s27115@szuflandia22:~/katalog2$ cd katalog3
+s27115@szuflandia22:~/katalog2/katalog3$ chmod 000 ..
+s27115@szuflandia22:~/katalog2/katalog3$ cd -
+-bash: cd: /home/PJWSTK/s27115/katalog2: Brak dostępu
+s27115@szuflandia22:~/katalog2/katalog3$ 
+
+<

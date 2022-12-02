@@ -16,3 +16,10 @@ Mój drogi pamiętniku, na zajęciach nauczyłem się:
 -zadanie sprawiły mi trochę problemu przez co zajęły mi dużo czasu
 -podczas robienia zadań, przećwiczyłem sobie materiał i go zrozumiałem
 -nie zrozumiałem ostatniego zadania(umask), i chciałbym żeby zostało to wytłumaczone na ćwiczeniach
+--------------------------------------------------------------------------------------------
+05.11.2022r
+-podobała mi się forma zajęć
+-dzięki takiej formie zajęć dużo więcej rozumiałem
+-nie miałem wcześniej większej styczności z linuxem ale narazie daję radę
+-nauczyłem się nowych komend, które uważam że mogą mi się kiedyś przydać w życiu prywatnym
+

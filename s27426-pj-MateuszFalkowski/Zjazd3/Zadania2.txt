@@ -1,0 +1,14 @@
+Zadanie 2:
+Zobacz jaki ma on PID - przyda się do tego komenda ps
+1774
+
+Zadanie 3:
+Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+kill 1774
+działa
+Zadanie 4:
+Zobacz działanie komendy killall bash
+nic się nie stało
+Zadanie 5:
+Zobacz czy kill zadziała dla dowolnego procesu.
+nie działa dla procesów roota 

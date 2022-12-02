@@ -1,0 +1,25 @@
+Zadanie.2.
+= Uruchom wybrany przez Ciebie graficzny edytor tekstowy
++ Włączyłem gedit.
+= Zobacz jaki ma on PID - przyda się do tego komenda ps
++ ps axu | grep gedit | grep -v grep
+ubuntu     995  0.8  0.9 638388 36680 ?        Sl   12:23   0:00 gedit
+jego PID to 995
+= Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+kill [PID tego procesu]
++ kill 995
+zamknął się pomyślnie
+= Zobacz czy możesz wysłać do niego SIGKILL (gdzie sprawdzisz jak to zrobić?)
++ man kill
+otworzyłem ponownie gedit
+sprawdziłem jego PID
++ ps axu | grep gedit | grep -v grep
++ kill -sigkill 1014
+zamknął się pomyślnie
+SIGKILL to alternatywne polecenie do KILL
+
+= Zobacz działanie komendy killall bash
++ nic się nie stało
+wpisując alternatywne polecenie które można znaleźć w man
++ killall -9 bash
+teraz DZIAŁA

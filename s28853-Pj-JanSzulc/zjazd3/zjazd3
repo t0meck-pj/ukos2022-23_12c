@@ -1,0 +1,494 @@
+0 (rozgrzewkowe)
+
+zad 1 Przejdź do swojego katalogu domowego
+
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+
+
+zad 2 Wydaj komendę: ls -a
+
+buntu@bss-ubu1804:~$ ls -a
+.              .mozilla                   ukos2022-23_12c
+..             Music                      .vboxclient-clipboard.pid
+.bash_history  Pictures                   .vboxclient-display.pid
+.bash_logout   .pki                       .vboxclient-draganddrop.pid
+.bashrc        .profile                   .vboxclient-seamless.pid
+.cache         Public                     Videos
+.config        s28853-Pj-JanSzulc         .vim
+Desktop        .ssh                       .viminfo
+Documents      .sudo_as_admin_successful  .Xauthority
+Downloads      Templates                  .xscreensaver
+.gitconfig     test1                      .xsession-errors
+.gnupg         .thumbnails                .xsession-errors.old
+.local         ukos
+
+
+zad 3 Zobacz ile plików wypisało.
+
+wypisało się 14 pików 
+
+zad 4 Teraz wydaj komendę: ls -a | grep D
+
+buntu@bss-ubu1804:~$ ls -a | grep D
+Desktop
+Documents
+Downloads
+
+zad 5 Zobacz ile teraz jest wyników. Co się stało?
+
+wyświetliły się  3 katalogi zaczynające się na D
+
+zad 6 A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+
+ubuntu@bss-ubu1804:~$ ls -a | grep D > lista_plików_z_literja_d.txt
+
+zad 7 Zobacz czy utworzył sie jakiś plik?
+Jaka jest jego treść?
+Co znaczy | oraz co znaczy > ?
+
+buntu@bss-ubu1804:~$ ls -l
+total 52
+drwxr-xr-x  2 ubuntu ubuntu 4096 Nov  2 11:02 Desktop
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Documents
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Downloads
+-rw-rw-r--  1 ubuntu ubuntu   28 Nov  7 17:42 lista_plików_z_literja_d.txt
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Music
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Pictures
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Public
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 16 14:09 s28853-Pj-JanSzulc
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Templates
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 17 18:10 test1
+drwxrwxr-x  4 ubuntu ubuntu 4096 Oct 14 21:38 ukos
+drwxrwxr-x 14 ubuntu ubuntu 4096 Nov  6 17:48 ukos2022-23_12c
+drwxr-xr-x  2 ubuntu ubuntu 4096 Aug 25  2019 Videos
+ubuntu@bss-ubu1804:~$ cat lista_plików_z_literja_d.txt
+Desktop
+Documents
+Downloads
+ubuntu@bss-ubu1804:~$ 
+
+treścią są trzy pliki na literke D
+| oznacza przekierowanie standardowego wyjścia programu1 na standardowe wejście programu2
+> oznacza przekierowanie standardowego wyjścia 
+
+zad 8 A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+
+ubuntu@bss-ubu1804:~$ ls -a | grep D | tee  lista_plików_z_literja_d.txt
+Desktop
+Documents
+Downloads
+
+zad 9 Zobacz czy plik się utworzył?
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Co robi program tee?
+
+od razu wyświwtlają się pliki na literkę D
+pobiera wejście do plik i wyświetla wyjście pliku oraz zawartość
+
+
+
+
+zadanie 1
+
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+zad1 ps
+
+ps 
+PID TTY          TIME CMD
+ 1201 pts/0    00:00:00 bash
+ 1295 pts/0    00:00:00 ps
+
+zad 2 ps -a
+
+ubuntu@bss-ubu1804:~$ ps -a
+  PID TTY          TIME CMD
+ 1296 pts/0    00:00:00 ps
+
+wyświetla procesy niezwiązane z terminalem.
+
+zad3 ps x
+
+ubuntu@bss-ubu1804:~$ ps x
+PID TTY      STAT   TIME COMMAND
+  646 ?        Ss     0:00 /lib/systemd/systemd --user
+  647 ?        S      0:00 (sd-pam)
+  658 ?        Ssl    0:00 /usr/bin/lxsession -s Lubuntu -e LXDE
+  673 ?        Ss     0:00 /usr/bin/dbus-daemon --session --address=systemd: --n
+  709 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+  710 ?        Sl     0:00 /usr/bin/VBoxClient --clipboard
+  720 ?        S      0:00 /usr/bin/VBoxClient --display
+  721 ?        S      0:00 /usr/bin/VBoxClient --display
+  731 ?        S      0:00 /usr/bin/VBoxClient --seamless
+  732 ?        Sl     0:00 /usr/bin/VBoxClient --seamless
+  737 ?        S      0:00 /usr/bin/VBoxClient --draganddrop
+  738 ?        Sl     0:26 /usr/bin/VBoxClient --draganddrop
+  746 ?        Ss     0:00 /usr/bin/ssh-agent /usr/bin/lxsession -s Lubuntu -e L
+  751 ?        S      0:02 openbox --config-file /home/ubuntu/.config/openbox/lu
+  754 ?        Sl     0:07 lxpanel --profile Lubuntu
+  758 ?        Sl     0:06 pcmanfm --desktop --profile lubuntu
+  759 ?        Sl     0:00 lxpolkit
+  772 ?        Ss     0:00 /usr/bin/ssh-agent -s
+  812 ?        Sl     0:00 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-c
+ 1199 ?        S      0:07 leafpad
+ 1200 ?        Sl     0:16 lxterminal
+ 1201 pts/0    Ss     0:00 bash
+ 1397 pts/0    R+     0:00 ps x
+
+
+wyświetla procesy sytstemowe
+
+zad 4 ps axu
+
+buntu@bss-ubu1804:~$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2  77592  8604 ?        Ss   09:13   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    09:13   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   09:13   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    09:13   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    09:13   0:01 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    09:13   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    09:13   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    09:13   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    09:13   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    09:13   0:00 [kdevtmpfs]
+root        14  0.0  0.0      0     0 ?        I<   09:13   0:00 [netns]
+root        15  0.0  0.0      0     0 ?        S    09:13   0:00 [rcu_tasks_kthr
+root        16  0.0  0.0      0     0 ?        S    09:13   0:00 [kauditd]
+root        17  0.0  0.0      0     0 ?        S    09:13   0:00 [khungtaskd]
+root        18  0.0  0.0      0     0 ?        S    09:13   0:00 [oom_reaper]
+root        19  0.0  0.0      0     0 ?        I<   09:13   0:00 [writeback]
+root        20  0.0  0.0      0     0 ?        S    09:13   0:00 [kcompactd0]
+root        21  0.0  0.0      0     0 ?        SN   09:13   0:00 [ksmd]
+root        22  0.0  0.0      0     0 ?        SN   09:13   0:00 [khugepaged]
+root        23  0.0  0.0      0     0 ?        I<   09:13   0:00 [crypto]
+root        24  0.0  0.0      0     0 ?        I<   09:13   0:00 [kintegrityd]
+root        25  0.0  0.0      0     0 ?        I<   09:13   0:00 [kblockd]
+root        26  0.0  0.0      0     0 ?        I<   09:13   0:00 [ata_sff]
+root        27  0.0  0.0      0     0 ?        I<   09:13   0:00 [md]
+root        28  0.0  0.0      0     0 ?        I<   09:13   0:00 [edac-poller]
+root        29  0.0  0.0      0     0 ?        I<   09:13   0:00 [devfreq_wq]
+root        30  0.0  0.0      0     0 ?        I<   09:13   0:00 [watchdogd]
+root        32  0.0  0.0      0     0 ?        I    09:13   0:08 [kworker/0:1]
+root        34  0.0  0.0      0     0 ?        S    09:13   0:00 [kswapd0]
+root        35  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/u3:0]
+root        36  0.0  0.0      0     0 ?        S    09:13   0:00 [ecryptfs-kthre
+root        78  0.0  0.0      0     0 ?        I<   09:13   0:00 [kthrotld]
+root        79  0.0  0.0      0     0 ?        I<   09:13   0:00 [acpi_thermal_p
+root        80  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_0]
+root        81  0.0  0.0      0     0 ?        I<   09:13   0:00 [scsi_tmf_0]
+root        82  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_1]
+root        83  0.0  0.0      0     0 ?        I<   09:13   0:00 [scsi_tmf_1]
+root        89  0.0  0.0      0     0 ?        I<   09:13   0:00 [ipv6_addrconf]
+root        98  0.0  0.0      0     0 ?        I<   09:13   0:00 [kstrp]
+root       115  0.0  0.0      0     0 ?        I<   09:13   0:00 [charger_manage
+root       164  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/0:1H]
+root       165  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_2]
+root       166  0.0  0.0      0     0 ?        I<   09:13   0:00 [scsi_tmf_2]
+root       188  0.0  0.0      0     0 ?        S    09:13   0:00 [jbd2/sda1-8]
+root       189  0.0  0.0      0     0 ?        I<   09:13   0:00 [ext4-rsv-conve
+root       221  0.0  0.4 103052 18472 ?        S<s  09:13   0:00 /lib/systemd/sy
+root       252  0.0  0.1  45968  4584 ?        Ss   09:13   0:00 /lib/systemd/sy
+systemd+   273  0.0  0.1  80044  5376 ?        Ss   09:13   0:00 /lib/systemd/sy
+root       284  0.0  0.0      0     0 ?        I<   09:13   0:00 [iprt-VBoxWQueu
+root       290  0.0  0.0      0     0 ?        I<   09:13   0:00 [ttm_swap]
+root       291  0.0  0.0      0     0 ?        S    09:13   0:00 [irq/18-vmwgfx]
+systemd+   399  0.0  0.1  70628  4980 ?        Ss   09:14   0:00 /lib/systemd/sy
+root       452  0.0  0.4 170436 17372 ?        Ssl  09:14   0:00 /usr/bin/python
+root       453  0.0  0.0  31320  3188 ?        Ss   09:14   0:00 /usr/sbin/cron 
+root       454  0.0  0.1  70608  5976 ?        Ss   09:14   0:00 /lib/systemd/sy
+syslog     467  0.0  0.1 263036  4436 ?        Ssl  09:14   0:00 /usr/sbin/rsysl
+root       469  0.0  0.1 287536  6892 ?        Ssl  09:14   0:00 /usr/lib/accoun
+message+   471  0.0  0.1  50184  4448 ?        Ss   09:14   0:04 /usr/bin/dbus-d
+root       488  0.0  0.1 289052  6848 ?        Ssl  09:14   0:00 /usr/lib/policy
+root       493  0.0  0.0  16180  1916 tty1     Ss+  09:14   0:00 /sbin/agetty -o
+root       501  0.0  0.3 265344 12288 ?        Ss   09:14   0:00 /usr/sbin/nmbd 
+root       520  0.0  0.5 356676 20432 ?        Ss   09:14   0:00 /usr/sbin/smbd 
+root       523  0.0  0.1 344936  5992 ?        S    09:14   0:00 /usr/sbin/smbd 
+root       524  0.0  0.1 344928  4736 ?        S    09:14   0:00 /usr/sbin/smbd 
+root       525  0.0  0.1 356676  6796 ?        S    09:14   0:00 /usr/sbin/smbd 
+root       594  0.0  0.0 131240   384 ?        S    09:14   0:00 VBoxClient --vm
+root       595  0.0  0.0 131240   384 ?        S    09:14   0:00 VBoxClient --vm
+root       602  0.0  0.1 364228  6844 ?        Ssl  09:14   0:00 /usr/sbin/light
+root       618  0.0  0.0 313904  2448 ?        Sl   09:14   0:04 /usr/sbin/VBoxS
+root       629  0.8  1.6 367456 67192 tty7     Ssl+ 09:14   1:22 /usr/lib/xorg/X
+root       642  0.0  0.1 246396  6992 ?        Sl   09:14   0:00 lightdm --sessi
+ubuntu     646  0.0  0.1  76756  7920 ?        Ss   09:14   0:00 /lib/systemd/sy
+ubuntu     647  0.0  0.0 111576  2212 ?        S    09:14   0:00 (sd-pam)
+ubuntu     658  0.0  0.3 355060 12692 ?        Ssl  09:14   0:00 /usr/bin/lxsess
+ubuntu     673  0.0  0.1  49896  4232 ?        Ss   09:14   0:00 /usr/bin/dbus-d
+ubuntu     709  0.0  0.0  51988   324 ?        S    09:14   0:00 /usr/bin/VBoxCl
+ubuntu     710  0.0  0.1 120376  4288 ?        Sl   09:14   0:00 /usr/bin/VBoxCl
+ubuntu     720  0.0  0.0  51988   324 ?        S    09:14   0:00 /usr/bin/VBoxCl
+ubuntu     721  0.0  0.0  52124  2868 ?        S    09:14   0:00 /usr/bin/VBoxCl
+ubuntu     731  0.0  0.0  51988   324 ?        S    09:14   0:00 /usr/bin/VBoxCl
+ubuntu     732  0.0  0.0 118172  2216 ?        Sl   09:14   0:00 /usr/bin/VBoxCl
+ubuntu     737  0.0  0.0  51988   324 ?        S    09:14   0:00 /usr/bin/VBoxCl
+ubuntu     738  0.2  0.0 118688  2236 ?        Sl   09:14   0:26 /usr/bin/VBoxCl
+ubuntu     746  0.0  0.0  11304   320 ?        Ss   09:14   0:00 /usr/bin/ssh-ag
+ubuntu     751  0.0  0.4 238296 19360 ?        S    09:14   0:02 openbox --confi
+ubuntu     754  0.0  0.8 661560 33396 ?        Sl   09:14   0:07 lxpanel --profi
+ubuntu     758  0.0  1.4 655520 58736 ?        Sl   09:14   0:06 pcmanfm --deskt
+ubuntu     759  0.0  0.2 297248 12080 ?        Sl   09:14   0:00 lxpolkit
+ubuntu     772  0.0  0.0  11304   320 ?        Ss   09:14   0:00 /usr/bin/ssh-ag
+ubuntu     812  0.0  0.1 113884  4664 ?        Sl   09:14   0:00 /usr/lib/menu-c
+root      1021  0.0  0.0      0     0 ?        I    10:28   0:00 [kworker/u2:1]
+ubuntu    1199  0.2  0.5 189244 23680 ?        S    11:11   0:06 leafpad
+ubuntu    1200  0.6  0.8 468388 33804 ?        Sl   11:12   0:15 lxterminal
+ubuntu    1201  0.0  0.1  22656  5084 pts/0    Ss   11:12   0:00 bash
+root      1244  0.0  0.0      0     0 ?        I    11:21   0:00 [kworker/u2:0]
+root      1320  0.0  0.0      0     0 ?        I    11:36   0:00 [kworker/0:0]
+ubuntu    1396  0.0  0.0  37364  3360 pts/0    R+   11:50   0:00 ps aux
+
+wyświetla wszystkie procesy systemowe
+
+kolumna oznacza jeśli jest znak ? to oznacza że nie mają przypisanego
+terminala
+
+
+zad  B;
+
+zad 1 Wyświetl wszystkie procesy bash
+
+ubuntu@bss-ubu1804:~$ ps aux | grep bash | grep -v grep
+ubuntu    1201  0.0  0.1  22656  5084 pts/0    Ss   11:11   0:00 bash
+
+
+zad 2 Wyświetl wszystkei procesy należące do użytkownika root
+
+ubuntu@bss-ubu1804:~$ ps aux | grep root | grep -v grep
+root         1  0.0  0.2  77592  8604 ?        Ss   09:13   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    09:13   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   09:13   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    09:13   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    09:13   0:01 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    09:13   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    09:13   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    09:13   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    09:13   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    09:13   0:00 [kdevtmpfs]
+root        14  0.0  0.0      0     0 ?        I<   09:13   0:00 [netns]
+root        15  0.0  0.0      0     0 ?        S    09:13   0:00 [rcu_tasks_kthre]
+root        16  0.0  0.0      0     0 ?        S    09:13   0:00 [kauditd]
+root        17  0.0  0.0      0     0 ?        S    09:13   0:00 [khungtaskd]
+root        18  0.0  0.0      0     0 ?        S    09:13   0:00 [oom_reaper]
+root        19  0.0  0.0      0     0 ?        I<   09:13   0:00 [writeback]
+root        20  0.0  0.0      0     0 ?        S    09:13   0:00 [kcompactd0]
+root        21  0.0  0.0      0     0 ?        SN   09:13   0:00 [ksmd]
+root        22  0.0  0.0      0     0 ?        SN   09:13   0:00 [khugepaged]
+root        23  0.0  0.0      0     0 ?        I<   09:13   0:00 [crypto]
+root        24  0.0  0.0      0     0 ?        I<   09:13   0:00 [kintegrityd]
+root        25  0.0  0.0      0     0 ?        I<   09:13   0:00 [kblockd]
+root        26  0.0  0.0      0     0 ?        I<   09:13   0:00 [ata_sff]
+root        27  0.0  0.0      0     0 ?        I<   09:13   0:00 [md]
+root        28  0.0  0.0      0     0 ?        I<   09:13   0:00 [edac-poller]
+root        29  0.0  0.0      0     0 ?        I<   09:13   0:00 [devfreq_wq]
+root        30  0.0  0.0      0     0 ?        I<   09:13   0:00 [watchdogd]
+root        32  0.0  0.0      0     0 ?        I    09:13   0:09 [kworker/0:1]
+root        34  0.0  0.0      0     0 ?        S    09:13   0:00 [kswapd0]
+root        35  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/u3:0]
+root        36  0.0  0.0      0     0 ?        S    09:13   0:00 [ecryptfs-kthrea]
+root        78  0.0  0.0      0     0 ?        I<   09:13   0:00 [kthrotld]
+root        79  0.0  0.0      0     0 ?        I<   09:13   0:00 [acpi_thermal_pm]
+root        80  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_0]
+root        81  0.0  0.0      0     0 ?        I<   09:13   0:00 [scsi_tmf_0]
+root        82  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_1]
+root        83  0.0  0.0      0     0 ?        I<   09:13   0:00 [scsi_tmf_1]
+root        89  0.0  0.0      0     0 ?        I<   09:13   0:00 [ipv6_addrconf]
+root        98  0.0  0.0      0     0 ?        I<   09:13   0:00 [kstrp]
+root       115  0.0  0.0      0     0 ?        I<   09:13   0:00 [charger_manager]
+root       164  0.0  0.0      0     0 ?        I<   09:13   0:00 [kworker/0:1H]
+root       165  0.0  0.0      0     0 ?        S    09:13   0:00 [scsi_eh_2]
+root       166  0.0  0.0      0     0 ?        I<   09:13   0:00 [scsi_tmf_2]
+root       188  0.0  0.0      0     0 ?        S    09:13   0:00 [jbd2/sda1-8]
+root       189  0.0  0.0      0     0 ?        I<   09:13   0:00 [ext4-rsv-conver]
+root       221  0.0  0.4 103052 18836 ?        S<s  09:13   0:00 /lib/systemd/systemd-journald
+root       252  0.0  0.1  45968  4584 ?        Ss   09:13   0:00 /lib/systemd/systemd-udevd
+root       284  0.0  0.0      0     0 ?        I<   09:13   0:00 [iprt-VBoxWQueue]
+root       290  0.0  0.0      0     0 ?        I<   09:13   0:00 [ttm_swap]
+root       291  0.0  0.0      0     0 ?        S    09:13   0:00 [irq/18-vmwgfx]
+root       452  0.0  0.4 170436 17372 ?        Ssl  09:13   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       453  0.0  0.0  31320  3188 ?        Ss   09:13   0:00 /usr/sbin/cron -f
+root       454  0.0  0.1  70608  5976 ?        Ss   09:13   0:00 /lib/systemd/systemd-logind
+root       469  0.0  0.1 287536  6892 ?        Ssl  09:13   0:00 /usr/lib/accountsservice/accounts-daemon
+root       488  0.0  0.1 291352  7108 ?        Ssl  09:13   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root       493  0.0  0.0  16180  1916 tty1     Ss+  09:13   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root       501  0.0  0.3 265344 12288 ?        Ss   09:13   0:00 /usr/sbin/nmbd --foreground --no-process-group
+root       520  0.0  0.5 356676 20432 ?        Ss   09:13   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       523  0.0  0.1 344936  5992 ?        S    09:13   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       524  0.0  0.1 344928  4736 ?        S    09:13   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       525  0.0  0.1 356676  6796 ?        S    09:13   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       594  0.0  0.0 131240   384 ?        S    09:13   0:00 VBoxClient --vmsvga
+root       595  0.0  0.0 131240   384 ?        S    09:13   0:00 VBoxClient --vmsvga
+root       602  0.0  0.1 364228  6844 ?        Ssl  09:13   0:00 /usr/sbin/lightdm
+root       618  0.0  0.0 313904  2448 ?        Sl   09:13   0:04 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-service.sh
+root       629  0.9  2.3 394592 93880 tty7     Ssl+ 09:13   2:05 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root       642  0.0  0.1 246396  6992 ?        Sl   09:13   0:00 lightdm --session-child 12 15
+root      1021  0.0  0.0      0     0 ?        I    10:28   0:00 [kworker/u2:1]
+root      1919  0.0  0.0      0     0 ?        I    12:12   0:00 [kworker/u2:3]
+root      2044  0.0  0.0      0     0 ?        I    12:13   0:00 [kworker/0:2]
+root      2174  0.0  0.0      0     0 ?        I    12:38   0:00 [kworker/u2:0]
+ubuntu@bss-ubu1804:~$ 
+
+
+
+
+
+
+
+
+
+
+zadanie 2
+
+
+zad 1 Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+
+ uruchamiam gedit
+
+zad 2 Zobacz jaki ma on PID - przyda się do tego komenda ps
+
+ubuntu@bss-ubu1804:~$ ps aux | grep gedit | grep -v grep
+ubuntu    2206  0.5  0.9 564480 36760 ?        Sl   12:51   0:00 gedit
+
+zad 3 Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+
+buntu@bss-ubu1804:~$ kill 2206
+
+zad 4 Zobacz działanie komendy killall bash
+
+killall -9 bash
+
+
+
+zadanie 3
+
+
+zad 1 Wydaj komendę cat > wynik3_1.txt
+
+ubuntu@bss-ubu1804:~$ cat  > wynik3_1.txt
+
+zad 2 Wpisz tekst witaj bez wciskania klawisza Enter
+
+witaj
+
+zad3 Wciśnij CTRL+C
+
+witaj^C
+wciskamy Ctrl C
+
+zad 4 zobacz co się znalazło w pliku wynik3_1.txt
+
+ubuntu@bss-ubu1804:~$ cat wynik3_1.txt
+
+ubuntu@bss-ubu1804:~$ 
+
+
+zad 1 Wydaj komendę cat > wynik3_2.txt
+
+buntu@bss-ubu1804:~$ cat > wynik3_2.txt
+
+zad 2 Wpisz tekst witaj bez wciskania klawisza Enter
+
+ubuntu@bss-ubu1804:~$ cat > wynik3_2.txt
+witajubuntu@bss-ubu1804
+
+zad 3 wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+
+ubuntu@bss-ubu1804:~$ cat > wynik3_2.txt
+witajubuntu@bss-ubu1804
+
+zad 4 Zobacz co się znalazło w pliku wynik3_2.txt
+
+buntu@bss-ubu1804:~$ cat wynik3_2.txt
+witajubuntu@bss-ubu1804:~$ 
+
+W opisie rozwiązania zadania umieść:
+
+jak rozumiesz co się stało?
+
+czym oba te przykłady się różnią?
+
+DLACZEGO się różnią?
+
+Ctrl C oznacza przerwanie zatrzymanie  to co robisz w terminalu wysłanie sygnału i wyjście zpowrotem do znaku zachęty
+Ctrl D wylogowuje z dowolnego terminala i zamyka go lub przywraca znak zachęty użytkownika. powłoka bash kończy działanie
+Różnią się tym że Ctrl C od razu przerywa a Ctrl D dokancza
+
+
+zadanie 4
+
+
+zad 1 Wpisz komendę gimp (lub np. edytor tekstowy gedit)
+
+buntu@bss-ubu1804:~$ gedit
+
+(gedit:2572): dbind-WARNING **: 16:39:18.884: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+zad 2 W terminalu w którym sie to uruchomiło wciśnij CTRL+Z
+
+^Z
+[1]+  Stopped                 gedit
+ubuntu@bss-ubu1804:~$ 
+
+zad 3 Spróbuj coś wyklikać w gimpie / gedicie
+
+gedit nie odpowiada na kliknięcia
+
+zad 4 Otwórz dowolne inne okno i przesuń je tak by częściowo nachodziło na okno gimpa / gedita i potem je odsuń by odsłonić w pełni okno gimpa / gedita
+
+Nie odpowiada na cokolwiek
+
+zad 1 Wpisz komende bg
+
+buntu@bss-ubu1804:~$ bg
+[1]+ gedit &
+
+zad 1 wpisz komende fg
+
+buntu@bss-ubu1804:~$ fg
+gedit
+^C
+
+INFO: Jeśli jakiegoś programu nie ma to zastąp go innym, który znasz.
+
+zad 1 Wykonaj komendę gimp &
+
+buntu@bss-ubu1804:~$ 
+Command 'gimp' not found, but can be installed with:
+
+sudo apt install gimp
+
+
+[1]+  Exit 127                gimp
+
+zad2 Wykonaj komendę gedit &
+
+buntu@bss-ubu1804:~$ 
+(gedit:2594): dbind-WARNING **: 16:49:17.414: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+zad 3 Wykonaj komendę geany &
+
+buntu@bss-ubu1804:~$ 
+(geany:2599): dbind-WARNING **: 16:50:36.234: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+zad 1 przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+składnia: fg %(numer jobu)
+
+ubuntu@bss-ubu1804:~$ jobs
+[1]-  Running                 gedit &
+[2]+  Running                 geany &
+
+ubuntu@bss-ubu1804:~$ fg %1
+gedit
+
+
+
+
+
+
+
+

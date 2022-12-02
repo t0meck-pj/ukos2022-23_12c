@@ -6,3 +6,20 @@ Mój kochany pamiętniku
 -także problemem jest dla mnie git
 -nauczyłem się otwierać i zapisywać pliki tekstowe  w vim 
 -nauczyłem się podstaw Git
+02.11.2022
+-Nauczyłem się zmieniać uprawnienia za pomocą chmod
+-Nauczyłem się zmieniać dziedzićzenie uprawnien przez pliki za pomocą umask
+-dowiedziałem się więcej o poleceniu ls
+-problem sprawia mi używanie chmod z r w x u o g
+-dowiedziałem się trochę o poruszanu w szuflandi
+-nauczyłem się przesyłania zawartości tekstowej do pliku za pomocą >> i >
+16.111.2022
+-Nauczyłem się polecenia grep i jego niektorych parametrow
+-Nauczyłem się polecenia ps i kilku jego parametrow
+-Nauczyłem się roznicy miedzy Ctrl-D a Ctrl-C
+-Dowiedziałem się jak używać kill
+-problem sprawia mi tlumaczenie niektorych polecen w man
+-nauczyłem się uruchamianai procesu w tle i jego przywracania na pierwszy plan
+-Dowiedziałem się o strumieniach stdin stdout i błędów oraz co znaczy poszczególne
+symbole takie jak np >>
+

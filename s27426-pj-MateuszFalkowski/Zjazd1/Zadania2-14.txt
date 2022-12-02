@@ -1,0 +1,45 @@
+Zadanie 2: Wyświetl zawartość aktualnego katalogu.
+Komenda: ls
+Wynik: Desktop Documents Downloads Music Pictures Public Templates Videos
+
+Zadanie 3: Sprawdź gdzie aktualnie się znajdujesz.
+Komenda: pwd
+
+Zadanie 4: Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+Komenda: cd Desktop
+
+Zadanie 5: Sprawdź gdzie jesteś.
+Komenda: pwd
+Wynik: /home/ubuntu/Desktop
+
+Zadanie 6: Wyświetl zawartość bieżącego katalogu.
+Komenda: ls
+Wynik: adding-packages-permanently-info.txt passwords-info.txt
+
+Zadanie 7: Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+Komenda: ls -H ~
+Wynik: Desktop Documents Downloads Music Pictures Public Templates Videos
+
+Zadanie 8: Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej.
+Komenda: cd ~/Pictures
+
+Zadanie 9: Sprawdź gdzie jesteś.
+Komenda: pwd
+Wynik: /home/ubuntu/Pictures
+
+Zadanie 10: Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+Komenda: cd ././././././
+Wynik: nic się nie stało
+
+Zadanie 11: Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+Komenda: cd ~
+
+Zadanie 12: Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie.
+Komenda: cd/root
+Wnioski: Konto na którym wykonywano polecenie nie jest rootem
+
+Zadanie 13: Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1
+Wynik: Przełączono na inny terminal , nie posiadający powłoki graficznej
+
+Zadanie 14: A teraz co się stanie po: Alt+F7
+Wynik: Powrócono do terminala graficznego

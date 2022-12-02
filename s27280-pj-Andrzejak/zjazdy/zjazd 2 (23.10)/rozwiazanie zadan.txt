@@ -1,0 +1,21 @@
+1: 
+    wszedlem do katalogu s26964, gdy sprobowalem stworzyc katalog (mkdir) jak i plik txt (touch)
+    w obydwu przypadkach spotkalem sie z komunikatem o braku dostepu
+    POLECENIE MC NIE BYLO ZAINSTALOWANE NA szuflandi
+
+2: 
+    stworzylem sobie kilka katalogow, w moim katalogu z "s'ka" utworzylem ukos nastepnie ukos/katalogtestowy i ukos/katalogtestowy/katalog
+    gdy znajdywalem sie w sciezce /ukos/katalogtestowy ustawilem chmod 000 na folder ukos, teraz nie moge do niego wrocic komenda cd, po ustawienu chmod 700 wszystko wrocilo do normy 
+    po ustawieniu chmod 000 w katalogu w ktorym aktualnie sie znajduje znajdowalem sie w nim ciagle jednak nie moglem w nim nic zrobic(nie dzialalo ls ani nic innego), po uzyciu komendy cd .. do katalogu juz spowrotem wejsc nie moglem
+    gdy bylem w sciezce ukos/katalogtestowy/katalog nadalem chmod 000 dla folderu ukos
+    w takim przypadku poleceniem cd moglem wskoczyc z ukos/katalogtestowy/katalog do ukos/katalogtestowy ale do samego ukos juz nie, nie bylo rowniez problemu zeby przeskoczyc na katalog w ktorym ukos sie znajduje
+    polecenia chmod mozemy uzyc w przypadku gdy mamy bardzo wazny plik i nie chcielibysmy czyjejs ingerencji w niego
+    gdy probowalem przeskoczyc z bazowej sciezki do ukos/katalogtestowy nie majac dostepu do ukos nie udalo mi sie wejsc do katalogtestowy
+
+3:
+
+4:
+    udalo mi sie stworzyc moja strone internetowa wg instrukcji 
+    http://szuflandia.pjwstk.edu.pl/~s27280/strona.html
+    gdy z ciekawosci ustawilem chmod 000 strona zniknela, zostawiajac komunikat o braku dostepu
+    plik .html finalnie zostawilem z chmod 744, abym ja mial caly dostep a pozostale osoby tylko odczyt

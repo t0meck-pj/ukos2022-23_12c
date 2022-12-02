@@ -11,25 +11,37 @@ W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperyment
 	    \
 	     sekret  drwxr-xr-x 2 s26838 domain users 4096 11-02 16:59 sekret
 
-+ chmod u-r,u-w sekret
++ chmod u-rw pk1
 + ls -l
-d---r--r-- 2 s26838 domain users 4096 11-02 16:59 sekret
-+ chmod g-r,a-r sekret
+d---r--r-- 2 s26838 domain users 4096 11-02 16:59 pk1
++ chmod g-r,a-r pk1
 + ls -l
-d--------- 2 s26838 domain users 4096 11-02 16:59 sekret
-+ cd sekret
--bash: cd: sekret/: Brak dostępu
+d--------- 2 s26838 domain users 4096 11-02 16:59 pk1
++ cd pk1
+-bash: cd: pk1/: Brak dostępu
 
-+ chmod u-r,u-w,u-x pk2 
++ chmod u-rwx podkatalog1 
 + ls -l
-d---r-xr-x 3 s26838 domain users 4096 11-02 16:59 pk2
-+ chmod g-r,g-x pk2
-+ chmod a-r,a-x pk2
+d---r-xr-x 3 s26838 domain users 4096 11-02 16:59 podkatalog1
++ chmod g-rx podkatalog1
++ chmod a-rx podkatalog1
 + ls -l
-d--------- 3 s26838 domain users 4096 11-02 16:59 pk2
--bash: cd: pk2/: Brak dostępu
-cd możemy użyć tylko wtedy kiedy jesteśmy w danym folderze, który modyfikujemy
+d--------- 3 s26838 domain users 4096 11-02 16:59 podkatalog1
+-bash: podkatalog1: pk2/: Brak dostępu
+
+= W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+
+cd możemy użyć wtedy kiedy mamy uprawnienia dostępu do katalogu
+
+= W jakich przypadkach możemy wykonać polecenie chmod ?
+
 kiedy mamy uprawnienie do zapisu/zmiany zawartości pliku/katalogu
-tak
-tak
+
+= Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+
+Nie, ponieważ nie mamy dostępu do katalogu nadrzędnego.
+
+= Czy możemy także wrócić korzystając z polecnia cd - ?
+
+Tak, możemy wrócić z drzewa katalogów.
 

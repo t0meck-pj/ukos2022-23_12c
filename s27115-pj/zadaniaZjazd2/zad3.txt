@@ -1,0 +1,36 @@
+s27115@szuflandia22:~$ ls
+eksperyment  katalog  katalog2  s-27115  windows  zad3plik
+s27115@szuflandia22:~$ nano zad3plik
+s27115@szuflandia22:~$ rm zad3plik 
+s27115@szuflandia22:~$ touch zad3plik
+s27115@szuflandia22:~$ chmod 760 zad3plik
+s27115@szuflandia22:~$ rm zad3plik
+s27115@szuflandia22:~$ mkdir zad3 
+s27115@szuflandia22:~$ cd zad3
+s27115@szuflandia22:~/zad3$ touch zad3plik
+s27115@szuflandia22:~/zad3$ chmod 760 zad3plik
+s27115@szuflandia22:~/zad3$ cat zad3plik
+zadanie3
+s27115@szuflandia22:~/zad3$ cat zad3plik
+zadanie3
+kukulcze_jajo
+s27115@szuflandia22:~/zad3$ man tail 
+
+[2]+  Zatrzymano              man tail
+s27115@szuflandia22:~/zad3$ ls
+zad3plik
+s27115@szuflandia22:~/zad3$ echo test> zad3plik
+s27115@szuflandia22:~/zad3$ echo test> zad3plik
+s27115@szuflandia22:~/zad3$ 
+s27115@szuflandia22:~/zad3$ echo 1> zad3plik
+s27115@szuflandia22:~/zad3$ echo 2> zad3plik
+
+s27115@szuflandia22:~/zad3$ echo 3> zad3plik
+
+s27115@szuflandia22:~/zad3$ echo 3>> zad3plik
+
+s27115@szuflandia22:~/zad3$ echo 33>> zad3plik
+
+s27115@szuflandia22:~/zad3$ echo teeest>> zad3plik
+s27115@szuflandia22:~/zad3$ echo '3'>> zad3plik
+s27115@szuflandia22:~/zad3$ echo 'beka jak rzeka'>> zad3plik

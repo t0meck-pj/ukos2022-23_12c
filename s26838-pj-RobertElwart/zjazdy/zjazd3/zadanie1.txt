@@ -1,0 +1,17 @@
+Zadanie 1:
+= Zobacz co się stanie jeśli wpiszemy w terminalu:
+ps
++ wyświetla listę procesu
+ps -a
++ wyświetla wszystkie procesy z wyjątkiem procesów nie związanych z terminalem
+ps -x
++ wyswietla procesy systemowe
+ps axu
+= Jak myślisz, co oznacza znak zapytania w kolumnie 2?
++ powłoka w której wykonuje się dany proces
+
+B: Jak wykonasz poniższe 2 zadania?
+1. Wyświetl wszystkie procesy bash
++ ps axu | grep bash
+2. Wyświetl wszystkie procesy należące do użytkownika root
++ ps axu | grep root | grep -v grep

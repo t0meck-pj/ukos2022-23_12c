@@ -1,4 +1,4 @@
-Zadanie 1:
+Zadanie 1: 
 
 = Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych.
 + mkdir podkatalog1
@@ -18,8 +18,7 @@ drwxr-xr-x 2 s26838 domain users 4096 11-02 16:59 sekret
 + chmod a-x sekret
 drw-r--r-- 2 s26838 domain users 4096 11-02 16:59 sekret
 + cd ..
-+ chmod g-w plik.txt
-+ chmod o-w , o-x plik.txt
++ chmod o-wx plik.txt
 
 = następnie spróbować wejść do katalogów domowych innych uczestników zajęć i sprawdzić, które z obiektów są tam dla nas dostępne (i w jakim sensie).
 
@@ -48,9 +47,10 @@ drwxrwxr-x 3 s26836 domain users 4096 10-25 14:09 pusty
 + cd pelny
 + ls -l
 -rw-r--r-- 1 s26836 domain users 28 10-25 14:10 text.txt
-+ rm text.txt
-rm: usunąć zabezpieczony przed zapisem plik zwykły 'text.txt'? yes
-+ ls -l
-razem 0
++ rm text.txt 
++ rm: usunąć zabezpieczony przed zapisem plik zwykły 'text.txt'? yes
+++ ls -l
++ razem 0
+
 
 
