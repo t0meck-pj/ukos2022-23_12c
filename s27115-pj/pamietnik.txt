@@ -86,4 +86,13 @@ Drogi pamiętniczku na czwartych z kolei zajęciach nauczyłem się następując
 -przypomniałem sobie że istnieje taka fajna magia jak polecenie tree o którymś jakimś niewytłumaczalnym cudem nieco mi się zapomniało ,a jest dość pomocne.
 -usystematyzowałem sobie w głowie pojęcie ścieżek dostępu do pliku względnych i bezwzględnych.
 
+*
+ rrrr-mm-dd
+ 2022-12-02
+Mój dorgi pamiętniczku przygotowywując się do kolokwium nauczyłem się następujących rzeczy:
+
+-jak działa umask 
+-używania strumieni w praktycznych zastosowaniach 
+-zarządzania aktywnimi procesami w bashu 
+
 No cusz a teraz niech dzieje się kolokwium alt+crtl+del.
