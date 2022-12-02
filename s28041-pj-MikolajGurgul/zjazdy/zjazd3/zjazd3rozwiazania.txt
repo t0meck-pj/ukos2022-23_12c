@@ -53,7 +53,7 @@
     	Co robi program tee?
 
 	Utworzyl sie plik z podana nazwa. Na ekranie od razu zostalo wypisane co znajduje sie w srodku utworzonego pliku. 
-	Tee wczytuje podane dane, czyli to co podalismy po lewej stronie. Wypisuje te pliki i kopiuje do podanego przez nas miejsca. Natomiast jezeli 	posiadamy juz jakies dane w pliku, do ktorego zapisujemy nasze polecenie. To dane 	zostaja nadpisane.
+	Tee wczytuje podane dane, czyli to co podalismy po lewej stronie. Wypisuje te pliki i kopiuje do podanego przez nas miejsca. Natomiast jezeli posiadamy juz jakies dane w pliku, do ktorego zapisujemy nasze polecenie. To dane zostaja nadpisane.
 
 1
 
