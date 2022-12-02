@@ -295,3 +295,12 @@ http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
 Uprawnienia minimalne dla katalogu domowego to read dla other
 Uprawnienia minimalne dla katalogu public_html to uprawnienie do wejścia(x)
 Uprawnienia minimalne dla pliku strona.html to read
+
+
+UMASK
+Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
+Operacja to NOT AND
+
+
+
+
