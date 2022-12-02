@@ -102,15 +102,15 @@ Przygotuj 3 wariacje rozwiazania tego zadania uzywajac roznych notacji:
 
     oktalnej/osemkowej/cyfrowej
 
-	user@user-VirtualBox:~/Desktop$ chmod 741 tmp
+	user@user-VirtualBox:/tmp/ukos$ chmod 741 ala
 
     literowej ze znakiem rownosci
 
-	user@user-VirtualBox:~/Desktop$ chmod u=rwx,g=r,o=x tmp
+	user@user-VirtualBox:/tmp/ukos$ chmod u=rwx,g=r,o=x ala
 
     literowej z plusami i minusami
 
-	user@user-VirtualBox:~/Desktop$ chmod u+w,ug+r,uo+x tmp
+	user@user-VirtualBox:/tmp/ukos$ chmod u+w,ug+r,uo+x ala
 
 Wszystkie wersje powinny byc zapisane w jednym poleceniu (bez uzywania && czy | )
 7
