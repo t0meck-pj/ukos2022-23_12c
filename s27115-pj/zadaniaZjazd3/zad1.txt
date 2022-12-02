@@ -1,0 +1,335 @@
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ ps
+    PID TTY          TIME CMD
+   9186 pts/1    00:00:00 bash
+   9471 pts/1    00:00:00 tee
+   9687 pts/1    00:00:00 ps
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ ps -a
+    PID TTY          TIME CMD
+   9471 pts/1    00:00:00 tee
+   9688 pts/1    00:00:00 ps
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ ps x
+    PID TTY      STAT   TIME COMMAND
+   1285 ?        Ss     0:00 /lib/systemd/systemd --user
+   1286 ?        S      0:00 (sd-pam)
+   1300 ?        S<sl   0:00 /usr/bin/pipewire
+   1301 ?        S<sl   1:04 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+   1304 ?        Ss     0:02 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1306 ?        Sl     0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+   1307 ?        S<l    0:00 /usr/bin/pipewire-media-session
+   1314 ?        Sl     0:01 /usr/bin/kwalletd5 --pam-login 7 3
+   1315 ?        Sl     0:00 /usr/bin/startplasma-x11
+   1374 ?        Ss     0:00 /usr/bin/ssh-agent /usr/bin/im-launch /usr/bin/startplasma-x11
+   1391 ?        Ssl    0:34 /usr/bin/ibus-daemon --daemonize --xim
+   1397 ?        Ssl    0:00 /usr/libexec/gvfsd
+   1399 ?        Sl     0:00 /usr/libexec/pulse/gsettings-helper
+   1407 ?        Sl     0:00 /usr/libexec/ibus-dconf
+   1408 ?        Sl     0:06 /usr/libexec/ibus-ui-gtk3
+   1410 ?        Sl     0:08 /usr/libexec/ibus-extension-gtk3
+   1413 ?        Sl     0:02 /usr/libexec/ibus-x11 --kill-daemon
+   1420 ?        Sl     0:00 /usr/libexec/ibus-portal
+   1439 ?        Ssl    0:00 /usr/libexec/at-spi-bus-launcher
+   1447 ?        S      0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+   1460 ?        Ssl    0:00 /usr/libexec/xdg-desktop-portal
+   1462 ?        S      0:00 /usr/lib/x86_64-linux-gnu/libexec/kf5/start_kdeinit
+   1465 ?        Sl     0:03 /usr/libexec/at-spi2-registryd --use-gnome-session
+   1472 ?        Ss     0:00 kdeinit5: Running...
+   1475 ?        Ssl    0:00 /usr/libexec/xdg-document-portal
+   1478 ?        Ssl    0:00 /usr/libexec/xdg-permission-store
+   1488 ?        Ssl    0:04 /usr/libexec/xdg-desktop-portal-gtk
+   1489 ?        Sl     0:01 /usr/lib/x86_64-linux-gnu/libexec/kf5/klauncher --fd=9
+   1503 ?        Sl     0:00 /usr/libexec/dconf-service
+   1508 ?        Sl     0:01 /usr/lib/x86_64-linux-gnu/libexec/xdg-desktop-portal-kde
+   1520 ?        Sl     0:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+   1533 ?        Sl     0:08 /usr/bin/kded5
+   1537 ?        Sl     6:50 /usr/bin/kwin_x11
+   1538 ?        Sl     0:08 /usr/libexec/ibus-engine-simple
+   1572 ?        Sl     0:01 /usr/lib/x86_64-linux-gnu/libexec/kactivitymanagerd
+   1583 ?        Ssl    0:07 /usr/bin/kglobalaccel5
+   1590 ?        Sl     0:03 /usr/bin/ksmserver
+   1594 ?        Sl     3:29 /usr/bin/plasmashell
+   1596 ?        Sl     0:03 /usr/bin/kaccess
+   1598 ?        Sl     0:01 /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
+   1601 ?        SNl    0:03 /usr/bin/baloo_file
+   1608 ?        Sl     0:01 /usr/bin/xembedsniproxy
+   1621 ?        Sl     0:01 /usr/bin/gmenudbusmenuproxy
+   1625 ?        Sl     0:02 /usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier
+   1633 ?        Sl     0:02 /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd
+   1651 ?        S      0:00 /usr/bin/xsettingsd
+   1674 ?        Sl     0:02 /usr/bin/korgac -session 106531310000166561836900000014680009_1669839352_647956
+   1698 ?        Sl     0:01 /usr/lib/x86_64-linux-gnu/libexec/baloorunner -session 106531310000166562069400000014680028_1669839352_655833
+   1702 ?        Sl     0:04 /usr/bin/ksystemstats
+   1705 ?        S      0:04 /usr/bin/ksysguardd
+   1716 ?        Ss     0:00 /usr/libexec/bluetooth/obexd
+   1717 ?        Sl     0:01 /usr/lib/x86_64-linux-gnu/libexec/kf5/kscreen_backend_launcher
+   1720 ?        Sl    52:48 /usr/lib/firefox-esr/firefox-esr --sm-client-id 106531310000166983790000000015790052
+   1787 ?        Sl     0:03 /usr/lib/x86_64-linux-gnu/libexec/org_kde_powerdevil
+   1790 ?        Sl     0:00 /usr/libexec/geoclue-2.0/demos/agent
+   1812 ?        Sl     0:20 /usr/share/teams/teams --disable-namespace-sandbox --disable-setuid-sandbox
+   1834 ?        S      0:00 /usr/share/teams/teams --type=zygote --no-zygote-sandbox
+   1835 ?        S      0:00 /usr/share/teams/teams --type=zygote
+   1929 ?        Sl     0:33 /usr/share/teams/teams --type=gpu-process --field-trial-handle=14248353160275883187,12784771084729370356,131072 --enable-features=ContextB
+   1933 ?        Sl     0:02 /usr/share/teams/teams --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=14248353160275883187,1278477108
+   1968 ?        Sl     0:00 /usr/share/teams/teams --type=renderer --autoplay-policy=no-user-gesture-required --disable-background-timer-throttling --field-trial-hand
+   2002 ?        Sl     0:00 /usr/share/teams/teams --type=utility --utility-sub-type=audio.mojom.AudioService --field-trial-handle=14248353160275883187,12784771084729
+   2055 ?        Sl     0:00 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20221107191025 -prefsLen 31705 -prefMapSize 218634 -appDir /usr/lib/firefox-e
+   2095 ?        Sl     0:07 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 1 -isForBrowser -prefsLen 31846 -prefMapSize 218634 -jsInitLen 277276 -parentBuildI
+   2124 ?        Sl     0:06 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 2 -isForBrowser -prefsLen 36489 -prefMapSize 218634 -jsInitLen 277276 -parentBuildI
+   2341 ?        Sl     7:54 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20221107191025 -prefsLen 37364 -prefMapSize 218634 -appDir /usr/lib/firefox-e
+   2351 ?        Sl     0:10 /usr/lib/x86_64-linux-gnu/libexec/kf5/kio_http_cache_cleaner
+   2422 ?        S      0:00 file.so [kdeinit5] file local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/kded5TcOPWD.1.slave-socket
+   4108 ?        Sl     1:51 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20221107191025 -sandboxingKind 1 -prefsLen 37365 -prefMapSize 218634 -appDir 
+   5345 ?        Sl     0:02 /usr/share/teams/teams --type=renderer --autoplay-policy=no-user-gesture-required --disable-background-timer-throttling --field-trial-hand
+   5347 ?        S      0:00 /usr/share/teams/teams --type=renderer --autoplay-policy=no-user-gesture-required --disable-background-timer-throttling --field-trial-hand
+   5418 ?        Sl     0:37 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 57 -isForBrowser -prefsLen 37365 -prefMapSize 218634 -jsInitLen 277276 -parentBuild
+   6363 ?        Sl     6:33 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 70 -isForBrowser -prefsLen 37364 -prefMapSize 218634 -jsInitLen 277276 -parentBuild
+   6568 ?        S      0:08 file.so [kdeinit5] file local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/plasmashellJeyxmO.13.slave-socket
+   7901 ?        SLl    0:13 /usr/bin/telegram-desktop --
+   8654 ?        Sl     9:39 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 100 -isForBrowser -prefsLen 37364 -prefMapSize 218634 -jsInitLen 277276 -parentBuil
+   8982 ?        Sl     0:17 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 109 -isForBrowser -prefsLen 37364 -prefMapSize 218634 -jsInitLen 277276 -parentBuil
+   9033 ?        S      0:00 tags.so [kdeinit5] tags local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/plasmashelloWsFcM.17.slave-socket
+   9034 ?        S      0:00 tags.so [kdeinit5] tags local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/kded5weCYgO.3.slave-socket
+   9103 ?        Sl     0:05 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 111 -isForBrowser -prefsLen 37364 -prefMapSize 218634 -jsInitLen 277276 -parentBuil
+   9174 ?        Sl     0:08 /usr/bin/konsole
+   9186 pts/1    Ss     0:00 /bin/bash
+   9471 pts/1    T      0:00 tee w przeciwności do zapisu używającego sposobu z zapisaniem standardowego wyjścia do pliku przekazuje je też do standardowego wyjścia
+   9689 pts/1    R+     0:00 ps x
+
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ kill -9 9471
+//wpisywanie odpowiedzi jako komend to jednak nie jest najlepszy pomysł xD
+
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 164320  4824 ?        Ss   lis30   0:05 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    lis30   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   lis30   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   lis30   0:00 [rcu_par_gp]
+root           8  0.0  0.0      0     0 ?        I<   lis30   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    lis30   0:00 [rcu_tasks_rude_]
+root          10  0.0  0.0      0     0 ?        S    lis30   0:00 [rcu_tasks_trace]
+root          11  0.0  0.0      0     0 ?        S    lis30   0:00 [ksoftirqd/0]
+root          12  0.0  0.0      0     0 ?        I    lis30   0:08 [rcu_sched]
+root          13  0.0  0.0      0     0 ?        S    lis30   0:00 [migration/0]
+root          15  0.0  0.0      0     0 ?        S    lis30   0:00 [cpuhp/0]
+root          16  0.0  0.0      0     0 ?        S    lis30   0:00 [cpuhp/1]
+root          17  0.0  0.0      0     0 ?        S    lis30   0:00 [migration/1]
+root          18  0.0  0.0      0     0 ?        S    lis30   0:00 [ksoftirqd/1]
+root          20  0.0  0.0      0     0 ?        I<   lis30   0:00 [kworker/1:0H-events_highpri]
+root          21  0.0  0.0      0     0 ?        S    lis30   0:00 [cpuhp/2]
+root          22  0.0  0.0      0     0 ?        S    lis30   0:00 [migration/2]
+root          23  0.0  0.0      0     0 ?        S    lis30   0:00 [ksoftirqd/2]
+root          25  0.0  0.0      0     0 ?        I<   lis30   0:00 [kworker/2:0H-events_highpri]
+root          26  0.0  0.0      0     0 ?        S    lis30   0:00 [cpuhp/3]
+root          27  0.0  0.0      0     0 ?        S    lis30   0:00 [migration/3]
+root          28  0.0  0.0      0     0 ?        S    lis30   0:00 [ksoftirqd/3]
+root          30  0.0  0.0      0     0 ?        I<   lis30   0:00 [kworker/3:0H-events_highpri]
+root          35  0.0  0.0      0     0 ?        S    lis30   0:00 [kdevtmpfs]
+root          36  0.0  0.0      0     0 ?        I<   lis30   0:00 [netns]
+root          37  0.0  0.0      0     0 ?        S    lis30   0:00 [kauditd]
+root          39  0.0  0.0      0     0 ?        S    lis30   0:00 [khungtaskd]
+root          40  0.0  0.0      0     0 ?        S    lis30   0:00 [oom_reaper]
+root          41  0.0  0.0      0     0 ?        I<   lis30   0:00 [writeback]
+root          42  0.0  0.0      0     0 ?        S    lis30   0:01 [kcompactd0]
+root          43  0.0  0.0      0     0 ?        SN   lis30   0:00 [ksmd]
+root          44  0.0  0.0      0     0 ?        SN   lis30   0:00 [khugepaged]
+root          62  0.0  0.0      0     0 ?        I<   lis30   0:00 [kintegrityd]
+root          63  0.0  0.0      0     0 ?        I<   lis30   0:00 [kblockd]
+root          64  0.0  0.0      0     0 ?        I<   lis30   0:00 [blkcg_punt_bio]
+root          67  0.0  0.0      0     0 ?        I<   lis30   0:00 [edac-poller]
+root          68  0.0  0.0      0     0 ?        I<   lis30   0:00 [devfreq_wq]
+root          69  0.0  0.0      0     0 ?        I<   lis30   0:01 [kworker/2:1H-events_highpri]
+root          70  0.2  0.0      0     0 ?        S    lis30   0:32 [kswapd0]
+root          71  0.0  0.0      0     0 ?        I<   lis30   0:00 [kthrotld]
+root          72  0.0  0.0      0     0 ?        I<   lis30   0:00 [acpi_thermal_pm]
+root          75  0.0  0.0      0     0 ?        I<   lis30   0:00 [ipv6_addrconf]
+root          84  0.0  0.0      0     0 ?        I<   lis30   0:00 [kstrp]
+root          87  0.0  0.0      0     0 ?        I<   lis30   0:00 [zswap-shrink]
+root         114  0.0  0.0      0     0 ?        I<   lis30   0:01 [kworker/0:1H-kblockd]
+root         142  0.0  0.0      0     0 ?        I<   lis30   0:01 [kworker/1:1H-events_highpri]
+root         143  0.0  0.0      0     0 ?        I<   lis30   0:01 [kworker/3:1H-kblockd]
+root         144  0.0  0.0      0     0 ?        I<   lis30   0:00 [cryptd]
+root         155  0.0  0.0      0     0 ?        I<   lis30   0:00 [ata_sff]
+root         157  0.0  0.0      0     0 ?        S    lis30   0:00 [scsi_eh_0]
+root         159  0.0  0.0      0     0 ?        I<   lis30   0:00 [scsi_tmf_0]
+root         160  0.0  0.0      0     0 ?        S    lis30   0:00 [scsi_eh_1]
+root         163  0.0  0.0      0     0 ?        I<   lis30   0:00 [scsi_tmf_1]
+root         165  0.0  0.0      0     0 ?        S    lis30   0:00 [scsi_eh_2]
+root         166  0.0  0.0      0     0 ?        I<   lis30   0:00 [scsi_tmf_2]
+root         192  0.0  0.0      0     0 ?        S    lis30   0:00 [card0-crtc0]
+root         193  0.0  0.0      0     0 ?        S    lis30   0:00 [card0-crtc1]
+root         194  0.0  0.0      0     0 ?        S    lis30   0:00 [card0-crtc2]
+root         221  0.0  0.0      0     0 ?        I<   lis30   0:00 [md]
+root         232  0.0  0.0      0     0 ?        I<   lis30   0:00 [raid5wq]
+root         289  0.0  0.0      0     0 ?        S    lis30   0:02 [jbd2/sda1-8]
+root         290  0.0  0.0      0     0 ?        I<   lis30   0:00 [ext4-rsv-conver]
+root         338  0.0  0.1  95036  6336 ?        Ss   lis30   0:01 /lib/systemd/systemd-journald
+root         373  0.0  0.0  24040   640 ?        Ss   lis30   0:00 /lib/systemd/systemd-udevd
+root         408  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop0]
+root         410  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop1]
+root         412  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop2]
+root         421  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop3]
+root         422  0.0  0.0      0     0 ?        I<   lis30   0:00 [tpm_dev_wq]
+root         437  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop4]
+root         438  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop5]
+root         443  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop6]
+root         459  0.0  0.0      0     0 ?        I<   lis30   0:00 [ktpacpid]
+root         463  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop7]
+root         465  0.0  0.0      0     0 ?        S    lis30   0:00 [watchdogd]
+root         467  0.0  0.0      0     0 ?        I<   lis30   0:00 [kworker/0:2H-kblockd]
+root         468  0.0  0.0      0     0 ?        S    lis30   0:02 [ktpacpi_nvramd]
+root         470  0.0  0.0      0     0 ?        I<   lis30   0:00 [cfg80211]
+root         472  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop8]
+root         492  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop9]
+root         494  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop10]
+root         495  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop11]
+root         496  0.0  0.0      0     0 ?        S<   lis30   0:00 [loop12]
+root         531  0.2  0.0      0     0 ?        S    lis30   0:32 [irq/50-iwlwifi]
+systemd+     550  0.0  0.0  88572   264 ?        Ssl  lis30   0:00 /lib/systemd/systemd-timesyncd
+root         597  0.0  0.0   8184   464 ?        Ss   lis30   0:00 /usr/sbin/haveged --Foreground --verbose=1
+root         599  0.0  0.0 240920  3276 ?        Ssl  lis30   0:00 /usr/libexec/accounts-daemon
+avahi        600  0.0  0.0   7096   504 ?        Ss   lis30   0:00 avahi-daemon: running [e11.local]
+root         601  0.0  0.0  22864  1308 ?        Ss   lis30   0:00 /usr/libexec/bluetooth/bluetoothd
+root         603  0.0  0.0   9280   736 ?        Ss   lis30   0:00 /usr/sbin/cron -f
+message+     606  0.0  0.0  10588  3028 ?        Ss   lis30   0:08 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-
+avahi        609  0.0  0.0   6916    56 ?        S    lis30   0:00 avahi-daemon: chroot helper
+root         610  0.0  0.2 257888  8020 ?        Ssl  lis30   0:07 /usr/sbin/NetworkManager --no-daemon
+root         613  0.0  0.0 220800    84 ?        Ssl  lis30   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         614  0.0  0.0  11524   524 ?        Ss   lis30   0:00 /usr/sbin/smartd -n
+root         615  0.0  0.3 1243792 11988 ?       Ssl  lis30   0:06 /usr/lib/snapd/snapd
+root         616  0.0  0.0 235512  1048 ?        Ssl  lis30   0:00 /usr/libexec/switcheroo-control
+root         617  0.0  0.0 374272   392 ?        Ss   lis30   0:00 /lib/systemd/systemd-logind
+root         618  0.0  0.0 127156   480 ?        Ssl  lis30   0:00 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+root         619  0.0  0.0 393836  3400 ?        Ssl  lis30   0:02 /usr/libexec/udisks2/udisksd
+root         621  0.0  0.0  15252  3928 ?        Ss   lis30   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root         680  0.0  0.0 235592  1184 ?        Ssl  lis30   0:01 /usr/libexec/polkitd --no-debug
+root         820  0.0  0.0      0     0 ?        I<   lis30   0:00 [iprt-VBoxWQueue]
+root         821  0.0  0.0      0     0 ?        S    lis30   0:00 [iprt-VBoxTscThr]
+root         876  0.0  0.0  29200  1004 ?        Ss   lis30   0:00 /usr/sbin/cupsd -l
+root         882  0.0  0.0 121316  1096 ?        Ssl  lis30   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         886  0.0  0.0 138608  1684 ?        Ssl  lis30   0:00 /usr/bin/sddm
+colord       887  0.0  0.0 246896  1808 ?        Ssl  lis30   0:00 /usr/libexec/colord
+root         894  4.1  0.6 915476 24484 tty7     Ssl+ lis30   9:01 /usr/lib/xorg/Xorg -nolisten tcp -auth /var/run/sddm/{5cd2e916-1557-49bc-b655-f8455be2926d} -backgro
+root         909  0.0  0.0 175280   924 ?        Ssl  lis30   0:00 /usr/sbin/cups-browsed
+rtkit        989  0.0  0.0 153752   128 ?        SNsl lis30   0:00 /usr/libexec/rtkit-daemon
+root        1016  0.0  0.0      0     0 ?        S<   lis30   0:00 [krfcommd]
+Debian-+    1279  0.0  0.0  18500   308 ?        Ss   lis30   0:00 /usr/sbin/exim4 -bd -q30m
+root        1283  0.0  0.0  61476  2184 ?        S    lis30   0:00 /usr/lib/x86_64-linux-gnu/sddm/sddm-helper --socket /tmp/sddm-auth13f56781-700d-4121-b1c0-98b36d6095
+xeon        1285  0.0  0.0  15696  3140 ?        Ss   lis30   0:00 /lib/systemd/systemd --user
+xeon        1286  0.0  0.0 101556   536 ?        S    lis30   0:00 (sd-pam)
+xeon        1300  0.0  0.0  91052   464 ?        S<sl lis30   0:00 /usr/bin/pipewire
+xeon        1301  0.5  0.1 2210840 7052 ?        S<sl lis30   1:05 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+xeon        1304  0.0  0.0   8804  2236 ?        Ss   lis30   0:02 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog
+xeon        1306  0.0  0.0 240296   364 ?        Sl   lis30   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+xeon        1307  0.0  0.0  85360   472 ?        S<l  lis30   0:00 /usr/bin/pipewire-media-session
+xeon        1314  0.0  0.0 284856  3820 ?        Sl   lis30   0:01 /usr/bin/kwalletd5 --pam-login 7 3
+xeon        1315  0.0  0.0 146944  2816 ?        Sl   lis30   0:00 /usr/bin/startplasma-x11
+xeon        1374  0.0  0.0   6028    40 ?        Ss   lis30   0:00 /usr/bin/ssh-agent /usr/bin/im-launch /usr/bin/startplasma-x11
+xeon        1391  0.2  0.1 386644  5304 ?        Ssl  lis30   0:34 /usr/bin/ibus-daemon --daemonize --xim
+xeon        1397  0.0  0.0 239852  1288 ?        Ssl  lis30   0:00 /usr/libexec/gvfsd
+xeon        1399  0.0  0.0 245500   632 ?        Sl   lis30   0:00 /usr/libexec/pulse/gsettings-helper
+xeon        1407  0.0  0.0 236632  1096 ?        Sl   lis30   0:00 /usr/libexec/ibus-dconf
+xeon        1408  0.0  0.2 816548 10208 ?        Sl   lis30   0:06 /usr/libexec/ibus-ui-gtk3
+xeon        1410  0.0  0.1 739568  7520 ?        Sl   lis30   0:08 /usr/libexec/ibus-extension-gtk3
+xeon        1413  0.0  0.0 661468  2316 ?        Sl   lis30   0:02 /usr/libexec/ibus-x11 --kill-daemon
+xeon        1420  0.0  0.0 851004  1552 ?        Sl   lis30   0:00 /usr/libexec/ibus-portal
+xeon        1439  0.0  0.0 307252   944 ?        Ssl  lis30   0:00 /usr/libexec/at-spi-bus-launcher
+xeon        1447  0.0  0.0   7988   356 ?        S    lis30   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-a
+xeon        1460  0.0  0.0 623904  2308 ?        Ssl  lis30   0:00 /usr/libexec/xdg-desktop-portal
+xeon        1462  0.0  0.0   2292     4 ?        S    lis30   0:00 /usr/lib/x86_64-linux-gnu/libexec/kf5/start_kdeinit
+xeon        1465  0.0  0.0 165792   668 ?        Sl   lis30   0:03 /usr/libexec/at-spi2-registryd --use-gnome-session
+xeon        1472  0.0  0.0 113520  2424 ?        Ss   lis30   0:00 kdeinit5: Running...
+xeon        1475  0.0  0.0 457644   832 ?        Ssl  lis30   0:00 /usr/libexec/xdg-document-portal
+xeon        1478  0.0  0.0 235696  1256 ?        Ssl  lis30   0:00 /usr/libexec/xdg-permission-store
+root        1483  0.0  0.0   2468   400 ?        Ss   lis30   0:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+xeon        1488  0.0  0.1 560280  4624 ?        Ssl  lis30   0:04 /usr/libexec/xdg-desktop-portal-gtk
+xeon        1489  0.0  0.1 282980  4004 ?        Sl   lis30   0:01 /usr/lib/x86_64-linux-gnu/libexec/kf5/klauncher --fd=9
+xeon        1503  0.0  0.0 155944   988 ?        Sl   lis30   0:00 /usr/libexec/dconf-service
+xeon        1508  0.0  0.0 357860  3004 ?        Sl   lis30   0:01 /usr/lib/x86_64-linux-gnu/libexec/xdg-desktop-portal-kde
+xeon        1520  0.0  0.0 239832  1036 ?        Sl   lis30   0:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+xeon        1533  0.0  0.2 922516 11004 ?        Sl   lis30   0:08 /usr/bin/kded5
+xeon        1537  3.1  1.3 3385920 52756 ?       Sl   lis30   6:52 /usr/bin/kwin_x11
+xeon        1538  0.0  0.0 162944  2116 ?        Sl   lis30   0:08 /usr/libexec/ibus-engine-simple
+root        1542  0.0  0.0 250092  2180 ?        Ssl  lis30   0:01 /usr/libexec/upowerd
+xeon        1572  0.0  0.1 548128  5112 ?        Sl   lis30   0:01 /usr/lib/x86_64-linux-gnu/libexec/kactivitymanagerd
+xeon        1583  0.0  0.0 284488  2260 ?        Ssl  lis30   0:07 /usr/bin/kglobalaccel5
+xeon        1590  0.0  0.1 288176  5120 ?        Sl   lis30   0:03 /usr/bin/ksmserver
+xeon        1594  1.6  3.9 3309360 156756 ?      Sl   lis30   3:31 /usr/bin/plasmashell
+xeon        1596  0.0  0.0 283640  3068 ?        Sl   lis30   0:03 /usr/bin/kaccess
+xeon        1598  0.0  0.0 435432  2464 ?        Sl   lis30   0:01 /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
+xeon        1601  0.0  0.2 268671140 10136 ?     SNl  lis30   0:03 /usr/bin/baloo_file
+xeon        1608  0.0  0.0 238044  1572 ?        Sl   lis30   0:01 /usr/bin/xembedsniproxy
+xeon        1621  0.0  0.0 236972  2372 ?        Sl   lis30   0:01 /usr/bin/gmenudbusmenuproxy
+xeon        1625  0.0  0.0 373120  1876 ?        Sl   lis30   0:02 /usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier
+xeon        1633  0.0  0.0 364512  2756 ?        Sl   lis30   0:02 /usr/lib/x86_64-linux-gnu/libexec/kdeconnectd
+xeon        1651  0.0  0.0   9552   372 ?        S    lis30   0:00 /usr/bin/xsettingsd
+root        1663  0.0  0.0 440384  1712 ?        Ssl  lis30   0:10 /usr/libexec/packagekitd
+xeon        1674  0.0  0.1 318296  4284 ?        Sl   lis30   0:02 /usr/bin/korgac -session 106531310000166561836900000014680009_1669839352_647956
+xeon        1698  0.0  0.1 268720140 6468 ?      Sl   lis30   0:01 /usr/lib/x86_64-linux-gnu/libexec/baloorunner -session 106531310000166562069400000014680028_16698393
+xeon        1702  0.0  0.1 137760  3948 ?        Sl   lis30   0:05 /usr/bin/ksystemstats
+xeon        1705  0.0  0.0   4200   508 ?        S    lis30   0:04 /usr/bin/ksysguardd
+xeon        1716  0.0  0.0  45160   100 ?        Ss   lis30   0:00 /usr/libexec/bluetooth/obexd
+xeon        1717  0.0  0.0 229316  2524 ?        Sl   lis30   0:01 /usr/lib/x86_64-linux-gnu/libexec/kf5/kscreen_backend_launcher
+xeon        1720 24.2  9.2 4653340 364064 ?      Sl   lis30  52:51 /usr/lib/firefox-esr/firefox-esr --sm-client-id 106531310000166983790000000015790052
+xeon        1787  0.0  0.1 1156896 6892 ?        Sl   lis30   0:03 /usr/lib/x86_64-linux-gnu/libexec/org_kde_powerdevil
+xeon        1790  0.0  0.0 236624     0 ?        Sl   lis30   0:00 /usr/libexec/geoclue-2.0/demos/agent
+xeon        1812  0.1  1.1 6774100 44388 ?       Sl   lis30   0:20 /usr/share/teams/teams --disable-namespace-sandbox --disable-setuid-sandbox
+xeon        1834  0.0  0.0 209308  1284 ?        S    lis30   0:00 /usr/share/teams/teams --type=zygote --no-zygote-sandbox
+xeon        1835  0.0  0.0 209308  1404 ?        S    lis30   0:00 /usr/share/teams/teams --type=zygote
+xeon        1929  0.2  0.4 1161288 16640 ?       Sl   lis30   0:33 /usr/share/teams/teams --type=gpu-process --field-trial-handle=14248353160275883187,1278477108472937
+xeon        1933  0.0  0.0 802716  2640 ?        Sl   lis30   0:02 /usr/share/teams/teams --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-
+xeon        1968  0.0  0.0 5390620  776 ?        Sl   lis30   0:00 /usr/share/teams/teams --type=renderer --autoplay-policy=no-user-gesture-required --disable-backgrou
+xeon        2002  0.0  0.0 917856   216 ?        Sl   lis30   0:00 /usr/share/teams/teams --type=utility --utility-sub-type=audio.mojom.AudioService --field-trial-hand
+xeon        2055  0.0  0.0 211120  2252 ?        Sl   lis30   0:00 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20221107191025 -prefsLen 31705 -prefMap
+xeon        2095  0.0  1.0 2443464 42288 ?       Sl   lis30   0:07 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 1 -isForBrowser -prefsLen 31846 -prefMapSize 
+xeon        2124  0.0  0.8 2443260 33880 ?       Sl   lis30   0:06 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 2 -isForBrowser -prefsLen 36489 -prefMapSize 
+xeon        2341  3.6  0.8 411808 33108 ?        Sl   lis30   7:54 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20221107191025 -prefsLen 37364 -prefMap
+xeon        2351  0.0  0.0 161072  1088 ?        Sl   lis30   0:10 /usr/lib/x86_64-linux-gnu/libexec/kf5/kio_http_cache_cleaner
+xeon        2422  0.0  0.0 114172  2492 ?        S    lis30   0:00 file.so [kdeinit5] file local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/kde
+root        2924  0.0  0.0      0     0 ?        S    lis30   0:00 [irq/49-mei_me]
+xeon        4108  1.1  0.1 330272  6920 ?        Sl   lis30   1:52 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20221107191025 -sandboxingKind 1 -prefs
+xeon        5345  0.0  1.1 5252476 46284 ?       Sl   lis30   0:02 /usr/share/teams/teams --type=renderer --autoplay-policy=no-user-gesture-required --disable-backgrou
+xeon        5347  0.0  0.0 213992   416 ?        S    lis30   0:00 /usr/share/teams/teams --type=renderer --autoplay-policy=no-user-gesture-required --disable-backgrou
+xeon        5418  0.4  0.7 2594144 30360 ?       Sl   lis30   0:37 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 57 -isForBrowser -prefsLen 37365 -prefMapSize
+xeon        6363  6.3  6.5 21854824 258992 ?     Sl   lis30   6:43 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 70 -isForBrowser -prefsLen 37364 -prefMapSize
+xeon        6568  0.1  0.0 114536  3256 ?        S    lis30   0:08 file.so [kdeinit5] file local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/pla
+root        7434  0.1  0.0      0     0 ?        I<   lis30   0:04 [kworker/u17:1-rb_allocator]
+xeon        7901  0.4  1.6 2223852 63264 ?       SLl  00:08   0:13 /usr/bin/telegram-desktop --
+root        8264  0.0  0.0      0     0 ?        I    00:13   0:00 [kworker/u16:4-events_unbound]
+root        8299  0.0  0.0      0     0 ?        I<   00:15   0:01 [kworker/u17:2-i915_flip]
+root        8338  0.5  0.0      0     0 ?        I    00:17   0:12 [kworker/0:7-events]
+xeon        8654 31.2 28.3 3832968 1114692 ?     Sl   00:24   9:40 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 100 -isForBrowser -prefsLen 37364 -prefMapSiz
+root        8856  0.0  0.0      0     0 ?        I    00:32   0:00 [kworker/2:0-rcu_gp]
+root        8952  0.0  0.0      0     0 ?        I    00:32   0:00 [kworker/1:7-mm_percpu_wq]
+xeon        8982  1.3  2.1 2468952 85944 ?       Sl   00:32   0:18 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 109 -isForBrowser -prefsLen 37364 -prefMapSiz
+xeon        9033  0.0  0.1 268551380 4464 ?      S    00:32   0:00 tags.so [kdeinit5] tags local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/pla
+xeon        9034  0.0  0.1 268551380 4468 ?      S    00:32   0:00 tags.so [kdeinit5] tags local:/run/user/1000/klauncherMwcVjF.1.slave-socket local:/run/user/1000/kde
+xeon        9103  0.4  1.9 2510036 75504 ?       Sl   00:34   0:05 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 111 -isForBrowser -prefsLen 37364 -prefMapSiz
+root        9156  0.0  0.0      0     0 ?        I    00:34   0:00 [kworker/u16:1-i915]
+root        9171  0.0  0.0      0     0 ?        I    00:35   0:00 [kworker/3:2-events]
+xeon        9174  0.8  1.1 1051700 45252 ?       Rl   00:35   0:09 /usr/bin/konsole
+xeon        9186  0.0  0.0   9988  2488 pts/1    Ss   00:35   0:00 /bin/bash
+root        9271  0.0  0.0      0     0 ?        I    00:37   0:00 [kworker/0:1-events]
+root        9424  0.0  0.0      0     0 ?        I    00:44   0:00 [kworker/1:0-events]
+root        9453  0.0  0.0      0     0 ?        I    00:44   0:00 [kworker/3:0-mm_percpu_wq]
+root        9516  0.0  0.0      0     0 ?        I    00:47   0:00 [kworker/u16:3-events_unbound]
+root        9603  0.0  0.0      0     0 ?        I    00:50   0:00 [kworker/1:1-events]
+root        9604  0.0  0.0      0     0 ?        I    00:50   0:00 [kworker/2:2-events]
+root        9665  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/0:0-events]
+root        9666  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/0:2-events]
+root        9667  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/0:3-events]
+root        9669  0.2  0.0      0     0 ?        I    00:53   0:00 [kworker/0:4-events]
+root        9670  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/0:5-events]
+root        9671  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/0:6-events]
+root        9678  0.0  0.0      0     0 ?        I<   00:54   0:00 [kworker/u17:0-rb_allocator]
+root        9679  0.0  0.0      0     0 ?        I    00:54   0:00 [kworker/1:2-events]
+xeon        9693  0.0  0.0  12384  3400 pts/1    R+   00:55   0:00 ps aux
+[1]+  Unicestwiony            tee w przeciwności do zapisu używającego sposobu z zapisaniem standardowego wyjścia do pliku przekazuje je też do standardowego wyjścia > poza  (katalog: ~/Pulpit/uko)
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ TTY oznacza teleTypewriter i pokazuje nam który termianl wykonał dane polecenie 
+bash: TTY: nie znaleziono polecenia
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ ^[[200~Wyświetl wszystkie procesy bash~
+bash: $'\E[200~Wyświetl': nie znaleziono polecenia
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ man pid
+Brak podręcznika dla pid
+xeon@e11:~/Pulpit/uko/s27115-pj/zadaniaZjazd3$ man ps
+
+aby wyswietlic procesy bash uzyje samego ps
+do wyświetlenia procesów roota użyje parametru -u root
