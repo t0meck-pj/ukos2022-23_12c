@@ -1,0 +1,75 @@
+Program ps służy do wyświetlania listy procesów. 
+
+Zadania:
+
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+1. ps - wyswietli liste  procesow 
+2. ps -a - wswietli liste procesow innych uzytkownikow
+3. ps x - wyswietli lite procesow nie popietych pod terminal
+4. ps aux - wyswietla wszystko co powyzej razem z nazwa uzytkownika
+
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+Nie wiesz? A gdzie może być wyjaśnienie?
+--------------------------------------------------------
+
+B: Jak wykonasz poniższe 2 zadania?
+
+Wyświetl wszystkie procesy bash
+ps aux | grep bash
+
+Wyświetl wszystkei procesy należące do użytkownika root
+-ps aux | grep root | grep -v grep
+
+Zadanie 2. 
+
+1.Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...):
+gedit &
+2.Zobacz jaki ma on PID - przyda się do tego komenda ps:
+PID jest 879
+3.Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.:
+Kill 879 // Kill -9 // Kill SIGKILL 879
+4.Zobacz działanie komendy killall bash:
+Przesyła sygnał SIGTERM do wszystkich procesów BASH
+5.Zobacz czy kill zadziała dla dowolnego procesu:
+ Nie mozna zmaknac procesu innego urzytkownika
+
+Zadanie 3.
+1. Uruchom komendę cat be parametrów - Wpisuje tekst i program mi go wyswietla
+2. Wciśnij CTRL+C i zobacz co się stanie - Wyszedłem z CAT
+
+Zobacz co się stanie:
+
+1.Wydaj komendę cat > wynik3_1.txt
+
+2.Wpisz tekst witaj bez wciskania klawisza Enter
+
+3.Wciśnij CTRL+C
+
+4.Zobacz co się znalazło w pliku wynik3_1.txt - Do pliku został wpisany tekst "Witaj".
+-------------------------------------------------------------------------------------------
+1.Wydaj komendę cat > wynik3_2.txt
+
+2.Wpisz tekst witaj bez wciskania klawisza Enter
+
+3.Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+
+4.Zobacz co się znalazło w pliku wynik3_2.txt - Plik wynik3_2.txt - zawiera wyraz 'witaj'
+
+Zadanie 4.
+
+1.Wpisz komendę gimp (lub np. edytor tekstowy gedit)
+
+2.W terminalu w którym sie to uruchomiło wciśnij CTRL+Z - Zamrarza program 
+
+3.Spróbuj coś wyklikać w gimpie / gedicie
+
+4.Otwórz dowolne inne okno i przesuń je tak by częściowo nachodziło na okno gimpa / gedita i potem je odsuń by odsłonić w pełni okno gimpa / gedita
+-Program został zatrzymany i generuje „mozaika” 
+
+Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+składnia: fg %(numer jobu)
+ps | grep gedit 
+fg %951
+
