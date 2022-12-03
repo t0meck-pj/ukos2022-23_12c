@@ -1,0 +1,79 @@
+Zadania 0. Przypuscmy, ze nie mozesz utworzyc zadnego pliku na swoim koncie uczelnianym np. na szuflandii.
+Co sie moglo stac? (wymin co najmniej 2 opcje)
+-brak uprawnien
+-nie maamy juz miejsca na dysku (quota)
+
+1.Jest dane drzewo katalogow:
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+Znajdujesz się w katalogu 'kota'. Katalog 'ala', jest w katalogu /tmp/ukos.
+Jak przejsc do katalogu 'ala' ale za pomoca:
+*sciezki wzglednej (relatywnej)
+-cd ../../
+*sciezki bezwzglednej (absolutnej)
+-cd ~/tmp/ukos/ala
+
+2. Masz taki uklad katalogow, jak wyzej i ciagle jestes w katalogu 'kota'. Jak utworzyc poddrzewo katalogow jan/kowalski w katalogu ale za pomoca jednej komendy?
+-mkdir -p jan/kowalski
+
+3. Masz taki uklad katalogow, jak wyzej i ciagle jestes w katalogu 'kota'. Jak przeniesc katalog ale do katalogu i uzywajac:
+*zrodlo (sciezka wzgledna), miejsce docelowe (sciezka absolutna)
+- mv ../../../kot/ma/ale ~/tmp/ukos/ala/i
+*zrodlo (sciezka absolutna), miejsce docelowe (sciezka wzgledna)
+mv ~/tmp/ukos/kot/ma/ale ../../i
+
+4. Jak zamknac program, ktory nie reaguje na ctrl+c?
+-za pomoca kill/kill -9 podajac jako argumend PID ktory mozna znalez za pomoca ps axu | grep (nazwa programu)
+
+5. Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna się od al?
+-ls -d al* 
+
+6. Nadaj uprawnienia do katalogu ala tak aby:
+
+1)kazdy mogl do niego wejsc
+2)tylko grupa mogla wyswietlic co w nim jest
+3)wlasciciel ma pelne prawa
+
+Przygotuj 3 wariacje rozwiazania tego zadania uzywajac roznych notacji: 
+
+oktalnej/osemkowej/cyfrowej
+literowej ze znakiem rownosci
+literowej z plusami i minusami
+Wszystkie wersje powinny być zapisane w jednym poleceniu (bez używania && czy | )
+
+1) chmod 111 ala
+   chmod a=x lub u=x,g=x,o=x ala			
+   chmod a+x,a-rw lub u+x,u-rw,g+x,g-rw,o+x,o-rw ala	 
+
+2) chmod 373 ala
+   chmod uo=wx,g=rwx ala lub u=wx,g=rwx,o=wx,o-r ala
+   chmod uo+wx,uo-r,g+rwx ala lub u+wx,u-r,g+rwx,o+wx,o-r ala
+
+3) chmod 700 ala
+   chmod u=rwx,go= ala
+   chmod u+rwx,go-rwx ala
+
+7. Jak utworzyć plik z listą plików w bieżącym katalogu?
+ls > nazwytutaj.txt
+
+8. Jak przyspieszyc wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupelnianie komend?
+-TAB jezeli komenda jest unikatowa odrazu dopelni w innym przypadku pokaze sugestie
+
+9. Jak uruchomic program by nie blokowal terminala. Sa 2 sposoby. Jakie?
+-po nazwie programu wpisac '&'aby automatycznie program przeszedl do dzialania w tle
+-'komenda' wciskamy 'Ctrl+z' nastepnie 'bg'

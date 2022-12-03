@@ -1,0 +1,46 @@
+	1.Kotzystajac z komend cd oraz mkdir stworz nastepujace drzewo katalogow w swoim domowym podkatalogu
+albo bezposrednio w~
+ukos
+|\katalog
+|    |\katalog2
+|    \katalog3
+ \
+  klamka
+-pwd
+-cd ..
+-ls
+-cd Pictures
+-ls
+-mkdir ukos/katalog/katalog2/katalog3
+-mkdir -p ukos/katalog/katalog2/katalog3
+	2.W katalogu ukos/klamka stworz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt
+-cd ukos
+-mkdir klamka
+-cd klamka
+-touch zajecia2.txt
+-touch zajecia2.png
+-touch inny.txt
+-youch nowy.txt
+-ls
+-cd..
+	3.za pomoca jednego polecenia stworz w katalogu ukos nastepujacy katalo
+	ukos/to/jest/dluga/nazwa
+mkdir -p ukos/to/jest/dluga/nazwa
+-rm -r ukos/ukos/to/jest/dluga/nazwa
+-mkdir -p ukos/to/jest/dluga/nazwa
+	4.Nastepnie umiesc w katalogu ukos/ukos/to/jest/dluga/nazwa plik dane.txt
+-touch ukos/to/jest/dluga/nazwa/dane.txt
+-cd ..
+-tree
+	5.Usun z katalogu ukos klamka wszystkie pliki z rozszerzeniem txt
+-cd ukos
+-cd klamka
+-ls
+-rm *.txt
+	6.Usun katalog ukos/katalog/katalog2
+-ls
+-cd ..
+-rm -r katalog
+	7.Usun caly katalog klamka za pomoca jednego polecenia
+-rm -r klamka
+-ls
