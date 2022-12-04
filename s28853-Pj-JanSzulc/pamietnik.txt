@@ -22,4 +22,7 @@ Mój kochany pamiętniku
 -nauczyłem się uruchamianai procesu w tle i jego przywracania na pierwszy plan
 -Dowiedziałem się o strumieniach stdin stdout i błędów oraz co znaczy poszczególne
 symbole takie jak np >>
+30.11.2022
+-powtórzyłem wiadomości do kolokwim narazie nic nie sprawia większego problemu
+-rozjaśniły mi się strumienie oraz uprawnienia i ścierzki względne i bezwzględne
 

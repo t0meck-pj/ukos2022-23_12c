@@ -1,0 +1,129 @@
+zad 0 Przypuśćmy, że nie możesz utworzyć żadnego pliku na swoim koncie uczelnianym np. na szuflandii.
+Co się mogło stać? (wymień co najmniej 2 opcje)
+
+Zakładamy, że możesz zalogować się w konsoli i nie masz zaległości w opłatach.
+
+dostęp został odebrany za pomocą polecenia chmod, zuzycie miejsca na
+serwerze uczelnianym quota.
+
+zad 1 Jest dane takie drzewo katalogów:
+
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos.
+Jak przejść do katalogu ala ale za pomocą:
+
+ścieżki względnej (relatywnej)
+
+ścieżki bezwzględnej (absolutnej)
+
+tworzenie katalogów
+
+ubuntu@bss-ubu1804:~/tmp$ mkdir ukos
+ubuntu@bss-ubu1804:~/tmp$ cd mkdir
+ubuntu@bss-ubu1804:~/tmp/ukos$ mkdir ala
+ubuntu@bss-ubu1804:~/tmp/ukos$ cd ala
+ubuntu@bss-ubu1804:~/tmp/ukos/ala$ mkdir ma
+ubuntu@bss-ubu1804:~/tmp/ukos/ala$ cd ma
+ubuntu@bss-ubu1804:~/tmp/ukos/ala/ma$ mkdir kota
+ubuntu@bss-ubu1804:~/tmp/ukos/ala/ma$ cd ..
+ubuntu@bss-ubu1804:~/tmp/ukos/ala$ cd ..
+ubuntu@bss-ubu1804:~/tmp/ukos$ cd ala
+ubuntu@bss-ubu1804:~/tmp/ukos/ala$ mkdir i
+ubuntu@bss-ubu1804:~/tmp/ukos/ala$ cd i
+ubuntu@bss-ubu1804:~/tmp/ukos/ala/i$ mkdir as
+ubuntu@bss-ubu1804:~/tmp/ukos/ala/i$ cd -
+/home/ubuntu/tmp/ukos/ala
+buntu@bss-ubu1804:~/tmp/ukos$ mkdir kot
+ubuntu@bss-ubu1804:~/tmp/ukos$ cd kot
+ubuntu@bss-ubu1804:~/tmp/ukos/kot$ mkdir ma
+ubuntu@bss-ubu1804:~/tmp/ukos/kot$ cd ma
+ubuntu@bss-ubu1804:~/tmp/ukos/kot/ma$ mkdir ale
+
+przemieszczenie się
+
+względne 
+
+ubuntu@bss-ubu1804:/tmp/ukos/ala/ma/kota$ cd ../../
+ubuntu@bss-ubu1804:/tmp/ukos/ala$ 
+
+bezwzględne
+
+ubuntu@bss-ubu1804:/tmp/ukos/ala/ma/kota$ cd /tmp/ukos/ala
+ubuntu@bss-ubu1804:/tmp/ukos/ala$ 
+
+zad 2 Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. 
+Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
+
+ubuntu@bss-ubu1804:/tmp/ukos/ala/ma/kota$ mkdir -p jan/kowalski
+
+zad 3 Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak przenieść katalog ale do katalogu i używając:
+
+źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna)
+
+źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
+
+1 wariant
+
+ubuntu@bss-ubu1804:/tmp/ukos/ala/ma/kota$ mv ../../../kot/ma/ale /tmp/ukos/ala/i
+
+2 wariant
+
+ubuntu@bss-ubu1804:/tmp/ukos/ala/ma/kota$/tmp/ukos/kot/ma/ale ../../i
+
+zad 4 Jak zamknąć program, który nie reaguje na ctrl+c ?
+
+za pomocą komendy kill
+
+zad 5 Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna się od al?
+
+ls -l  | grep '^al'  | grep -v grep
+
+zad 6 
+Nadaj uprawnienia do katalogu ala tak aby:
+
+każdy mógł do niego wejść
+
+tylko grupa mogła wyświetlić co w nim jest
+
+właściciel ma pełne prawa
+
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+
+oktalnej/ósemkowej/cyfrowej
+
+literowej ze znakiem równości
+
+literowej z plusami i minusami
+
+Wszystkie wersje powinny być zapisane w jednym poleceniu (bez używania && czy | )
+
+ubuntu@bss-ubu1804:/tmp/ukos$ chmod 754 ala;chmod u=rwx,g=rx,o=x ala;chmod u+rwx,g+rx,g-w,u+r,u-wx ala
+
+zad 7 Jak utworzyć plik z listą plików w bieżącym katalogu?
+
+ubuntu@bss-ubu1804:/tmp/ukos$ ls -l >> plik.txt
+
+zad 8 Jak przyspieszyć wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupełnianie komend?
+
+klawisz TAB
+
+zad 9  Jak uruchomić program by nie blokował terminala. Są 2 sposoby. Jakie?
+
+za pomocą program & lub ctrl +  Z i bg
