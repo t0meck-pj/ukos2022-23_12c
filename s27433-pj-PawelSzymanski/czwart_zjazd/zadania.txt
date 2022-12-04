@@ -50,7 +50,7 @@ właściciel ma pełne prawa chmod 700/u=rwx,g=-,o=-/u+r,u+w,u+x,g-r,g-w,g-x,o-r
 
 7.Jak utworzyć plik z listą plików w bieżącym katalogu?
 
-ls > lista_plikow_z_literka.txt
+ls -l > lista_plikow_z_literka.txt
 
 8.Jak przyspieszyć wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupełnianie komend?
 
