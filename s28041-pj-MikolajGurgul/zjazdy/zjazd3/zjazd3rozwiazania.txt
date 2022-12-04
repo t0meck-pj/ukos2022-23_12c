@@ -1,0 +1,294 @@
+0 (rozgrzewkowe)
+
+    1.Przejdz do swojego katalogu domowego
+
+	user@user-VirtualBox:~$ cd /Desktop
+
+    2.Wydaj komende: ls -a
+
+	user@user-VirtualBox:~/Desktop$ ls-a
+
+
+    3.Zobacz ile plikow wypisalo.
+
+	4 pliki, plik costam, doplik, plik oraz katalog kataldok
+
+    4.Teraz wydaj komende: ls -a | grep D
+    	HINT: Jesli nie masz zadnego pliku czy katalogu z literka D to wybierz inną literke, 	
+	ktora juz bedzie w nazwie jakiegos pliku czy katalogu.
+
+	user@user-VirtualBox:~/Desktop$ ls -a | grep d
+
+
+    5.Zobacz ile teraz jest wynikow. Co sie stalo?
+   	Otoz program grep sluzy do wyszukiwania wierszy w pliku lub strumieniu wejsciowym, 	
+	ktore pasuja do wzorca. Tu podano wzorzec jako "D".
+
+	doplik
+	kataldok
+
+    6.A teraz wykonaj komende: ls -a | grep D > lista_plikow_z_literka_d.txt
+
+	user@user-VirtualBox:~/Desktop$ ls -a | grep d > lista_plikow_z_literka_d.txt
+
+
+    7.Zobacz czy utworzyl sie jakis plik?
+    	Jaka jest jego tresc?
+    	Co znaczy | oraz co znaczy > ?
+
+	Utworzyl sie plik z podana nazwa, zawiera wszystkie pliki, ktore posiadaja w swojej nazwie literke "d".
+	| oznacza iz polecenie, ktore znajduje sie po lewej stronie jest laczone z poleceniem z prawej. 
+	To znaczy, ze wynik polecenia ls -a jest przekazywany do grep -d i dzieki temu wypisujac cala zawartosc miejsca, 
+	w ktorym sie znajdujemy jest filtrowana tak, aby zobaczyc tylko pliki z literka d. 
+	> Oznacza przekazanie parametru wyjscia, czyli 	w tym przypadku naszych polecen z lewej strony, do pliku, 
+	ktorego nazwe oraz typ 	podalismy po prawej stronie znaku.
+
+    8.A teraz wykonaj komende: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+
+	user@user-VirtualBox:~/Desktop$ ls -a | grep d | tee lista_plikow_z_literka_d_2.txt
+
+
+    9.Zobacz czy plik sie utworzyl?
+    	Jaka jest tresc wzgledem poprzedniej proby bez programu tee?
+    	Co robi program tee?
+
+	Utworzyl sie plik z podana nazwa. Na ekranie od razu zostalo wypisane co znajduje sie w srodku utworzonego pliku. 
+	Tee wczytuje podane dane, czyli to co podalismy po lewej stronie. Wypisuje te pliki i kopiuje do podanego przez nas miejsca. Natomiast jezeli posiadamy juz jakies dane w pliku, do ktorego zapisujemy nasze polecenie. To dane zostaja nadpisane.
+
+1
+
+Program ps sluzy do wyswietlania listy procesow. 
+
+Zadania:
+
+A: Zobacz co sie stanie jesli wpiszemy w terminalu:
+
+    1. ps
+
+	Po wpisaniu polecenia ps otrzymamy
+
+	Dane wyjsciowe zawieraja informacje o powloce bash. PID - identyfikator procesu, TTY- nazwa terminala sterujacego, 
+	dla procesu, TIME - laczy czas uruchomienia procesu w minutach oraz milisekundach, 
+	CMD - nazwa polecenia uzytego do uruchomienia procesu
+
+    2. ps -a
+
+	Otrzymamy procesy, tylko te, ktore nie sa powiazane z terminalem.
+
+    3. ps x
+
+	Otrzymamy procesy bez terminala sterujacego, glownie procesy uruchamiane podczas rozruchu i dzialajace w tle
+
+    4. ps axu
+    INFO: tu kolejnosc parametrow a, x, u nie ma znaczenie a jedynie fakt, ze sa podane. Dowolna kolejnosc powinna dac ten sam wynik.
+
+    Jak myslisz, co oznacza znak zapytania w kolumnie 2?
+    Nie wiesz? A gdzie moze być wyjasnienie?
+
+	Sa to procesy, ktore musza dzialac, ale nie maja zdefiniowanego terminala. Wyjasnienie mozna znalezc w man albo w internecie 
+
+B: Jak wykonasz ponizsze 2 zadania?
+
+    1. Wyswietl wszystkie procesy bash
+
+	user@user-VirtualBox:~/Desktop$ ps axu | grep bash | grep -v grep
+
+	user	1799	0.0	0.1	13676	5656	pts/0	Ss	01:41	0:00	bash
+
+    2. Wyswietl wszystkie procesy nalezace do uzytkownika root
+
+	user@user-VirtualBox:~/Desktop$ ps axu | grep root | grep -v grep
+
+	root	670	0.0	0.3	75996	14092	?	Ss	01:41	0:00	/usr/sbin/cupsd -l
+	root	692	0.0	0.2	243740	9356	?	Ssl	01:41	0:00	/usr/sbin/gdm3
+	etc
+
+2
+
+INFO: Zadanie do wykonania na linuxie z dostępnym srodowiskiem graficznym.
+
+PID jest to indentyfikator procesu ([P]rocess [ID]entificator). Za jego pomoca mozesz odwolac sie do danego procesu 
+za pomoca roznych mechanizmow systemu. Jednym z takich mechanizmow jest wyslanie sygnalu (na przyklad zakonczenia) do procesu. 
+Do tego mozna uzyc komendy kill (moze brzmi ona dosc brutalnie, ale coz, informatyka nie jest dla mieczakow). 
+Komenda ta domyslnie wysyla sygnal zakonczenia procesu do zadanego procesu.
+
+Zadanie:
+
+    1. Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+
+	 Uruchomiony zostaje gedit
+
+    2. Zobacz jaki ma on PID - przyda sie do tego komenda ps
+
+	user@user-VirtualBox:~/Desktop$ ps axu | grep gedit | grep -v grep
+	
+	user	6899	0.3	1.3	566484	55248	?	Sl	19:13	0:00	usr/bin/gedit --gapplication-service
+	Czyli jego PID to 6899
+
+    3. Wydaj komende kill w taki sposob, aby ten edytor sie wylaczyl. Zobacz czy to dziala.
+    	 UWAGA: Niektore programy przechwytuja sygnaly i moga je czesciowo blokowac. 
+    			Jesli program nie wylacza sie, to zobacz jaka jest jego reakcja.
+    			Zobacz czy mozesz wyslac do niego SIGKILL (gdzie sprawdzisz jak to zrobic?)
+
+	kill 6899 wylaczyl gedita
+
+    4. Zobacz dzialanie komendy killall bash
+
+	killall bash -9 wylaczyl terminal, -9 wysyla sigkill, czyli wysyla sygnal kill, ktora wymusza wylaczenie procesu/programu
+
+    5. Zobacz czy kill zadziala dla dowolnego procesu.
+
+	Nie zadziala dla kazdego, dla niektorych procesow systemowych otrzymujemy "bash: kill: (1) - Operation not permitted"
+
+3
+
+W terminalu jest kilka przydatnych skrotow klawiszowych. Jednym z nich jest CTRL+C lub jak to jest czesto podawane C-c lub ^C. 
+Niektorzy z Panstwa juz go mieli okazje przetestowac. Jest to sposob na wylaczenie aktywnego programu w terminalu. 
+Prosze go przetestowac w taki sposob, ze:
+
+    1. Uruchom komende cat bez parametrow
+
+	user@user-VirtualBox:~$ cat
+
+
+    2. Wcisnij CTRL+C i zobacz co sie stanie
+
+	^C
+
+Kolejnym fajnym (zalezy dla kogo :) ) skrotem klawiszowym jest CTRL+D. Sluzy on do zakonczenia strumienia wejsciowego. 
+Dziala to troche inaczej niz poprzednie rozwiazanie, mimo ze na pierwszy rzut oka wyglada tak samo. 
+Tym razem nie wysyla sygnalu zakonczenia, a jedynia zamyka strumien wejsciowy. Jest to bardzo przydatne, j
+eśli chcemy zakonczyc dzialanie jakiegos programu korzystajacego ze standardowego wejscia (stdin), ale w sposob mozliwie bezpieczny.
+
+Zobacz co sie stanie:
+
+    1. Wydaj komende cat > wynik3_1.txt
+
+	user@user-VirtualBox:~/Desktop$ cat > wynik3_1.txt
+
+    2. Wpisz tekst witaj bez wciskania klawisza Enter
+
+	witaj
+
+    3. Wcisnij CTRL+C
+	
+	witaj^C
+
+    4. Zobacz co sie znalazlo w pliku wynik3_1.txt
+
+	W pliku sie nic nie zapisalo. Operacja zostala przerwana zanim wiersz zostal przeslany poprzez wcisniecie enter
+
+
+    1. Wydaj komende cat > wynik3_2.txt
+
+	 user@user-VirtualBox:~/Desktop$ cat > wynik3_2.txt
+
+    2. Wpisz tekst witaj bez wciskania klawisza Enter
+
+	witaj
+
+    3. Wcisnij CTRL+D (mozliwe, ze bedzie trzeba wcisnac go 2x)
+
+	witajuser@user-VirtualBox:~/Desktop$
+
+    4. Zobacz co sie znalazlo w pliku wynik3_2.txt
+
+	W pliku znalazlo sie slowo witaj
+
+W opisie rozwiazania zadania umiesc:
+
+    jak rozumiesz co sie stalo?
+
+	W pierwszym przypadku z CTRL+C zostalo przerwane dzialanie przez co tekst sie nie zapisal, w drugim przypadku 
+	z CTRL+D zostalo zakonczone dzialanie i tekst, ktory pisalismy zapisal sie.
+
+    czym oba te przyklady sie roznia?
+
+	Pierwsza opcja zapisze tekst do ostatniej linijki, dlatego wazne jest aby ostatnia linijka byla pusta, 
+	tak aby nic nie stracic. W drugim przypadku po wcisnieciu CTRL+D, plik zostanie zapisany w momencie, 
+	w ktorym skonczylismy cos pisac.
+
+    DLACZEGO sie roznia?
+
+	Dlatego, ze CTRL+C przerywa dzialanie, natmiast CTRL+D konczy dzialanie.
+
+
+4
+
+INFO: Zadanie do wykonania na linuxie z dostepnym srodowiskiem graficznym.
+
+CTRL+Z sluzy do wstrzymania biezacego procesu i przeniesienia go do tla. To znaczy, ze program jest w pamieci, 
+ale nie wykonuje zadnych operacji. Jest wstrzymany.
+
+Zobacz co sie stanie:
+
+    1. Wpisz komende gimp (lub np. edytor tekstowy gedit)
+
+	user@user-VirtualBox:~/Desktop$ gedit
+
+    2. W terminalu w ktorym sie to uruchomilo wciśnij CTRL+Z
+
+	[3] + Stopped	gedit
+
+    3. Sprobuj cos wyklikac w gimpie / gedicie
+
+	Nie da się wyklikac nic
+
+    4. Otworz dowolne inne okno i przesun je tak by czesciowo nachodzilo na okno gimpa / gedita i potem je odsun 
+	by odslonic w pełni okno gimpa / gedita
+
+	Dubluje sie tak jakby okno terminala i zostawia slady jak w starych memach z errorami.
+
+Co sie stalo? Wstrzymalismy program gimp/gedit. Program wstrzymany za pomoca kombinacji CTRL+Z jest przenoszony w tlo (background). Efekt jest taki, ze taki program przestaje odpowiadac na cokolwiek.
+
+Komenda bg sluzy do wznowienia w tle wstrzymanego programu. Zobacz:
+
+    1. Wpisz komende: bg
+
+	user@user-VirtualBox:~/Desktop$ bg
+
+Jak widać gimp/gedit ożył (jeśli nie, to zapytaj prowadzącego)
+
+Komenda fg sluzy do wznowienia na pierwszym planie wstrzymanego wczesniej procesu. Zobacz co sie stanie:
+
+    1. Wpisz komende: fg
+
+	user@user-VirtualBox:~/Desktop$ fg
+
+Jak widac proces wrocil i mozna wcisnac na przyklad CTRL+C aby go zakonczyc.
+
+W momencie uruchamiania programu, mozemy od razu nakazac wykonanie go w tle. Sluzy do tego znak & umieszczony na koncu instrukcji.
+
+Zobacz:
+INFO: Jesli jakiegos programu nie ma to zastap go innym, ktory znasz.
+
+    1. Wykonaj komende gimp &
+
+	user@user-VirtualBox:~/Desktop$ code &
+
+    2. Wykonaj komende gedit &
+
+	user@user-VirtualBox:~/Desktop$ gedit &
+
+    3. Wykonaj komende geany &
+
+	user@user-VirtualBox:~/Desktop$ vim &
+
+Zobacz co sie stalo (domyslam sie, ze uruchomily sie 3 programy, a na terminalu ciagle mozna cos pisac.
+
+
+Kolejna komenda to jobs. Sluzy ona do wyswietlania listy zadan (jobow; nie mylic z procesami) przeniesionych do tla.
+
+    1. Przywroc program gedit (lub gimp, w kazdym razie nie uruchomiony jako ostatni program) z tla na pierwszy plan. 
+    Skorzystaj z jobs aby dowiedziec sie jakie maja numery poszczegolne zadania dzialajace w tle.
+    skladnia: fg %(numer jobu)
+
+user@user-VirtualBox:~/Desktop$ jobs
+[1]  Running 	gedit &
+[2]  Stopped 	vim
+[3]- Stopped 	vim
+[5]+ Stopped 	vim
+[6]  Done 	gedit
+
+user@user-VirtualBox:~/Desktop$ fg %2
+Z powrotem weszlismy do programu vim, w ktorym mozemy cos pisac

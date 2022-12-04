@@ -1,0 +1,33 @@
+Zadanie
+W opisie bash-a (man) przeczytac opis polecenia wewnetrznego umask i wyprobowac jego dzialanie sprawdzajac, 
+a nastepnie zmieniajac swoja maske trybu pliku i tworzac za kazdym razem nowe pliki (przy uzyciu polecenia touch plik), 
+a pozniej sprawdzajac uzyskane uprawnienia dostepu do nich (polecenie ls -l). 
+Jaka operacja logiczna na bitach domyslnych uprawnien dostepu oraz maski jest wykonywana ? 
+
+user@user-VirtualBox:~/Desktop$ umask
+0002
+user@user-VirtualBox:~/Desktop$ touch plik
+user@user-VirtualBox:~/Desktop$ ls -l
+-rw-rw-r-- 1 user user 0 gru 1 20:05 plik
+user@user-VirtualBox:~/Desktop$ umask 777
+user@user-VirtualBox:~/Desktop$ umask
+0777
+user@user-VirtualBox:~/Desktop$ touch plik2
+user@user-VirtualBox:~/Desktop$ ls -l
+-rw-rw-r-- 1 user user 0 gru 1 20:05 plik
+---------- 1 user user 0 gru 1 20:06 plik2
+user@user-VirtualBox:~/Desktop$ umask 000
+user@user-VirtualBox:~/Desktop$ umask
+0000
+user@user-VirtualBox:~/Desktop$ touch plik3
+user@user-VirtualBox:~/Desktop$ ls -l
+-rw-rw-rw- 1 user user 0 gru 1 20:07 plik3
+-rw-rw-r-- 1 user user 0 gru 1 20:05 plik
+---------- 1 user user 0 gru 1 20:06 plik2
+
+umask zamienia uprawnienia (w teorii na odwrot), to znaczy jezeli ustawimy wszedzie 777, to znaczy ze nie chcemy, 
+aby tworzone przez nas pliki posiadaly jakiekolwiek uprawnienia. Natomiast jezeli damy 000, to znaczy, ze chcemy aby tworzone pliki 
+posiadaly wszystkie uprawnienia dla wszystkich uzytkownikow. Natomiast o ile foldery otrzymaja wszystkie uprawnienia rwx dla 
+kazdej grupy, to same pliki juz takowych uprawnien nie beda posiadac ze wzgledu na bezpieczenstwo wykonywania pliku. 
+Jakis plik moze zawierac wirusa i dlatego z automatu nie mozna go wykonywac ze wzgledow bezpieczenstwa. 
+Umask dziala korzystajac z operacji na bitach AND.
