@@ -1,0 +1,4 @@
+Jak zamknąć program, który nie reaguje na ctrl+c ?
+
+można spróbować użyć kill -9 pid lub kill -15 pid
+

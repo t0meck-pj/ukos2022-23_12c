@@ -1,0 +1,7 @@
+Jak uruchomić program by nie blokował terminala. Są 2 sposoby. Jakie?
+
+Program uruchomiony przy pomocy zapisu z znakiem & na tyle 
+w ten sposób program uruchomi się w tle ,a my nadal będziemy mieć dostęp do powłoki. 
+
+Możemy to również zrobić za pomocą uruchomienia programu w normalny sposób zatrzymania go użyciem ctrl+z i wznowieniem w tle komendą bg
+

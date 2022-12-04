@@ -42,3 +42,57 @@ na drugich zajęciach dowiedziałem się kilku nowych rzeczy:
  	2. do uprawnień grupy właściciela,
  	3. do wszystkich innych użytkowników danego systemu.
 	każda litera odnosi się do innych uprawnień i działa to różnie dla folderów oraz plików.
+
+ rrrr-mm-dd
+ 2022-11-05
+Mój drogi pamiętniczku z dużą zwłoką spowodowaną wszelakimi zawirowaniami w mojej egzystencji dodaję wpis z trzeciego zjazdu.
+
+Na trzecich zajęciach dowiedziałem się kilku  nowych rzeczy:
+
+-istnieje takie coś jak strumienie.
+-co to są strumienie i jak działają.
+-się o tym że zazwyczaj istnieją trzy rodzaje strumieni stdout,stdin oraz stderr.
+-strumienie można przekierować  do innych strumieni/plików  na wiele różnych sposóbów i już to kiedyś nieświadomie robiłem używając polecenia grep.
+-PID jest to indentyfikator procesu ([P]rocess [ID]entificator).
+-dowiedziałem się że komenda kill nie służy w założeniu do "zabijania" procesów tylko do przekazywania do nich sygnałów ,ale własnie dzięki tej opcji mozna
+ "zabić" nią program.
+-dowiedziałem się o tar - [T]ape [AR]chiver 
+-dowiedziałem się również że można wklejać rzeczy do terminala używając przyciśniecia środkowego przycisku myszy/scrolla.
+-gzip,bzip2
+-time polecenie - mierzy czas wykonania polecenia 
+-zcat, zgrep, zless - programy, które potrafią operować podobnie jak ich odpowiedniki bez literki z tylko,
+ że na plikach skompresowanych przez gzip bez potrzeby rozpakowywania.
+-wget - pozwala na pobranie strony albo pliku z internetu a w przypadku przerwania pobierania umożliwia wznownie pobierania od miejsca przerwania\
+ (o ile serwer na to zezwala). Pozwala na zrobienie zrzutu całej strony wraz z podstronami do zadanej głębokości.
+-curl - pozwala na wysłanie własnego żądania http(s) do serwera wg podanych parametrów.Można go użyć do pobrania pliku z , ale trzeba w nim podać  więcej
+ parametrów niż do wget.
+ Pracuje na niższym poziomie niż wget ale daje  więcej możliwości. 
+Jedną z graficznych alternatyw dla curl jest program postman.
+
+-w3m, lynx, links, links2 - to wszystko to przeglądarki internetowe w trybie tekstowym. 
+Można z nich skorzystać kiedy potrzebujemy na serwerze na którym nie ma GUI czegoś  poszukać w internecie. 
+
+
+
+ rrrr-mm-dd
+ 2022-11-19
+Mój drogi pamiętniczku z zwłoką znów spowodowaną wszelakimi zawirowaniami w mojej studenckiej egzystencji dodaję wpis z czwartego zjazdu w trybie asap.|
+Zbliża się kolos i wiadomo trzeba załatać braki i nauczyć się wszystkiego na błysk (gdzieś w przeszłości już to sam od siebie słyszałem xD).
+Swoją dorogą dzięki tobie pamiętniczku zaczynam się uczyć bieglejszego operowania programem nano i tego żeby nie kilkać ctrl+z żeby cofać zmiany (tak niestety 
+zdarzyło mi się to kilka razy zrobić nie zapisując wcześniej zmian) wiadomo że jako prawdziwy chad muszę nauczyć się używać VIMa ,ale niestety
+ na ten moment nie potrafię sobie wyskorobać na to czasu.
+
+Drogi pamiętniczku na czwartych z kolei zajęciach nauczyłem się następujących niesamowicie ważnych spraw.
+-przypomniałem sobie że istnieje taka fajna magia jak polecenie tree o którymś jakimś niewytłumaczalnym cudem nieco mi się zapomniało ,a jest dość pomocne.
+-usystematyzowałem sobie w głowie pojęcie ścieżek dostępu do pliku względnych i bezwzględnych.
+
+*
+ rrrr-mm-dd
+ 2022-12-02
+Mój dorgi pamiętniczku przygotowywując się do kolokwium nauczyłem się następujących rzeczy:
+
+-jak działa umask 
+-używania strumieni w praktycznych zastosowaniach 
+-zarządzania aktywnimi procesami w bashu 
+
+No cusz a teraz niech dzieje się kolokwium alt+crtl+del.

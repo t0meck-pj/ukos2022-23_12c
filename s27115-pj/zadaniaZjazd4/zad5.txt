@@ -1,0 +1,2 @@
+Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna się od al?
+ls | grep ^al 

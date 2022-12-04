@@ -1,0 +1,56 @@
+W opisie bash-a (man) przeczytać opis polecenia wewnętrznego umask i wypróbować jego działanie sprawdzając,
+ a następnie zmieniając swoją maskę trybu pliku i tworząc za każdym razem nowe pliki (przy użyciu polecenia touch plik),
+ a później sprawdzając uzyskane uprawnienia dostępu do nich (polecenie ls -l).
+ Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
+ 
+Operacja logiczna wykonywana na bitach domyślnych uprawnień dostępu to negacja i koniunkcja.
+
+
+s27115@szuflandia22:~$ cd test
+s27115@szuflandia22:~/test$ ls
+s27115@szuflandia22:~/test$ umask
+0022
+s27115@szuflandia22:~/test$ mkdir k0
+s27115@szuflandia22:~/test$ umask 666
+s27115@szuflandia22:~/test$ mkdir k1
+s27115@szuflandia22:~/test$ ls -lha
+razem 16K
+drwxr-xr-x 4 s27115 domain users 4,0K 12-02 01:02 .
+drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
+drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
+d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
+s27115@szuflandia22:~/test$ umask 000
+s27115@szuflandia22:~/test$ mkdir k2
+s27115@szuflandia22:~/test$ \
+> ^C
+s27115@szuflandia22:~/test$ ls -lha
+razem 20K
+drwxr-xr-x 5 s27115 domain users 4,0K 12-02 01:02 .
+drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
+drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
+d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
+drwxrwxrwx 2 s27115 domain users 4,0K 12-02 01:02 k2
+s27115@szuflandia22:~/test$ umask 111
+s27115@szuflandia22:~/test$ mkdir k3
+s27115@szuflandia22:~/test$ ls -lha
+razem 24K
+drwxr-xr-x 6 s27115 domain users 4,0K 12-02 01:03 .
+drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
+drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
+d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
+drwxrwxrwx 2 s27115 domain users 4,0K 12-02 01:02 k2
+drw-rw-rw- 2 s27115 domain users 4,0K 12-02 01:03 k3
+s27115@szuflandia22:~/test$ umask 077
+s27115@szuflandia22:~/test$ mkdir k4
+s27115@szuflandia22:~/test$ ls -lha
+razem 28K
+drwxr-xr-x 7 s27115 domain users 4,0K 12-02 01:03 .
+drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
+drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
+d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
+drwxrwxrwx 2 s27115 domain users 4,0K 12-02 01:02 k2
+drw-rw-rw- 2 s27115 domain users 4,0K 12-02 01:03 k3
+drwx------ 2 s27115 domain users 4,0K 12-02 01:03 k4
+
+
+

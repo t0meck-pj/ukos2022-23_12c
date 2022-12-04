@@ -1,0 +1,8 @@
+Przypuśćmy, że nie możesz utworzyć żadnego pliku na swoim koncie uczelnianym np. na szuflandii.
+Co się mogło stać? (wymień co najmniej 2 opcje)
+
+Zakładamy, że możesz zalogować się w konsoli i nie masz zaległości w opłatach.
+
+Brak uprawnień do zapisu w folderze home.
+
+Osiągniety limit quota.

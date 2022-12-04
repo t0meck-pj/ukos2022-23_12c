@@ -1,0 +1,21 @@
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota.
+Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+Należy użyć komedy 
+mkdir ../../../kot/ma/ale/jan/kowalski
