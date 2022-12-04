@@ -1,0 +1,90 @@
+zadanie 0(rozgrzewkowe)
+cw 7.
+treścią pliku są wszystkie pliki i foldery z daną literką które zostały przekierowane.
+
+
+| - oznacza przekierowanie ze strumienia wyjściowego do strumienia wejściowego.  
+> - oznacza przekierowanie ze strumienia wejściowego do pliku (Nadpisanie pliku).
+
+cw 9.
+tresc pliku pozostala bez zmian
+
+Program tee zapisuje do pliku i wyswietla to, co zostanie przekierowane do niego.
+
+
+zadanie 1.
+cw A
+ps - służy do wyświetlania listy moich procesów.
+
+ps -a  - sluzy do wyswietlania listy procesow aktualnie zalogowanych uzytkownikow.
+
+ps x - służy do wyswietlania listy moich procesow oraz procesow niewiadomego pochodzenia
+
+? - oznacza ze procesy zostaly uruchomione z poza terminala
+
+ps u - sluzy do wyswietlania listy procesow i dodatkowych informacji jak np. nazwa uzytkownika czy ilosc uzycia procesora
+
+ps aux - sluzy do wyswietlania wszystkiego powyzej 
+
+wyjasnienie znajduje sie w manual'u 
+
+cw B
+
+do sprawdzenia wszystkich procesow bash uzyje grep -  ps aux | grep bash
+
+do sprawdzenia wszystkich procesow root'a uzyje -U  -  ps u -U root
+
+
+zadanie 3
+cw 1
+Uruchomilem program gedit
+
+cw2
+sprawdzilem za pomoca polecenia ps PID procesu gedit i wynosi ono 851
+
+cw3
+po wydaniu komendy kill 851 proces gedit wylaczyl sie 
+
+cw4 
+komenda killall bash w moim przypadku nic nie zrobila
+
+cw5
+
+przy uzyciu kill -9 na procesie odpowiedzialnym za srodowisko graficzne (Lubuntu) wylogowalo mnie i uruchomilo srodowisko ponownie.
+
+zadanie 3
+
+cw1
+po wpisaniu komendy cat bez parametrow i wcisnieciu CTRL+C zamknelo program cat
+
+po wpisaniu cat > wynik3_1.txt i wpisaniu "witaj" oraz wcisnieciu CTRL+C plik zostal utworzony ale byl pusty 
+
+po wpisaniu cat > wynik3_2.txt i wpisaniu "witaj" oraz wcisnieciu CTRL+D dwukrotnie plik zostal utworzony i byl w nim napis "witaj"
+
+w pierwszym przypadku rozumiem to tak, ze skrot klawiszowy CTRL+C konczy dzialanie bez zapisu
+
+natomiast w drugim przypadku rozumiem to tak, ze skrot klawiszowy CTRL+D konczy dzialanie zapisujac dana tresc
+
+Obydwa te przyklady roznia sie tym ze CTRL+C konczy dzialanie programu nie zapisujac go, a CTRL+D robi to samo, z tym, ze robi to w bezpieczniejszy sposob (zapisuje)
+
+Roznia sie dlatego, ze CTRL+D nie wysyla sygnalu zakonczenia, a jedynie zamyka strumien wejsciowy.
+
+zadanie 4.
+cw1
+
+Po wstrzymaniu programu gedit za pomoca skrotu klawiszowego CTRL+Z nic nie dalo sie w nim wpisac
+i po najechaniu oknem terminala na okno gedita wszystko sie rozjezdzalo
+
+cw2 
+
+komenda bg pozwala uzywac programu jak i uzywac terminala w ktorym zostal uruchomiony
+
+komenda fg pozwala uzywac program ale juz nie mozna uzywac terminala w ktorym zostal uruchomiony
+
+cw3
+
+po wpisaniu komend gimp &, gedit &, geany & uruchomiły się 3 programy, a na terminalu ciągle można coś pisać.
+
+cw4 
+
+po wpisaniu komendy jobs w terminalu wyswietlily sie numery zadan przy poszczegolnych programach i po wpisaniu komendy fg 1 przywrocilo mi program pierwszy ktory uruchomilem 
