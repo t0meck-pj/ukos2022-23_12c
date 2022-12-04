@@ -1,0 +1,132 @@
+ZAD0.ROZGRZEWKOWE
+1.Odpalamy terminal
+2/3.Dosyć dużo plików
+4/5.Wydałem komende i wyświetliły mi się wszyskie na litere d
+6/7.Utworzył mi się plik z końcówką .txt
+|-Przekierowanie standardowego wyjścia (stdout) do pliku (nadpisywanie)
+> przekierowanie zawartości pliku
+8/9.Tak plik się utworzył
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Plik otworzyl swoja zawartosc
+Co robi program tee?
+Przekierowanie z podgladem
+
+
+
+ZAD1.A.
+Zobacz co się stanie jeśli wpiszemy w terminalu:
+ps -procesy otwarte
+ps -a-procesy otwarte oprocz terminalem bash
+ps x-lista procesow systemowych
+ps axu-wszystkie procesy
+!!!Mozemy sprawdzic wszystkie skroty wpisujac:man ps
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+Nie wiesz? A gdzie może być wyjaśnienie?
+Moze byc wyjasnione na cwiczeniach albo poszukac w internecie
+Oznacza:powloke termina tty ktore byly pokazywane w terminalu ctrl+alt+np.F1
+ZAD1.B.
+1.Wyświetl wszystkie procesy bash
+ps aux | grep bash 
+(wszysko na cwiczeniach)
+
+2.Wyświetl wszystkei procesy należące do użytkownika root
+ps aux | awk '/bash/{ print $2 }'
+1393
+1433
+
+ZAD2.
+ 1.Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+Uruchomiony
+ 2.Zobacz jaki ma on PID - przyda się do tego komenda ps
+ ps aux | grep gedit | grep -v grep
+ 3.Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+Zadzialalo zamknal mi sie caly program
+ 4/5.Zobacz działanie komendy killall bash
+ killall bash mi dzialal ale poszukałem w internecie i jak dopisalem -9 zadzialalo i zamknal mi sie terminal mozemy to uzywac takze np. na mozilla to dziala
+
+ZAD3.
+ 1/2.Wciśnij CTRL+C i zobacz co się stanie
+ubuntu@bss-ubu1804:~$ cat
+^C
+ubuntu@bss-ubu1804:~$ 
+Terminal znowu zaczal dzialac
+
+Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo. Tym razem nie wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy. Jest to bardzo przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze standardowego wejścia (stdin), ale w sposób możliwie bezpieczny.
+
+Zobacz co się stanie:
+1.Wydaj komendę cat > wynik3_1.txt
+2.Wpisz tekst witaj bez wciskania klawisza Enter
+3.Wciśnij CTRL+C
+4.Zobacz co się znalazło w pliku wynik3_1.txt
+
+1.Wydaj komendę cat > wynik3_2.txt
+2.Wpisz tekst witaj bez wciskania klawisza Enter
+3.Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+4.Zobacz co się znalazło w pliku wynik3_2.txt
+ubuntu@bss-ubu1804:~$ touch wynik3_1.txt
+ubuntu@bss-ubu1804:~$ touch wynik3_2.txt
+ubuntu@bss-ubu1804:~$ cat > wynik3_1.txt
+witaj^C
+ubuntu@bss-ubu1804:~$ cat wynik3_1.txt
+ubuntu@bss-ubu1804:~$ cat > wynik3_2.txt
+witajubuntu@bss-ubu1804:~$ cat wynik3_2.txt
+witajubuntu@bss-ubu1804:~$
+W opisie rozwiązania zadania umieść:
+
+jak rozumiesz co się stało?
+Ctrl+C nie zapisuje zmian poniewaz zostaje szybciej zamkniety niz zostal przeslany do strumienia a Ctrl+D zdazyl
+czym oba te przykłady się różnią?
+Tak roznia sie
+DLACZEGO się różnią?
+Poniewaz ctrl+C nie zapisuje a ctrl+D zapisuje
+
+
+ZAD4.
+INFO: Zadanie do wykonania na linuxie z dostępnym środowiskiem graficznym.
+CTRL+Z służy do wstrzymania bieżącego procesu i przeniesienia go do tła. To znaczy, że program jest w pamięci, ale nie wykonuje żadnych operacji. Jest wstrzymany.
+
+Zobacz co się stanie:
+1.Wpisz komendę gimp (lub np. edytor tekstowy gedit)
+Otworzyl sie dokument
+2.W terminalu w którym sie to uruchomiło wciśnij CTRL+Z
+Tworzy sie mozajka
+3.Spróbuj coś wyklikać w gimpie / gedicie
+4.Otwórz dowolne inne okno i przesuń je tak by częściowo nachodziło na okno gimpa / gedita i potem je odsuń by odsłonić w pełni okno gimpa / gedita
+
+Co się stało? Wstrzymaliśmy program gimp/gedit. Program wstrzymany za pomocą kombinacji CTRL+Z jest przenoszony w tło (background). Efekt jest taki, że taki program przestaje odpowiadać na cokolwiek.
+
+Komenda bg służy do wznowienia w tle wstrzymanego programu. Zobacz:
+
+1.Wpisz komendę: bg
+Tak znowu dziala poprawnie
+
+Jak widać gimp/gedit ożył (jeśli nie, to zapytaj prowadzącego)
+
+Komenda fg służy do wznowienia na pierwszym planie wstrzymanego wcześniej procesu. Zobacz co się stanie:
+
+1.Wpisz komendę: fg
+W dokumecie mozemy pisac a terminal sie blokuje
+
+Jak widać proces wrócił i można wcisnąć na przykład CTRL+C aby go zakończyć.
+
+W momencie uruchamiania programu, możemy od razu nakazać wykonanie go w tle. Służy do tego znak & umieszczony na końcu instrukcji.
+
+Zobacz:
+INFO: Jeśli jakiegoś programu nie ma to zastąp go innym, który znasz.
+
+1.Wykonaj komendę gimp &
+
+2.Wykonaj komendę gedit &
+
+3.Wykonaj komendę geany &
+
+Zobacz co się stało (domyślam się, że uruchomiły się 3 programy, a na terminalu ciągle można coś pisać.
+
+Kolejna komenda to jobs. Służy ona do wyświetlania listy zadań (jobów; nie mylić z procesami) przeniesionych do tła.
+
+1.Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+składnia: fg %(numer jobu)
+fg %1 zablokowal sie terminal i gedit przestal dzialac
+
+

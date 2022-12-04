@@ -1,0 +1,230 @@
+ZAD1
+1.Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych. Przydzielić różne uprawnienia dostępu, następnie spróbować wejść do katalogów domowych innych
+ uczestników zajęć i sprawdzić, które z obiektów są tam dla nas dostępne (i w jakim sensie). Spróbować utworzyć własny plik w cudzym katalogu ("kukułcze jajko") oraz spróbować usunąć
+ cudzy plik we własnym katalogu (co można zaobserwować ?). Wypróbować powyższe operacje:
+
+w trybie tekstowym;
+
+przy użyciu programu Midnight Commander (mc):
+
+
+s29602@szuflandia22:~$ mkdir katalogi
+s29602@szuflandia22:~$ cd katalogi
+s29602@szuflandia22:~/katalogi$ cd katalog1
+-bash: cd: katalog1: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~/katalogi$ mkdir katalog1
+s29602@szuflandia22:~/katalogi$ mkdir katalog2
+s29602@szuflandia22:~/katalogi$ mkdir katalog3
+s29602@szuflandia22:~/katalogi$ cd katalog1
+s29602@szuflandia22:~/katalogi/katalog1$ mkdir katalog
+s29602@szuflandia22:~/katalogi/katalog1$ cd katalog
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ touch jeden.txt
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ touch dwa.txt
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ cd ../
+s29602@szuflandia22:~/katalogi/katalog1$ cd ../
+s29602@szuflandia22:~/katalogi$ cd katalog2
+s29602@szuflandia22:~/katalogi/katalog2$ touch trzy.log
+s29602@szuflandia22:~/katalogi/katalog2$ rm trzy.log
+s29602@szuflandia22:~/katalogi/katalog2$ touch trzy.txt
+s29602@szuflandia22:~/katalogi/katalog2$ cd ../
+s29602@szuflandia22:~/katalogi$ cd katalog3
+s29602@szuflandia22:~/katalogi/katalog3$ touch cztery.txt
+s29602@szuflandia22:~/katalogi/katalog3$ ../
+-bash: ../: Jest katalogiem
+s29602@szuflandia22:~/katalogi/katalog3$ cd ../
+s29602@szuflandia22:~/katalogi$ cd ../
+s29602@szuflandia22:~$ chmod a+rwx katalogi
+s29602@szuflandia22:~$ cd katalog1
+-bash: cd: katalog1: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~$ cd katalog1
+-bash: cd: katalog1: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~$ cd katalogi
+s29602@szuflandia22:~/katalogi$ cd katalog1
+s29602@szuflandia22:~/katalogi/katalog1$ chmod u+rwx katalogi
+chmod: nie ma dostępu do 'katalogi': Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~/katalogi/katalog1$ tree
+.
+└── katalog
+    ├── dwa.txt
+    └── jeden.txt
+s29602@szuflandia22:~$ cd katalog
+-bash: cd: katalog: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~$ cd katalogi
+s29602@szuflandia22:~/katalogi$ tree
+.
+├── katalog1
+│   └── katalog
+│       ├── dwa.txt
+│       └── jeden.txt
+├── katalog2
+│   └── trzy.txt
+└── katalog3
+    └── cztery.txt
+
+4 directories, 4 files
+s29602@szuflandia22:~/katalogi$ cd katalog1
+s29602@szuflandia22:~/katalogi/katalog1$ chmod g+rx dwa.txt
+chmod: nie ma dostępu do 'dwa.txt': Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~/katalogi/katalog1$ cd katalog
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ chmod g+rx dwa.txt
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ chmod u+rwx jeden.txt
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ ls -l
+razem 0
+-rw-r-xr-- 1 s29602 domain users 0 12-03 21:33 dwa.txt
+-rwxr--r-- 1 s29602 domain users 0 12-03 21:33 jeden.txt
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ cd ../../
+s29602@szuflandia22:~/katalogi$ ls -l
+razem 12
+drwxr-xr-x 3 s29602 domain users 4096 12-03 21:33 katalog1
+drwxr-xr-x 2 s29602 domain users 4096 12-03 21:35 katalog2
+drwxr-xr-x 2 s29602 domain users 4096 12-03 21:37 katalog3
+s29602@szuflandia22:~/katalogi$ cd ../
+s29602@szuflandia22:~$ ls
+katalogi  ls  windows
+s29602@szuflandia22:~$ cd
+s29602@szuflandia22:~$ cd
+katalogi/ .local/   .ssh/     windows/
+s29602@szuflandia22:~$ cd .ssh/
+s29602@szuflandia22:~/.ssh$ ls
+id_rsa  id_rsa.pub  known_hosts
+s29602@szuflandia22:~/.ssh$ cd ../
+s29602@szuflandia22:~$ cd ..
+s29602@szuflandia22:/home/PJWSTK$ cd s26967
+s29602@szuflandia22:/home/PJWSTK/s26967$ ls
+katalog1  katalog_wszyscy  public_html  s26967-pj-LukaszAleksandrowicz  test  windows
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd katalog_wszyscy
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ ls
+elo.txt
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ ../
+-bash: ../: Jest katalogiem
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ cd ../
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd
+katalog1/                       .local/                         s26967-pj-LukaszAleksandrowicz/ test/
+katalog_wszyscy/                public_html/                    .ssh/                           windows/
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd s26967-pj-LukaszAleksandrowicz
+s29602@szuflandia22:/home/PJWSTK/s26967/s26967-pj-LukaszAleksandrowicz$ ls
+s26967  ukos2022-23_12c  zjazd1
+s29602@szuflandia22:/home/PJWSTK/s26967/s26967-pj-LukaszAleksandrowicz$ cd ../
+s29602@szuflandia22:/home/PJWSTK/s26967$ ls
+katalog1  katalog_wszyscy  public_html  s26967-pj-LukaszAleksandrowicz  test  windows
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd katalog_wszyscy
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ ls
+elo.txt
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ cd elo.txt
+-bash: cd: elo.txt: Nie jest katalogiem
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ cd test
+-bash: cd: test: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:/home/PJWSTK/s26967/katalog_wszyscy$ cd ../
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd test
+s29602@szuflandia22:/home/PJWSTK/s26967/test$ ls
+witam  witam2.txt  witam3.txt  witam.txt
+s29602@szuflandia22:/home/PJWSTK/s26967/test$ cd ../
+s29602@szuflandia22:/home/PJWSTK/s26967$ ls
+katalog1  katalog_wszyscy  public_html  s26967-pj-LukaszAleksandrowicz  test  windows
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd katalog1
+-bash: cd: katalog1: Brak dostępu
+s29602@szuflandia22:/home/PJWSTK/s26967$ cd ../
+s29602@szuflandia22:/home/PJWSTK$ cd s27298
+s29602@szuflandia22:/home/PJWSTK/s27298$ ls
+katalog1  katalog2  s27298-pj-MaciejWojtowicz  windows
+s29602@szuflandia22:/home/PJWSTK/s27298$ cd katalog1
+-bash: cd: katalog1: Brak dostępu
+s29602@szuflandia22:/home/PJWSTK/s27298$ cd katalog2
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2$ ls
+podkatalog3  podkatalog4
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2$ mkdri kukulcze gniazdo
+-bash: mkdri: nie znaleziono polecenia
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2$ cd podkatalog3
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2/podkatalog3$ mkdri kukulcze gniazdo
+-bash: mkdri: nie znaleziono polecenia
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2/podkatalog3$ mkdir kukulcze gniazdo
+mkdir: nie można utworzyć katalogu „kukulcze”: Brak dostępu
+mkdir: nie można utworzyć katalogu „gniazdo”: Brak dostępu
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2/podkatalog3$ mkdir kukulcze_gniazdo
+mkdir: nie można utworzyć katalogu „kukulcze_gniazdo”: Brak dostępu
+s29602@szuflandia22:/home/PJWSTK/s27298/katalog2/podkatalog3$ cd ../../../
+
+ZAD2.W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperymenty:
+
+usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+
+usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
+
+W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+
+W jakich przypadkach możemy wykonać polecenie chmod ? 
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+
+Czy możemy także wrócić korzystając z polecnia cd - ?
+
+s29602@szuflandia22:~$ ls
+katalogi  ls  windows
+s29602@szuflandia22:~$ cd katalogi
+s29602@szuflandia22:~/katalogi$ ls
+katalog1  katalog2  katalog3
+s29602@szuflandia22:~/katalogi$ cd katalog1
+s29602@szuflandia22:~/katalogi/katalog1$ ls
+katalog
+s29602@szuflandia22:~/katalogi/katalog1$ cd katalog
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ ls
+dwa.txt  jeden.txt
+s29602@szuflandia22:~/katalogi/katalog1/katalog$ cd ../
+s29602@szuflandia22:~/katalogi/katalog1$ chmod 000 katalog
+s29602@szuflandia22:~/katalogi/katalog1$ cd katalog
+-bash: cd: katalog: Brak dostępu
+s29602@szuflandia22:~/katalogi/katalog1$ cd dwa.txt
+-bash: cd: dwa.txt: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~/katalogi/katalog1$ cd ././dwa.txt
+-bash: cd: ././dwa.txt: Nie ma takiego pliku ani katalogu
+s29602@szuflandia22:~/katalogi/katalog1$ ls
+katalog
+s29602@szuflandia22:~/katalogi/katalog1$ ls ./katalog
+ls: nie można otworzyć katalogu './katalog': Brak dostępu
+s29602@szuflandia22:~/katalogi/katalog1$ cd -
+-bash: cd: /home/PJWSTK/s29602/katalogi/katalog1/katalog: Brak dostępu
+s29602@szuflandia22:~/katalogi/katalog1$
+3.W zespołach 2- lub 3-osobowych (w opisie zadania na githubie proszę umieścić login osób z zespołu) wypróbować możliwość komunikacji przez współdzielony
+ plik: na jednym z kont w zespole utworzyć pusty plik i przydzielić odpowiednie uprawnienia dostępu (do pliku i do katalogu domowego). Wpisywać i odczytywać komunikaty przy użyciu poleceń:
+
+echo treść_komunikatu > plik
+
+cat plik
+Sprawdzić, jaki skutek powoduje zamiana operatora > na operator >> w poleceniu echo. Uruchom także drugi terminal i wykonaj w nim komendę tail -f plik i
+ powtórz powyższe ćwiczenie w pierwszym terminalu (komunikacja za pomocą pliku).
+
+Nie pamientalem ze trzeba to zrobic w grupach zadanie zostanie oddane wieczorem w niedziele
+
+
+ZAD4.Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z
+ podkreśleniem zamiast spacji pomiędzy słowami). Umieścić w nim plik o nazwie strona.html o następującej zawartości:
+s29602@szuflandia22:~$ ls
+katalogi  ls  windows
+s29602@szuflandia22:~$ cd windows
+s29602@szuflandia22:~/windows$ ls
+desktop
+s29602@szuflandia22:~/windows$ cd desktop
+s29602@szuflandia22:~/windows/desktop$ ls
+'$RECYCLE.BIN'  'Adobe Lightroom Classic.lnk'   desktop.ini   Lightroom.lnk  'Microsoft Teams.lnk'   repos
+s29602@szuflandia22:~/windows/desktop$ cd ../
+s29602@szuflandia22:~/windows$ mkdir public_html
+s29602@szuflandia22:~/windows$ cd
+desktop/     public_html/
+s29602@szuflandia22:~/windows$ cd public_html
+s29602@szuflandia22:~/windows/public_html$ mkdir strona.html
+s29602@szuflandia22:~/windows/public_html$ rmdir strona.html
+s29602@szuflandia22:~/windows/public_html$ touch strona.html
+s29602@szuflandia22:~/windows/public_html$ nano strona.html
+s29602@szuflandia22:~/windows/public_html$ nano strona.html
+s29602@szuflandia22:~/windows/public_html$ s29602@szuflandia22:~/windows/public_html$ cd ../
+s29602@szuflandia22:~/windows$ ls -l
+razem 12
+drwxrwx--x+ 4 s29602 domain users 4096 12-03 10:50 desktop
+drwxr-xr-x  2 s29602 domain users 4096 12-03 23:15 public_html
+s29602@szuflandia22:~/windows$ cd public_html
+s29602@szuflandia22:~/windows/public_html$ ls -l
+razem 4
+-rw-r--r-- 1 s29602 domain users 71 12-03 23:15 strona.html
+katalogom trzeba przydzielic mnimalnie x
+plikom trzeba przydzielic minimalnie r
+
