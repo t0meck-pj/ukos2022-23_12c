@@ -39,8 +39,8 @@ Czy możemy użyć cd -
 -bash: cd: /home/PJWSTK/s27424/KatalogN/KatalogP/katalogc: Brak dostępu
 Nie mamy dostępu
 
-*Zad3*
-ZADANIE GRUPOWE ROBIONE Z JAN SZULC: s28853 BłAŻEJ KANCZKOWSKI : s26836
+*Zad3* 
+ZADANIE GRUPOWE ROBIONE Z JAN SZULC: s28853 BłAŻEJ KANCZKOWSKI : s26836 /// 20.11.2022 Zadanie dodatkowo robione poźniej również z Konrad Zdrojewski: s29277
 katalog domowy musi mieć uprawnienia read oraz execute
 chmod o+r ./
 Plik musi mieć uprawnienia read oraz write oraz execute

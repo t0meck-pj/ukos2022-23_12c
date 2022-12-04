@@ -1,0 +1,56 @@
+Zad0.Rozgrzewkowe
+Brak uprawnień
+Nie mamy miejsca na dysku(quota)
+
+Zad1.Utworzenie drzewa katalogów
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+mkdir ala/i/as/ -p
+mkdir ala/ma/kota -p
+mkdir kot/ma/ale -p
+albo
+mkdir ala/ma/kota ala/i/as kot/ma/ale -p
+
+Znajdujesz się w katalogu kota.Przejsc do katalogu ala.
+cd ../.. (sciezka wzgledna)
+cd /home/PJWSTK/s27424/ala(sciezka bezwzględna)
+Zad2.Za pomoca jednej komendy drzewo katalogow
+mkdir jan/kowalski -p
+zad3.
+Przenies ale do i
+mv ../../../kot/ma/ale ../../i (wzgledna)
+mv /home/PJWSTK/s27424/kot/ma/ale /home/PJWSTK/s27424/ala/i (bezwzgledna)
+mv ../../../kot/ma/ale /home/PJWSTK/s27424/ala/i (wzgledna/bezwzgledna)
+zad 4 . wysłanie sygnału za pomocą polecenia kill
+albo sygnał 9 albo 15 (domyślny)
+zad5
+//grep .txt$ pliki zakonczone na .txt// grep ^al pliki zaczynajace sie na al
+ls -a| grep ^al
+zad 6
+chmod 741 ala
+chmod u=rwx,g=r,o=x ala
+chmod u+rwx,g+r,o+x ala
+zad 7 utworzenie listy plików w biezacym katalogu
+ls > lista_plikow.txt
+zad 8
+Wcisnieie tab podpowiada komendy
+zad 9 uruchomienie programu , z wolnym terminalem.
+Program &
+Może uruchomić bez & a później zatrzymać proces (Ctrl + Z)
+Albo po prostu uruchomić program bez termianala
