@@ -12,6 +12,8 @@ A: Zobacz co się stanie jeśli wpiszemy w terminalu:
 
 Jak myślisz, co oznacza znak zapytania w kolumnie 2?
 Nie wiesz? A gdzie może być wyjaśnienie?
+
+"?" Program nie ma zalokowane terminala
 --------------------------------------------------------
 
 B: Jak wykonasz poniższe 2 zadania?
@@ -29,7 +31,7 @@ gedit &
 2.Zobacz jaki ma on PID - przyda się do tego komenda ps:
 PID jest 879
 3.Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.:
-Kill 879 // Kill -9 // Kill SIGKILL 879
+Kill 879 // Kill -9 879 // Kill SIGKILL 879
 4.Zobacz działanie komendy killall bash:
 Przesyła sygnał SIGTERM do wszystkich procesów BASH
 5.Zobacz czy kill zadziała dla dowolnego procesu:
@@ -47,7 +49,7 @@ Zobacz co się stanie:
 
 3.Wciśnij CTRL+C
 
-4.Zobacz co się znalazło w pliku wynik3_1.txt - Do pliku został wpisany tekst "Witaj".
+4.Zobacz co się znalazło w pliku wynik3_1.txt - Plik jest pusty, daltego że program został zamknięt zanim tekst "witaj" został przesłany do strumienia wejściowego, "cat" zareguje dopiero jak naciśniemy "enter".
 -------------------------------------------------------------------------------------------
 1.Wydaj komendę cat > wynik3_2.txt
 
@@ -71,5 +73,5 @@ Zadanie 4.
 Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
 składnia: fg %(numer jobu)
 ps | grep gedit 
-fg %951
+fg %numerjoba(można go uzykać komendą "jobs")
 
