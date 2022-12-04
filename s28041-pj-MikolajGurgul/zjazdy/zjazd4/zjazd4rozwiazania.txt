@@ -1,0 +1,153 @@
+0 (rozgrzewkowe)
+
+Przypuscmy, ze nie mozesz utworzyc zadnego pliku na swoim koncie uczelnianym np. na szuflandii.
+Co sie moglo stac? (wymien co najmniej 2 opcje)
+
+Zakladamy, ze mozesz zalogowac sie w konsoli i nie masz zaleglosci w oplatach.
+
+
+Nie mamy uprawnien do zapisywania plikow oraz katalogow. Druga opcja to brak miejsca na swoim dysku. 
+Przekroczylismy przydzielony nam udzial na dysku(QUOTA)
+
+
+1
+
+Jest dane takie drzewo katalogow:
+
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+Znajdujesz sie w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos.
+Jak przejsc do katalogu ala ale za pomoca:
+
+    sciezki wzglednej (relatywnej)
+
+	user@user-VirtualBox:/tmp/ukos/ala/ma/kota$ cd ../..
+
+    sciezki bezwzglednej (absolutnej)
+
+	user@user-VirtualBox:/tmp/ukos/ala/ma/kota$ cd /tmp/ukos/ala
+
+2
+
+Masz taki uklad katalogow, jak wyzej i ciagle jestes w katalogu kota. Jak utworzyc poddrzewo katalogow jan/kowalski 
+w katalogu ale za pomoca jednej komendy?
+
+user@user-VirtualBox:/tmp/ukos/ala/ma/kota$ mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+albo drugi sposob
+
+user@user-VirtualBox:/tmp/ukos/ala/ma/kota$ mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
+
+
+3
+
+Masz taki uklad katalogow, jak wyzej i ciagle jestes w katalogu kota. Jak przeniesc katalog ale do katalogu i uzywajac:
+
+    zrodlo (sciezka wzgledna), miejsce docelowe (sciezka absolutna)
+
+	user@user-VirtualBox:/tmp/ukos/ala/ma/kota$ mv ../../../kot/ma/ale /tmp/ukos/ala/i
+
+    zrodlo (sciezka absolutna), miejsce docelowe (sciezka wzgledna)
+
+	user@user-VirtualBox:/tmp/ukos/ala/ma/kota$ mv  /tmp/ukos/kot/ma/ale ../../i
+
+4
+
+Jak zamknac program, ktory nie reaguje na ctrl+c ?
+
+Wpierw wywolujemy polecenie ps axu | grep "nasz program" | grep -v grep
+Sprawdzamy PID, ktory nas interesuje i nastepnie wpisujemy kill i PID programu
+5
+
+Jak wypisac wszystkie pliki w biezacym katalogu, ktorych nazwa zaczyna sie od al?
+Tu bedzie troche opisu ode mnie na temat wyrazen regularnych.
+Materialy:
+http://www.robelle.com/smugbook/regexpr.html
+https://www.regular-expressions.info/
+
+Uzywamy polecenia 
+
+user@user-VirtualBox:~$ ls -ld al*
+
+Narzedzia do testowania wyrazen regularnych w przyzwoity sposob:
+https://regex101.com/
+https://regexr.com/
+6
+
+Nadaj uprawnienia do katalogu ala tak aby:
+
+    kazdy mogl do niego wejsc
+
+    tylko grupa mogla wyswietlic co w nim jest
+
+    wlasciciel ma pelne prawa
+
+Przygotuj 3 wariacje rozwiazania tego zadania uzywajac roznych notacji: 
+
+    oktalnej/osemkowej/cyfrowej
+
+	user@user-VirtualBox:/tmp/ukos$ chmod 000 ala
+
+	d--------- 2 user user 4096 gru 2 20:02 ala
+
+	user@user-VirtualBox:/tmp/ukos$ chmod 751 ala
+
+	drwxr-x--x 2 user user 4096 gru 2 20:02 ala
+
+    literowej ze znakiem rownosci
+
+	user@user-VirtualBox:/tmp/ukos$ chmod a=- ala
+
+	d--------- 2 user user 4096 gru 2 20:02 ala
+
+	user@user-VirtualBox:/tmp/ukos$ chmod u=rwx,g=rx,o=x ala
+
+	drwxr-x--x 2 user user 4096 gru 20:02 ala
+
+    literowej z plusami i minusami
+
+	user@user-VirtualBox:/tmp/ukos$ chmod a-rwx ala
+	
+	d--------- 2 user user 4096 gru 2 20:02 ala
+	
+	user@user-VirtualBox:/tmp/ukos$ chmod u+w,ug+r,a+x ala
+
+	drwxr-x--x 2 user user 4096 gru 20:02 ala
+
+Wszystkie wersje powinny byc zapisane w jednym poleceniu (bez uzywania && czy | )
+7
+
+Jak utworzyc plik z lista plikow w biezacym katalogu?
+
+	user@user-VirtualBox:~$ ls > plik.txt
+
+8
+
+Jak przyspieszyc wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupelnianie komend?
+
+	Klawisz tab pozwala na uzupelnienie komend np dalszych nazw folderow/plikow/komend
+9
+
+Jak uruchomic program by nie blokowal terminala. Sa 2 sposoby. Jakie?
+
+Jeden ze sposobow to: gedit &
+Drugi ze sposobow to: drugi ze sposobow to odpalenie np vim i wcisniecie CTRL+Z, co spowoduje, 
+ze program zostanie zatrzymany, a my bedziemy mogli dalej korzystac z terminala, 
+a nastepnie przywrocic go wpisujac fg albo wybrać konrektny poleceniem fg %(numer zatrzymanego programu), 
+po wczesniejszym sprawdzeniu komenda jobs.
