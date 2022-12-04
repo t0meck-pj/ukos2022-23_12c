@@ -21,7 +21,7 @@
     
     Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
     
-    mkdir -p jan/kowalski
+    mkdir -p ../../jan/kowalski
 
 3: 
     
@@ -44,13 +44,13 @@
 
     Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna się od al?
 
-    ls | grep -e '^al' lub ls -d al*
+    ls | grep -e '^al' lub ls -la al*
 
 6:
 
     Nadaj uprawnienia do katalogu ala tak aby:
 
-    chmod 741 ala lub chmod u = rwx, g = r, o = x
+    chmod 741 ala lub chmod u=rwx, g=rx, o=x
 
 
 7:
@@ -69,4 +69,5 @@
     Jak uruchomić program by nie blokował terminala. Są 2 sposoby. Jakie?
 
     sposob pierwszy: wywolac program komenda, ctrl + z, jobs(sprawdz numer procesu), bg %(numer procesu)
-                    
+    sposob drugi: program &
+    
