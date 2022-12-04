@@ -2,7 +2,7 @@
 
     1.Przejdz do swojego katalogu domowego
 
-	user@user-VirtualBox:~$ cd /Desktop
+	user@user-VirtualBox:~$ cd ~
 
     2.Wydaj komende: ls -a
 
@@ -210,7 +210,9 @@ W opisie rozwiazania zadania umiesc:
 
     DLACZEGO sie roznia?
 
-	Dlatego, ze CTRL+C przerywa dzialanie, natmiast CTRL+D konczy dzialanie.
+	Dlatego, ze CTRL+C przerywa dzialanie, natomiast CTRL+D zamyka strumien wejsciowy, to znaczy ze nie ma wiecej danych do przetworzenia
+	i dlatego ostatnia linijka mimo braku klawisza enter, przetworzy ta linijke i skoro wiecej danych do przetworzenia nie ma,
+	to sie zamyka.
 
 
 4
