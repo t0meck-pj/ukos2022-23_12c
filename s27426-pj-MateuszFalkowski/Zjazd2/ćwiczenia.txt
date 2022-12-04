@@ -3,14 +3,23 @@ W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperyment
 
 usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
 zablokowano wszystkie działania w katalogu
+
 usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
 W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+
 przejścia do innego podfolderu , powrotu do katalogu głównego
+
 W jakich przypadkach możemy wykonać polecenie chmod ? 
+
 kiedy zmieniamy uprawnienia do katalogu nadrzędnego , wszystkie niżej są zablokowane
+
 Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+
 nie
+
 Czy możemy także wrócić korzystając z polecnia cd - ?
+
+nie
 
 Zadanie 3
 Sprawdzić, jaki skutek powoduje zamiana operatora > na operator >> w poleceniu echo. 
@@ -23,7 +32,6 @@ Sprawdzić, jakie są minimalne uprawnienia dostępu, które trzeba przydzielić
 katalogu domowego;
 
 katalogu public_html;
-
 pliku strona.html, aby zawartość pliku była widoczna w przeglądarce internetowej pod adresem http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
 
-Minimalnie trzeba nadać uprawnienie do wykonywania pliku
+Minimalnie zarowno dla pliku jak i katalogu trzeba nada mozliwosc wykonywania dla pozostałych np. 001

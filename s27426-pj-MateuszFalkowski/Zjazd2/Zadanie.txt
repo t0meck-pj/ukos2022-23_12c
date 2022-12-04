@@ -1,2 +1,3 @@
-Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
-maska tworzy domyślny zestaw uprawnień dla nowych plików
+Jaka operacja logiczna na bitach domyslnych uprawnien dostepu oraz maski jest wykonywana ? 
+Koniunkcja , bit wynikowy wynosi jeden tylko wtedy , gdy bit domyslnych uprawnien 
+wynosi 1 , a odpowiadajacy mu bit maski wynosi 0
