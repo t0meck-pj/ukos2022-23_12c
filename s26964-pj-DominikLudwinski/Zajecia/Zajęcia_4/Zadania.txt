@@ -37,9 +37,9 @@ oktalnej/ósemkowej/cyfrowej
 literowej ze znakiem równości
 literowej z plusami i minusami
 
-chmod 741 ala
-chmod u=rwx,g=r,o=x ala
-chmod u+rwx,g+r,o+x ala
+chmod 751 ala
+chmod u=rwx,g=rx,o=x ala
+chmod u+rwx,g+rx,o+x ala
 
 7.
 Jak utworzyć plik z listą plików w bieżącym katalogu?
@@ -47,11 +47,8 @@ Jak utworzyć plik z listą plików w bieżącym katalogu?
 ls > plik.txt
 
 8.
-Jak przyspieszyć wpisywanie komend w terminalu? 
-strzałką w górę
-
-Jaki klawisz pozwala na uzupełnianie komend?
-tab
+Jak przyspieszyć wpisywanie komend w terminalu? Jaki klawisz pozwala na uzupełnianie komend?
+Klawisz tab
 
 9.
 gedit &
