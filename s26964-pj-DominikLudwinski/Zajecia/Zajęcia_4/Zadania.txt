@@ -1,0 +1,59 @@
+1.
+Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos.
+Jak przejść do katalogu ala ale za pomocą:
+ -bezwzględna: cd /home/ubuntu/tmp/ukos/ala
+ -względna: cd ../../
+
+2.
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. 
+Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
+
+mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+3.
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak przenieść katalog ale do katalogu i 
+używając:
+źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna)
+	mv ../../../kot/ma/ale /home/ubuntu/tmp/ukos/ala/i
+
+źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
+	mv /home/ubuntu/tmp/ukos/kot/ma/ale ../../i
+
+4.
+Jak zamknąć program, który nie reaguje na ctrl+c ?
+
+kill -9/-SIGKILL/-KILL numer_PID
+
+5.
+ls | grep -e '^al'
+
+6.
+Nadaj uprawnienia do katalogu ala tak aby:
+każdy mógł do niego wejść
+tylko grupa mogła wyświetlić co w nim jest
+właściciel ma pełne prawa
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+oktalnej/ósemkowej/cyfrowej
+literowej ze znakiem równości
+literowej z plusami i minusami
+
+chmod 741 ala
+chmod u=rwx,g=r,o=x ala
+chmod u+rwx,g+r,o+x ala
+
+7.
+Jak utworzyć plik z listą plików w bieżącym katalogu?
+
+ls > plik.txt
+
+8.
+Jak przyspieszyć wpisywanie komend w terminalu? 
+strzałką w górę
+
+Jaki klawisz pozwala na uzupełnianie komend?
+tab
+
+9.
+gedit &
+gedit -> ctrl+z -> bg
+
