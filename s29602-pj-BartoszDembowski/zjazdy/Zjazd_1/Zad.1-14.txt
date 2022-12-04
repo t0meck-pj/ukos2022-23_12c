@@ -1,0 +1,42 @@
+1.Uruchom terminal.
+Uruchamiamy go poprostu
+
+2.Wyświetl zawartość aktualnego katalogu
+Wpisuje ls i wyswietla mi sie "Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos"
+
+3.Sprawdź gdzie aktualnie się znajdujesz.
+pwd /home/ubuntu
+
+4.Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+cd ./Desktop
+
+5.Sprawdź gdzie jesteś.
+pwd
+/home/ubuntu/Desktop
+
+6.Wyświetl zawartość bieżącego katalogu
+ls adding-packages-permanently-info.txt  passwords-info.txt
+
+7.Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+ls ../../ubuntu
+
+8.Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej.
+ cd ../Pictures cofneliśmy się i otworzyliśmy katalog z Pictures jakie wyświetlaly nam sie w drugim zadaniu
+
+9.Sprawdź gdzie jesteś.
+pwd /home/ubuntu/Pictures
+
+10.Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+Pokazało ze jest to katalog ale nigdzie sie nie przenieslismy
+
+11.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+cd ~ wpisalismy znak tyldu ktory oznacza katalog domowy
+
+12.Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie
+"bash: cd: /root: Permission denied" dostalismy odmowe uprawnien zeby moc dzialac w tym folderze potrzebujemy wiekszych uprawnien
+
+13.Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1
+Po wciśnieciu przłącza nas na powłoke tekstową gdzie trzeba się zalogować
+
+14.A teraz co się stanie po: Alt+F7
+Powrociliśmy na powloke graficzna
