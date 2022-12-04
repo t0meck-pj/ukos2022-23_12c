@@ -1,0 +1,29 @@
+Zadanie 2
+W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperymenty:
+
+usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+zablokowano wszystkie działania w katalogu
+usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
+W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+przejścia do innego podfolderu , powrotu do katalogu głównego
+W jakich przypadkach możemy wykonać polecenie chmod ? 
+kiedy zmieniamy uprawnienia do katalogu nadrzędnego , wszystkie niżej są zablokowane
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+nie
+Czy możemy także wrócić korzystając z polecnia cd - ?
+
+Zadanie 3
+Sprawdzić, jaki skutek powoduje zamiana operatora > na operator >> w poleceniu echo. 
+w przypadku operatora > dane są nadpisywane , w przypadku >> dopisywane do pliku
+Uruchom także drugi terminal i wykonaj w nim komendę tail -f plik i powtórz powyższe ćwiczenie w pierwszym terminalu (komunikacja za pomocą pliku).
+konsola śledzi zmiany zachodzące w pliku
+
+Zadanie 4
+Sprawdzić, jakie są minimalne uprawnienia dostępu, które trzeba przydzielić do:
+katalogu domowego;
+
+katalogu public_html;
+
+pliku strona.html, aby zawartość pliku była widoczna w przeglądarce internetowej pod adresem http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
+
+Minimalnie trzeba nadać uprawnienie do wykonywania pliku
