@@ -6,51 +6,24 @@ W opisie bash-a (man) przeczytać opis polecenia wewnętrznego umask i wypróbow
 Operacja logiczna wykonywana na bitach domyślnych uprawnień dostępu to negacja i koniunkcja.
 
 
-s27115@szuflandia22:~$ cd test
-s27115@szuflandia22:~/test$ ls
-s27115@szuflandia22:~/test$ umask
+
+xeon@e11:~/zad6$ umask
+0766
+xeon@e11:~/zad6$ umask 022
+xeon@e11:~/zad6$ umask
 0022
-s27115@szuflandia22:~/test$ mkdir k0
-s27115@szuflandia22:~/test$ umask 666
-s27115@szuflandia22:~/test$ mkdir k1
-s27115@szuflandia22:~/test$ ls -lha
-razem 16K
-drwxr-xr-x 4 s27115 domain users 4,0K 12-02 01:02 .
-drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
-drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
-d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
-s27115@szuflandia22:~/test$ umask 000
-s27115@szuflandia22:~/test$ mkdir k2
-s27115@szuflandia22:~/test$ \
-> ^C
-s27115@szuflandia22:~/test$ ls -lha
-razem 20K
-drwxr-xr-x 5 s27115 domain users 4,0K 12-02 01:02 .
-drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
-drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
-d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
-drwxrwxrwx 2 s27115 domain users 4,0K 12-02 01:02 k2
-s27115@szuflandia22:~/test$ umask 111
-s27115@szuflandia22:~/test$ mkdir k3
-s27115@szuflandia22:~/test$ ls -lha
-razem 24K
-drwxr-xr-x 6 s27115 domain users 4,0K 12-02 01:03 .
-drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
-drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
-d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
-drwxrwxrwx 2 s27115 domain users 4,0K 12-02 01:02 k2
-drw-rw-rw- 2 s27115 domain users 4,0K 12-02 01:03 k3
-s27115@szuflandia22:~/test$ umask 077
-s27115@szuflandia22:~/test$ mkdir k4
-s27115@szuflandia22:~/test$ ls -lha
-razem 28K
-drwxr-xr-x 7 s27115 domain users 4,0K 12-02 01:03 .
-drwx-----x 6 s27115 domain users 4,0K 12-02 01:02 ..
-drwxr-xr-x 2 s27115 domain users 4,0K 12-02 01:02 k0
-d--x--x--x 2 s27115 domain users 4,0K 12-02 01:02 k1
-drwxrwxrwx 2 s27115 domain users 4,0K 12-02 01:02 k2
-drw-rw-rw- 2 s27115 domain users 4,0K 12-02 01:03 k3
-drwx------ 2 s27115 domain users 4,0K 12-02 01:03 k4
-
-
-
+xeon@e11:~/zad6$ touch p1
+xeon@e11:~/zad6$ umask 766
+xeon@e11:~/zad6$ touch p2
+xeon@e11:~/zad6$ umask 111
+xeon@e11:~/zad6$ touch p3
+xeon@e11:~/zad6$ umask
+0111
+xeon@e11:~/zad6$ umask 0022
+xeon@e11:~/zad6$ ls -lha
+razem 8,0K
+drwxr-xr-x  2 xeon xeon 4,0K 12-05 11:32 .
+drwxr-xr-x 38 xeon xeon 4,0K 12-05 11:31 ..
+-rw-r--r--  1 xeon xeon    0 12-05 11:31 p1
+----------  1 xeon xeon    0 12-05 11:31 p2
+-rw-rw-rw-  1 xeon xeon    0 12-05 11:32 p3
