@@ -48,7 +48,7 @@ katalog1  katalog2
 s27115@szuflandia22:~/katalog$ 
 
 Rozwiązanie w mc 
-Po uruchomieniu mc pokazuje się klasyczny obraz dwuoknowego menadzera plików.
+Po uruchomieniu mc pokazuje się klasyczny obraz dwupanelowego menadzera plików.
 Gdy miałem nadane u kolegi uprawnienia do folderu testowego rwx mogłem utworzyć/kasować pliki bez problemu i mieć ich całkwoity podgląd 
 Gdy miałem uprawnienia --- wyświetlił się komunikat "nie można zmienić katalogu" przy próbie wejścia do katalogu testowego.
 Gdy miałem uprawnienia --x wyświetlił się komunikat "nie można odczytać zawartości katalogu" po czym program i tak przekierował mnie do tego folderu 

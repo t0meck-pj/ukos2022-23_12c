@@ -22,9 +22,9 @@ xeon@e11:~$ bash: chrome: nie znaleziono polecenia
 [10] 11951
 [9]   Kod wyjścia 127        chrome
 xeon@e11:~$ jobs
-[1]   Zatrzymano              man ps  (katalog: ~/Pulpit/Ukos tryb venom kurwa/uko/s27115-pj/zadaniaZjazd3)
-[2]   Zatrzymano              man ps  (katalog: ~/Pulpit/Ukos tryb venom kurwa/uko/s27115-pj/zadaniaZjazd3)
-[3]   Zatrzymano              man ps -u root  (katalog: ~/Pulpit/Ukos tryb venom kurwa/uko/s27115-pj/zadaniaZjazd3)
+[1]   Zatrzymano              man ps  (katalog: ~/Pulpit/Uko/uko/s27115-pj/zadaniaZjazd3)
+[2]   Zatrzymano              man ps  (katalog: ~/Pulpit/Uko/uko/s27115-pj/zadaniaZjazd3)
+[3]   Zatrzymano              man ps -u root  (katalog: ~/Pulpit/Uko/uko/s27115-pj/zadaniaZjazd3)
 [4]-  Zatrzymano              cat  (katalog: ~/uko)
 [5]+  Zatrzymano              nano wynik3_1.txt  (katalog: ~/uko)
 [6]   Działa                 kate &
@@ -38,30 +38,30 @@ kate
 xeon@e11:~$ 
 
 
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ jobs
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ jobs
 [1]+  Działa                 kate &
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ kate &
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ kate &
 [2] 38831
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ kate &
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ kate &
 [3] 38866
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ jobs
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ jobs
 [1]   Działa                 kate &
 [2]-  Działa                 kate &
 [3]+  Działa                 kate &
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ bg %1
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ bg %1
 bash: bg: zadanie 1 już pracuje w tle
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ jobs
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ jobs
 [1]   Działa                 kate &
 [2]-  Działa                 kate &
 [3]+  Działa                 kate &
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ fg  %1
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ fg  %1
 kate
 ^C
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ kill -9 %1
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ kill -9 %1
 bash: kill: %1: brak takiego zadania
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ jobs
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ jobs
 [2]-  Działa                 kate &
 [3]+  Działa                 kate &
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ kill -9 %2
-xeon@e11:~/Pulpit/Ukos tryb venom kurwa/uko2/s27115-pj/zadaniaZjazd3$ kill -9 %3
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ kill -9 %2
+xeon@e11:~/Pulpit/Uko/uko2/s27115-pj/zadaniaZjazd3$ kill -9 %3
 [2]-  Unicestwiony            kate
